@@ -1,0 +1,95 @@
+mapscripts WhimleafTown_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION
+}
+
+// State descriptions for VAR_WHIMLEAF_TOWN_STATE
+	// 1: Met Rival
+	// 2: Saving Birch
+    // 3: Received Pokedex
+	// 4: Received Running Shoes
+
+
+
+
+
+
+
+//sign scripts
+
+script WhimleafTown_EventScript_PlayerHouse {
+    lockall
+    msgbox("It's my house.")
+    releaseall
+}
+
+script WhimleafTown_EventScript_RivalHouse {
+    lockall
+    msgbox("Its {RIVAL}'s House.")
+    releaseall
+}
+
+script WhimleafTown_EventScript_PokeLab {
+    lockall
+    msgbox("Whimleaf Pokemon Lab")
+    releaseall
+}
+
+script WhimleafTown_EventScript_TownSign {
+    msgbox(TownSign, MSGBOX_SIGN)
+}
+
+script WhimleafTown_EventScript_WarningSign {
+    msgbox(WarningSign, MSGBOX_SIGN)
+}
+
+
+
+
+
+
+//dialogue scripts
+
+script WhimleafTown_EventScript_Youngster {
+    lockall
+    faceplayer
+    msgbox("Hey there, you have a pokemon?")
+    msgbox("That's pretty neat, huh?")
+    releaseall
+}
+
+script WhimleafTown_EventScript_Fatman {
+    lockall
+    faceplayer
+    msgbox("It's hard for me to walk sometimes.")
+    msgbox("I dont wanna talk about it.")
+    releaseall
+}
+
+script WhimleafTown_EventScript_LittleGirl {
+    lockall
+    faceplayer
+    msgbox("i have a butthole.")
+    releaseall
+}
+
+script WhimleafTown_EventScript_LittleBoy {
+    lockall
+    faceplayer
+    msgbox("did she tell you she has a butthole?\l")
+    msgbox("What a weirdo!")
+    releaseall
+}
+
+
+
+//texts
+
+text TownSign {
+    "Whimleaf Town\n"
+    "“Home of endless possibilities!”$"
+}
+
+text WarningSign {
+    "Route 1 {RIGHT_ARROW} \n"
+    "{COLOR RED}{SHADOW LIGHT_RED}Danger: Wild pokemon!$"
+}

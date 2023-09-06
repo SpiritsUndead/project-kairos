@@ -1,0 +1,34 @@
+mapscripts Hotbrook_Pokecenter_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: Hotbrook_Pokecenter_OnTransition
+    MAP_SCRIPT_ON_RESUME: CableClub_OnResume
+}
+
+script Hotbrook_Pokecenter_OnTransition {
+    setrespawn(HEAL_LOCATION_HOTBROOK_FLATS)
+    end
+}
+
+script Pokecenter_Nurse{
+    setvar(VAR_0x800B, 1)
+	call(Common_EventScript_PkmnCenterNurse)
+	waitmessage
+	waitbuttonpress
+	release
+	end
+}
+
+script NPC_Healer{
+    lock
+    faceplayer
+    msgbox("Would you like me to heal your party?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        call(Common_EventScript_OutOfCenterPartyHeal)
+        msgbox("There you go! Take care!", MSGBOX_NPC)
+        waitmessage
+        release
+        end
+    }
+    else{
+        msgbox("Have a nice day", MSGBOX_NPC)
+    }
+}

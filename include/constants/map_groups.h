@@ -63,6 +63,14 @@
 #define MAP_UNDERWATER_ROUTE129 (54 | (0 << 8))
 #define MAP_UNDERWATER_ROUTE105 (55 | (0 << 8))
 #define MAP_UNDERWATER_ROUTE125 (56 | (0 << 8))
+#define MAP_HOTBROOK_FLATS      (57 | (0 << 8))
+#define MAP_NEW_MAP2            (58 | (0 << 8))
+#define MAP_WHIMLEAF_TOWN       (59 | (0 << 8))
+#define MAP_ROUTE1              (60 | (0 << 8))
+#define MAP_BITTERBREEZE_CITY   (61 | (0 << 8))
+#define MAP_DAWNGEM_TOWN        (62 | (0 << 8))
+#define MAP_DAWNGEM_LAKE        (63 | (0 << 8))
+#define MAP_ROUTE2              (64 | (0 << 8))
 
 // gMapGroup_IndoorLittleroot
 #define MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F    (0 | (1 << 8))
@@ -70,6 +78,7 @@
 #define MAP_LITTLEROOT_TOWN_MAYS_HOUSE_1F        (2 | (1 << 8))
 #define MAP_LITTLEROOT_TOWN_MAYS_HOUSE_2F        (3 | (1 << 8))
 #define MAP_LITTLEROOT_TOWN_PROFESSOR_BIRCHS_LAB (4 | (1 << 8))
+#define MAP_ANOTHERLAB                           (5 | (1 << 8))
 
 // gMapGroup_IndoorOldale
 #define MAP_OLDALE_TOWN_HOUSE1            (0 | (2 << 8))
@@ -400,6 +409,7 @@
 #define MAP_TERRA_CAVE_END                           (105 | (24 << 8))
 #define MAP_ALTERING_CAVE                            (106 | (24 << 8))
 #define MAP_METEOR_FALLS_STEVENS_CAVE                (107 | (24 << 8))
+#define MAP_IVORYBERTH_FOREST                        (108 | (24 << 8))
 
 // gMapGroup_IndoorDynamic
 #define MAP_SECRET_BASE_RED_CAVE1    (0 | (25 << 8))
@@ -591,6 +601,18 @@
 // gMapGroup_IndoorRoute124
 #define MAP_ROUTE124_DIVING_TREASURE_HUNTERS_HOUSE (0 | (33 << 8))
 
-#define MAP_GROUPS_COUNT 34
+// gMapGroup_IndoorWhimleaf
+#define MAP_PLAYER_HOUSE    (0 | (34 << 8))
+#define MAP_PLAYER_HOUSE_BF (1 | (34 << 8))
+#define MAP_PLAYER_HOUSE2F  (2 | (34 << 8))
+#define MAP_WHIM_POKE_LAB   (3 | (34 << 8))
+#define MAP_RIVAL_HOUSE     (4 | (34 << 8))
+#define MAP_RIVAL_HOUSE2F   (5 | (34 << 8))
+
+// gMapGroup_IndoorHotbrook
+#define MAP_HOTBROOK_MART       (0 | (35 << 8))
+#define MAP_HOTBROOK_POKECENTER (1 | (35 << 8))
+
+#define MAP_GROUPS_COUNT 36
 
 #endif // GUARD_CONSTANTS_MAP_GROUPS_H

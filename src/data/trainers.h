@@ -9721,6 +9721,7 @@ const struct Trainer gTrainers[] = {
         .party = NO_ITEM_DEFAULT_MOVES(sParty_Noland),
     },
 
+
     [TRAINER_LUCY] =
     {
         .trainerClass = TRAINER_CLASS_PIKE_QUEEN,

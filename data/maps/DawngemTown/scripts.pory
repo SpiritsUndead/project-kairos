@@ -1,0 +1,13 @@
+mapscripts DawngemTown_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION
+}
+
+script DawngemTown_EventScript_TownSign {
+    msgbox(Dawn_TownSign, MSGBOX_SIGN)
+}
+
+
+text Dawn_TownSign {
+    "Dawngem Town\n"
+    "“Where brilliance is just on the horizon.”$"
+}

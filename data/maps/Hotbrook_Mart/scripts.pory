@@ -1,0 +1,20 @@
+mapscripts Hotbrook_Mart_MapScripts {
+
+}
+
+script Hotbrook_Mart_Employee{
+    lock
+    faceplayer
+    message("whatchu want?")
+    waitmessage
+    pokemart(Hotbrook_Mart)
+    msgbox("And goooood riddance!")
+    release
+    end
+}
+
+mart Hotbrook_Mart {
+    ITEM_LAVA_COOKIE
+    ITEM_MOOMOO_MILK
+    ITEM_RARE_CANDY
+}

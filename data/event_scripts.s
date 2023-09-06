@@ -1059,3 +1059,41 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/text/frontier_brain.inc"
 	.include "data/text/save.inc"
 	.include "data/text/birch_speech.inc"
+
+	.include "data/maps/anotherlab/scripts.inc"
+
+	.include "data/maps/HotbrookFlats/scripts.inc"
+
+	.include "data/maps/NewMap2/scripts.inc"
+
+	.include "data/maps/WhimleafTown/scripts.inc"
+
+	.include "data/maps/Route1/scripts.inc"
+
+	.include "data/maps/Route1/scripts.inc"
+
+	.include "data/maps/PlayerHouse/scripts.inc"
+
+	.include "data/maps/PlayerHouseBF/scripts.inc"
+
+	.include "data/maps/PlayerHouse2F/scripts.inc"
+
+	.include "data/maps/Hotbrook_Mart/scripts.inc"
+
+	.include "data/maps/Hotbrook_Pokecenter/scripts.inc"
+
+	.include "data/maps/BitterbreezeCity/scripts.inc"
+
+	.include "data/maps/WhimPokeLab/scripts.inc"
+
+	.include "data/maps/RivalHouse/scripts.inc"
+
+	.include "data/maps/RivalHouse2F/scripts.inc"
+
+	.include "data/maps/DawngemTown/scripts.inc"
+
+	.include "data/maps/DawngemLake/scripts.inc"
+
+	.include "data/maps/Route2/scripts.inc"
+
+	.include "data/maps/IvoryberthForest/scripts.inc"
