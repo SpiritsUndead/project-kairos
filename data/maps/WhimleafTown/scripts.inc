@@ -33,6 +33,15 @@ WhimleafTown_EventScript_WarningSign::
 	return
 
 
+WhimleafTown_EventScript_Mom::
+	msgbox WhimleafTown_EventScript_Mom_Text_0
+	msgbox WhimleafTown_EventScript_Mom_Text_1
+	msgbox WhimleafTown_EventScript_Mom_Text_2
+	special NameRival
+	waitstate
+	return
+
+
 WhimleafTown_EventScript_Youngster::
 	lockall
 	faceplayer
@@ -76,6 +85,16 @@ WhimleafTown_EventScript_RivalHouse_Text_0:
 
 WhimleafTown_EventScript_PokeLab_Text_0:
 	.string "Whimleaf Pokemon Lab$"
+
+WhimleafTown_EventScript_Mom_Text_0:
+	.string "Hey, {PLAYER}, we have some new neighbors...$"
+
+WhimleafTown_EventScript_Mom_Text_1:
+	.string "They have a daughter\n"
+	.string "thats around your age.$"
+
+WhimleafTown_EventScript_Mom_Text_2:
+	.string "Did you catch her name?$"
 
 WhimleafTown_EventScript_Youngster_Text_0:
 	.string "Hey there, you have a pokemon?$"

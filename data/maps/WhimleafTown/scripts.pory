@@ -42,10 +42,11 @@ script WhimleafTown_EventScript_WarningSign {
     msgbox(WarningSign, MSGBOX_SIGN)
 }
 
-
-
-
-
+script WhimleafTown_EventScript_Mom {
+    msgbox("Hey, {PLAYER}, we have some new neighbors...")
+    msgbox("They have a daughter thats around your age.")
+    msgbox("Did you catch her name?")
+}
 
 //dialogue scripts
 
