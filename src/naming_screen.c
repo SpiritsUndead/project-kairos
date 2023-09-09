@@ -310,6 +310,16 @@ static const u8 sPageColumnXPos[KBPAGE_COUNT][KBCOL_COUNT] = {
     [KEYBOARD_SYMBOLS]       = {0, 22, 44, 66, 88, 110}
 };
 
+static const u8 *const gMalePresetNames[] = {
+    gText_ExpandedPlaceholder_Brendan,
+};
+
+static const u8 *const gFemalePresetNames[] = {
+    gText_ExpandedPlaceholder_May,
+};
+
+
+
 static const struct NamingScreenTemplate *const sNamingScreenTemplates[];
 static const struct SubspriteTable sSubspriteTable_PageSwapFrame[];
 static const struct SubspriteTable sSubspriteTable_PageSwapText[];
