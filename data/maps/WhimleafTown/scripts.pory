@@ -1,16 +1,17 @@
 mapscripts WhimleafTown_MapScripts {
     MAP_SCRIPT_ON_TRANSITION
 }
+script WhimleafTown_OnTransition {
+    setrespawn(HEAL_LOCATION_WHIMLEAF_TOWN)
+}
+
+// VAR_WHIMLEAF_INTRO_STATE    0x4091 ---> whimleaf intro state, duh
 
 // State descriptions for VAR_WHIMLEAF_TOWN_STATE
-	// 1: Met Rival
-	// 2: Saving Birch
-    // 3: Received Pokedex
-	// 4: Received Running Shoes
-
-
-
-
+	// 1: new game
+	// 2: named rival
+    // 3: Received Pokemon
+	// 4: Received pokedex
 
 
 
@@ -42,14 +43,20 @@ script WhimleafTown_EventScript_WarningSign {
     msgbox(WarningSign, MSGBOX_SIGN)
 }
 
-script WhimleafTown_EventScript_Mom {
-    msgbox("Hey, {PLAYER}, we have some new neighbors...")
-    msgbox("They have a daughter thats around your age.")
-    msgbox("Did you catch her name?")
-}
+
 
 //dialogue scripts
 
+script WhimleafTown_EventScript_Mom {
+    // if Whim State = 1
+    lockall
+    faceplayer
+    msgbox(MomNamingRival)
+    special(NameRival)
+    //set Whim State = 2
+    waitstate
+    releaseall   
+}
 script WhimleafTown_EventScript_Youngster {
     lockall
     faceplayer
@@ -93,4 +100,12 @@ text TownSign {
 text WarningSign {
     "Route 1 {RIGHT_ARROW} \n"
     "{COLOR RED}{SHADOW LIGHT_RED}Danger: Wild pokemon!$"
+}
+
+text MomNamingRival {
+    "Hey, {PLAYER}, we have some new neighbors!\n"
+	"I think they have a daughter\l"
+	"thats around your age.\p "
+	"Did you catch her name?"
+
 }

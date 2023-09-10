@@ -2,6 +2,11 @@ WhimleafTown_MapScripts::
 	.byte 0
 
 
+WhimleafTown_OnTransition::
+	setrespawn HEAL_LOCATION_WHIMLEAF_TOWN
+	return
+
+
 WhimleafTown_EventScript_PlayerHouse::
 	lockall
 	msgbox WhimleafTown_EventScript_PlayerHouse_Text_0
@@ -34,11 +39,12 @@ WhimleafTown_EventScript_WarningSign::
 
 
 WhimleafTown_EventScript_Mom::
-	msgbox WhimleafTown_EventScript_Mom_Text_0
-	msgbox WhimleafTown_EventScript_Mom_Text_1
-	msgbox WhimleafTown_EventScript_Mom_Text_2
+	lockall
+	faceplayer
+	msgbox MomNamingRival
 	special NameRival
 	waitstate
+	releaseall
 	return
 
 
@@ -86,16 +92,6 @@ WhimleafTown_EventScript_RivalHouse_Text_0:
 WhimleafTown_EventScript_PokeLab_Text_0:
 	.string "Whimleaf Pokemon Lab$"
 
-WhimleafTown_EventScript_Mom_Text_0:
-	.string "Hey, {PLAYER}, we have some new neighbors...$"
-
-WhimleafTown_EventScript_Mom_Text_1:
-	.string "They have a daughter\n"
-	.string "thats around your age.$"
-
-WhimleafTown_EventScript_Mom_Text_2:
-	.string "Did you catch her name?$"
-
 WhimleafTown_EventScript_Youngster_Text_0:
 	.string "Hey there, you have a pokemon?$"
 
@@ -124,3 +120,9 @@ TownSign::
 WarningSign::
 	.string "Route 1 {RIGHT_ARROW} \n"
 	.string "{COLOR RED}{SHADOW LIGHT_RED}Danger: Wild pokemon!$"
+
+MomNamingRival::
+	.string "Hey, {PLAYER}, we have some new neighbors!\n"
+	.string "I think they have a daughter\l"
+	.string "thats around your age.\p "
+	.string "Did you catch her name?$"
