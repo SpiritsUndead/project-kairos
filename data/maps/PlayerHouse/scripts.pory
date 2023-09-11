@@ -3,7 +3,7 @@ mapscripts PlayerHouse_MapScripts {
 }
 
 // State descriptions for VAR_WHIMLEAF_TOWN_STATE
-	// 1: new game
-	// 2: named rival
-    // 3: Received Pokemon
-	// 4: Received pokedex
+	// ?: new game
+	// 1: named rival
+    // 2: Received Pokemon
+	// 3: Received pokedex

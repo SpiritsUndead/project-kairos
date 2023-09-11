@@ -41,9 +41,51 @@ WhimleafTown_EventScript_WarningSign::
 WhimleafTown_EventScript_Mom::
 	lockall
 	faceplayer
+	switch VAR_WHIMLEAF_INTRO_STATE
+	case 1, WhimleafTown_EventScript_Mom_2
+	case 2, WhimleafTown_EventScript_Mom_3
+	case 3, WhimleafTown_EventScript_Mom_4
+	case 4, WhimleafTown_EventScript_Mom_4
 	msgbox MomNamingRival
 	special NameRival
+	setrespawn HEAL_LOCATION_WHIMLEAF_TOWN
 	waitstate
+	msgbox MomConfirmRival, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq WhimleafTown_EventScript_Mom_7
+	goto WhimleafTown_EventScript_Mom
+WhimleafTown_EventScript_Mom_6:
+	setvar VAR_WHIMLEAF_INTRO_STATE, 1
+	releaseall
+	return
+
+WhimleafTown_EventScript_Mom_2:
+	msgbox WhimleafTown_EventScript_Mom_Text_0
+	releaseall
+	return
+
+WhimleafTown_EventScript_Mom_3:
+	msgbox WhimleafTown_EventScript_Mom_Text_1
+	releaseall
+	return
+
+WhimleafTown_EventScript_Mom_4:
+	msgbox MomHealPlayer1
+	call Common_EventScript_OutOfCenterPartyHeal
+	msgbox MomHealPlayer2
+	releaseall
+	return
+
+WhimleafTown_EventScript_Mom_7:
+	msgbox MomConfirmRival2
+	goto WhimleafTown_EventScript_Mom_6
+
+
+WhimleafTown_EventScript_Dad::
+	lockall
+	faceplayer
+	setvar VAR_WHIMLEAF_INTRO_STATE, 2
+	msgbox WhimleafTown_EventScript_Dad_Text_0
 	releaseall
 	return
 
@@ -83,6 +125,10 @@ WhimleafTown_EventScript_LittleBoy::
 	return
 
 
+ForceNameRival:
+	emote_exclamation_mark
+	step_end
+
 WhimleafTown_EventScript_PlayerHouse_Text_0:
 	.string "It's my house.$"
 
@@ -91,6 +137,15 @@ WhimleafTown_EventScript_RivalHouse_Text_0:
 
 WhimleafTown_EventScript_PokeLab_Text_0:
 	.string "Whimleaf Pokemon Lab$"
+
+WhimleafTown_EventScript_Mom_Text_0:
+	.string "whim intro satate is set to 1.$"
+
+WhimleafTown_EventScript_Mom_Text_1:
+	.string "whim intro state is set to 2.$"
+
+WhimleafTown_EventScript_Dad_Text_0:
+	.string "Whim state is now something different.$"
 
 WhimleafTown_EventScript_Youngster_Text_0:
 	.string "Hey there, you have a pokemon?$"
@@ -123,6 +178,26 @@ WarningSign::
 
 MomNamingRival::
 	.string "Hey, {PLAYER}, we have some new neighbors!\n"
-	.string "I think they have a daughter\l"
-	.string "thats around your age.\p "
-	.string "Did you catch her name?$"
+	.string "I think they have a kid\l"
+	.string "that's around your age.\p "
+	.string "Did you catch their name?$"
+
+MomHealPlayer1::
+	.string "Hey there, {PLAYER}! Welcome home!\l"
+	.string "You look tired...\p"
+	.string "Why don't you take a quick rest?$"
+
+MomHealPlayer2::
+	.string "Ok, you and your pokemon are good\n"
+	.string "to go!\p"
+	.string "Take care, {PLAYER},\n"
+	.string "and be careful out there!$"
+
+MomConfirmRival::
+	.string "Oh, so their name is {RIVAL}, huh?$"
+
+MomConfirmRival2::
+	.string "Oh, yes, of course their\n"
+	.string "name is {RIVAL}...\p"
+	.string "How silly of me to\n"
+	.string "have forgotten!$"

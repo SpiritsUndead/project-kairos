@@ -8,10 +8,10 @@ script WhimleafTown_OnTransition {
 // VAR_WHIMLEAF_INTRO_STATE    0x4091 ---> whimleaf intro state, duh
 
 // State descriptions for VAR_WHIMLEAF_TOWN_STATE
-	// 1: new game
-	// 2: named rival
-    // 3: Received Pokemon
-	// 4: Received pokedex
+	// ?: new game
+	// 1: named rival
+    // 2: Received Pokemon
+	// 3: Received pokedex
 
 
 
@@ -48,15 +48,49 @@ script WhimleafTown_EventScript_WarningSign {
 //dialogue scripts
 
 script WhimleafTown_EventScript_Mom {
-    // if Whim State = 1
     lockall
     faceplayer
-    msgbox(MomNamingRival)
-    special(NameRival)
-    //set Whim State = 2
-    waitstate
-    releaseall   
+    switch (var(VAR_WHIMLEAF_INTRO_STATE)) {
+        case 1:   //player has no pokemon yet
+            msgbox("whim intro satate is set to 1.")
+            releaseall
+        case 2:   //player just got pokemon
+            msgbox("whim intro state is set to 2.")
+            releaseall
+            
+        case 3:  //player fully ready to embark on journey    
+            
+        case 4:   //presumably anytime thereafter that the player comes home   
+            msgbox(MomHealPlayer1)
+            call(Common_EventScript_OutOfCenterPartyHeal)
+            msgbox(MomHealPlayer2)
+            releaseall 
+        default: //brand new game state
+            msgbox(MomNamingRival)
+            special(NameRival)
+            setrespawn(HEAL_LOCATION_WHIMLEAF_TOWN)
+            waitstate
+            msgbox(MomConfirmRival, MSGBOX_YESNO)
+            if (var(VAR_RESULT) == YES) {
+                msgbox(MomConfirmRival2)
+            }
+            else {
+                goto(WhimleafTown_EventScript_Mom)
+            }
+            setvar(VAR_WHIMLEAF_INTRO_STATE,1)
+            releaseall
+
+    } 
 }
+
+script WhimleafTown_EventScript_Dad {
+    lockall
+    faceplayer
+    setvar(VAR_WHIMLEAF_INTRO_STATE, 2)
+    msgbox("Whim state is now something different.")
+    releaseall
+}
+
 script WhimleafTown_EventScript_Youngster {
     lockall
     faceplayer
@@ -104,8 +138,37 @@ text WarningSign {
 
 text MomNamingRival {
     "Hey, {PLAYER}, we have some new neighbors!\n"
-	"I think they have a daughter\l"
-	"thats around your age.\p "
-	"Did you catch her name?"
+	"I think they have a kid\l"
+	"that's around your age.\p "
+	"Did you catch their name?"
 
+}
+
+text MomHealPlayer1 {
+    "Hey there, {PLAYER}! Welcome home!\l"
+    "You look tired...\p"
+    "Why don't you take a quick rest?"
+     
+}
+
+text MomHealPlayer2 {
+    "Ok, you and your pokemon are good\n"
+    "to go!\p"
+    "Take care, {PLAYER},\n" 
+    "and be careful out there!"
+}
+
+text MomConfirmRival {
+    "Oh, so their name is {RIVAL}, huh?"
+}
+
+text MomConfirmRival2 {
+    "Oh, yes, of course their\n"
+    "name is {RIVAL}...\p"
+    "How silly of me to\n"
+    "have forgotten!"
+}
+
+movement ForceNameRival {
+    emote_exclamation_mark
 }
