@@ -46,6 +46,9 @@ WhimleafTown_EventScript_Mom::
 	case 2, WhimleafTown_EventScript_Mom_3
 	case 3, WhimleafTown_EventScript_Mom_4
 	case 4, WhimleafTown_EventScript_Mom_4
+	applymovement 1, ForceNameRival
+	waitmovement 1
+	applymovement OBJ_EVENT_ID_PLAYER, Look_Left
 	msgbox MomNamingRival
 	special NameRival
 	setrespawn HEAL_LOCATION_WHIMLEAF_TOWN
@@ -53,9 +56,13 @@ WhimleafTown_EventScript_Mom::
 	msgbox MomConfirmRival, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq WhimleafTown_EventScript_Mom_7
-	goto WhimleafTown_EventScript_Mom
+WhimleafTown_EventScript_Mom_11:
+	compare VAR_RESULT, NO
+	goto_if_eq WhimleafTown_EventScript_Mom_12
+	msgbox MomConfirmRival2
 WhimleafTown_EventScript_Mom_6:
 	setvar VAR_WHIMLEAF_INTRO_STATE, 1
+	msgbox MomPostName
 	releaseall
 	return
 
@@ -80,14 +87,11 @@ WhimleafTown_EventScript_Mom_7:
 	msgbox MomConfirmRival2
 	goto WhimleafTown_EventScript_Mom_6
 
-
-WhimleafTown_EventScript_Dad::
-	lockall
-	faceplayer
-	setvar VAR_WHIMLEAF_INTRO_STATE, 2
-	msgbox WhimleafTown_EventScript_Dad_Text_0
-	releaseall
-	return
+WhimleafTown_EventScript_Mom_12:
+	special NameRival
+	waitstate
+	msgbox MomConfirmRival, MSGBOX_YESNO
+	goto WhimleafTown_EventScript_Mom_11
 
 
 WhimleafTown_EventScript_Youngster::
@@ -127,6 +131,18 @@ WhimleafTown_EventScript_LittleBoy::
 
 ForceNameRival:
 	emote_exclamation_mark
+	delay_16
+	delay_16
+	delay_16
+	delay_8
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	step_end
+
+Look_Left:
+	walk_in_place_faster_left
 	step_end
 
 WhimleafTown_EventScript_PlayerHouse_Text_0:
@@ -143,9 +159,6 @@ WhimleafTown_EventScript_Mom_Text_0:
 
 WhimleafTown_EventScript_Mom_Text_1:
 	.string "whim intro state is set to 2.$"
-
-WhimleafTown_EventScript_Dad_Text_0:
-	.string "Whim state is now something different.$"
 
 WhimleafTown_EventScript_Youngster_Text_0:
 	.string "Hey there, you have a pokemon?$"
@@ -201,3 +214,7 @@ MomConfirmRival2::
 	.string "name is {RIVAL}...\p"
 	.string "How silly of me to\n"
 	.string "have forgotten!$"
+
+MomPostName::
+	.string "go get a paccman\n"
+	.string "or a pokemon whatever$"

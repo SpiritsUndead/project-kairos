@@ -66,6 +66,9 @@ script WhimleafTown_EventScript_Mom {
             msgbox(MomHealPlayer2)
             releaseall 
         default: //brand new game state
+            applymovement(1,ForceNameRival)
+            waitmovement(1)
+            applymovement(OBJ_EVENT_ID_PLAYER, Look_Left)
             msgbox(MomNamingRival)
             special(NameRival)
             setrespawn(HEAL_LOCATION_WHIMLEAF_TOWN)
@@ -75,21 +78,22 @@ script WhimleafTown_EventScript_Mom {
                 msgbox(MomConfirmRival2)
             }
             else {
-                goto(WhimleafTown_EventScript_Mom)
+                while(var(VAR_RESULT) == NO) {
+                     special(NameRival)
+                     waitstate
+                     msgbox(MomConfirmRival, MSGBOX_YESNO)
+                }
+                msgbox(MomConfirmRival2)
             }
             setvar(VAR_WHIMLEAF_INTRO_STATE,1)
+            msgbox(MomPostName)
             releaseall
 
     } 
 }
 
-script WhimleafTown_EventScript_Dad {
-    lockall
-    faceplayer
-    setvar(VAR_WHIMLEAF_INTRO_STATE, 2)
-    msgbox("Whim state is now something different.")
-    releaseall
-}
+
+
 
 script WhimleafTown_EventScript_Youngster {
     lockall
@@ -169,6 +173,21 @@ text MomConfirmRival2 {
     "have forgotten!"
 }
 
+text MomPostName {
+    "go get a paccman\n"
+    "or a pokemon whatever"
+}
+
+
+// movements
+
 movement ForceNameRival {
     emote_exclamation_mark
+    delay_16 * 3
+    delay_8
+    walk_right * 4
+}
+
+movement Look_Left {
+    walk_in_place_faster_left
 }
