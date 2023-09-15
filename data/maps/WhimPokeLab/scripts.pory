@@ -1,3 +1,145 @@
 mapscripts WhimPokeLab_MapScripts {
     MAP_SCRIPT_ON_TRANSITION
 }
+
+// VAR_WHIMLEAF_INTRO_STATE    0x4091 ---> whimleaf intro state, duh
+
+// State descriptions for VAR_WHIMLEAF_TOWN_STATE
+	// ?: new game
+	// 1: named rival
+    // 2: Received Pokemon
+	// 3: Received pokedex
+
+
+script Choose_Pokemon {
+    msgbox(Welcome)
+    applymovement(1,Birch_Exclaim)
+    waitmovement(1)
+    msgbox(Welcome2)
+    releaseall
+}
+
+script EventScript_Pokeball_One { 
+    lockall
+    if(!(flag(FLAG_ROW_0x020) || flag(FLAG_FENN_0x021) || flag(FLAG_OSH_0x022))) {
+        call(WhimLab_EventScript_Rowlet)
+    }
+}
+
+script EventScript_Pokeball_Two { 
+    lockall
+    if(!(flag(FLAG_ROW_0x020) || flag(FLAG_FENN_0x021) || flag(FLAG_OSH_0x022))) {
+        call(WhimLab_EventScript_Fennekin)
+    }
+}
+
+script EventScript_Pokeball_Three { 
+    lockall
+    if(!(flag(FLAG_ROW_0x020) || flag(FLAG_FENN_0x021) || flag(FLAG_OSH_0x022))) {
+        call(WhimLab_EventScript_Oshawott)
+    }
+}
+
+script WhimLab_EventScript_Rowlet {
+    showmonpic(SPECIES_ROWLET, 10,3)
+    playmoncry(SPECIES_ROWLET, CRY_MODE_NORMAL)
+    msgbox("Do you want to choose {COLOR GREEN}{SHADOW LIGHT_GREEN} Rowlet?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES) {
+        givemon(SPECIES_MUDKIP, 5, ITEM_ORAN_BERRY)
+        playfanfare(MUS_OBTAIN_B_POINTS)
+        msgbox("Recieved Rowlet")
+        setflag(FLAG_SYS_POKEMON_GET)
+        removeobject(4)
+        setflag(FLAG_ROW_0x020)
+        setvar(VAR_WHIMLEAF_INTRO_STATE,2)
+        call(NicknamePartyMon) 
+        releaseall  
+    }
+    else {
+        hidemonpic
+        msgbox(WhimLab_NotChosen)
+        releaseall
+    }
+}
+
+script WhimLab_EventScript_Fennekin {
+    showmonpic(SPECIES_FENNEKIN, 10,3)
+    playmoncry(SPECIES_FENNEKIN, CRY_MODE_NORMAL)
+    msgbox("Do you want to choose {COLOR RED}{SHADOW LIGHT_RED} Fennekin?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES) {
+        givemon(SPECIES_FENNEKIN, 5, ITEM_ORAN_BERRY)
+        playfanfare(MUS_OBTAIN_B_POINTS)
+        msgbox("Recieved Fennekin")
+        setflag(FLAG_SYS_POKEMON_GET)
+        removeobject(5)
+        setflag(FLAG_FENN_0x021)
+        setvar(VAR_WHIMLEAF_INTRO_STATE,2)
+        call(NicknamePartyMon)
+        releaseall
+           
+    }
+    else {
+        hidemonpic
+        msgbox(WhimLab_NotChosen)
+        releaseall
+    }
+}
+
+script WhimLab_EventScript_Oshawott {
+    showmonpic(SPECIES_OSHAWOTT, 10,3)
+    playmoncry(SPECIES_OSHAWOTT, CRY_MODE_NORMAL)
+    msgbox("Do you want to choose {COLOR BLUE}{SHADOW LIGHT_BLUE} Oshawott?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES) {
+        givemon(SPECIES_OSHAWOTT, 5, ITEM_ORAN_BERRY)
+        playfanfare(MUS_OBTAIN_B_POINTS)
+        msgbox("Recieved Oshawott")
+        setflag(FLAG_SYS_POKEMON_GET)
+        removeobject(6)
+        setflag(FLAG_OSH_0x022)
+        setvar(VAR_WHIMLEAF_INTRO_STATE,2)
+        call(NicknamePartyMon)
+        releaseall   
+    }
+    else {
+        hidemonpic
+        msgbox(WhimLab_NotChosen)
+        releaseall
+    }
+}
+
+text WhimLab_NotChosen {
+    "yeah that one's stupid anyway"
+}
+
+text Welcome {
+    "Hey there!\n"
+    "Excuse the mess, I'm still getting\l"
+    "everything moved in around here.\p"
+    "My family and I have just moved here\n" 
+    "all the way from HOENN\l"
+    "so I could continue my research\l"
+    "here in REGION!\p"
+    "When I first read about REGION,\n"
+    "I knew I had to come here to see\l"
+    "things for myself!\p"
+    "....Ah, but I'm rambling now.\n"
+    "You're {PLAYER}, right?\p"
+    "Your father mentioned you while\n"
+    "he was helping us move some things in."
+}
+
+movement Birch_Exclaim {
+    emote_exclamation_mark
+    delay_16
+}
+
+text Welcome2 {
+    "Say, how would you like to\n"
+    "help me with some of my reasearch?\p"
+    "I'm still busy getting settled here...\n"
+    "Could you head to DAWNGEM TOWN\l"
+    "and find PERSON?\p"
+    "They told me there was information\n"
+    "regarding the native pokemon population\l"
+    "that might be of interest to me.\p"
+}

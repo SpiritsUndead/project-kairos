@@ -45,7 +45,8 @@ WhimleafTown_EventScript_Mom::
 	case 1, WhimleafTown_EventScript_Mom_2
 	case 2, WhimleafTown_EventScript_Mom_3
 	case 3, WhimleafTown_EventScript_Mom_4
-	case 4, WhimleafTown_EventScript_Mom_4
+	case 4, WhimleafTown_EventScript_Mom_5
+	playse SE_PIN
 	applymovement 1, ForceNameRival
 	waitmovement 1
 	applymovement OBJ_EVENT_ID_PLAYER, Look_Left
@@ -55,12 +56,12 @@ WhimleafTown_EventScript_Mom::
 	waitstate
 	msgbox MomConfirmRival, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq WhimleafTown_EventScript_Mom_7
-WhimleafTown_EventScript_Mom_11:
+	goto_if_eq WhimleafTown_EventScript_Mom_8
+WhimleafTown_EventScript_Mom_12:
 	compare VAR_RESULT, NO
-	goto_if_eq WhimleafTown_EventScript_Mom_12
+	goto_if_eq WhimleafTown_EventScript_Mom_13
 	msgbox MomConfirmRival2
-WhimleafTown_EventScript_Mom_6:
+WhimleafTown_EventScript_Mom_7:
 	setvar VAR_WHIMLEAF_INTRO_STATE, 1
 	msgbox MomPostName
 	releaseall
@@ -77,21 +78,25 @@ WhimleafTown_EventScript_Mom_3:
 	return
 
 WhimleafTown_EventScript_Mom_4:
+	msgbox WhimleafTown_EventScript_Mom_Text_2
+	return
+
+WhimleafTown_EventScript_Mom_5:
 	msgbox MomHealPlayer1
 	call Common_EventScript_OutOfCenterPartyHeal
 	msgbox MomHealPlayer2
 	releaseall
 	return
 
-WhimleafTown_EventScript_Mom_7:
+WhimleafTown_EventScript_Mom_8:
 	msgbox MomConfirmRival2
-	goto WhimleafTown_EventScript_Mom_6
+	goto WhimleafTown_EventScript_Mom_7
 
-WhimleafTown_EventScript_Mom_12:
+WhimleafTown_EventScript_Mom_13:
 	special NameRival
 	waitstate
 	msgbox MomConfirmRival, MSGBOX_YESNO
-	goto WhimleafTown_EventScript_Mom_11
+	goto WhimleafTown_EventScript_Mom_12
 
 
 WhimleafTown_EventScript_Youngster::
@@ -160,8 +165,11 @@ WhimleafTown_EventScript_Mom_Text_0:
 WhimleafTown_EventScript_Mom_Text_1:
 	.string "whim intro state is set to 2.$"
 
+WhimleafTown_EventScript_Mom_Text_2:
+	.string "whim intro state is set to 3.$"
+
 WhimleafTown_EventScript_Youngster_Text_0:
-	.string "Hey there, you have a pokemon?$"
+	.string "Hey there, you want a pokemon?$"
 
 WhimleafTown_EventScript_Youngster_Text_1:
 	.string "That's pretty neat, huh?$"
