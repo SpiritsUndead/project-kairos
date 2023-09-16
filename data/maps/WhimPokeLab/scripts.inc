@@ -3,10 +3,35 @@ WhimPokeLab_MapScripts::
 
 
 Choose_Pokemon::
+	applymovement OBJ_EVENT_ID_PLAYER, Lab_Trigger1
+	waitmovement OBJ_EVENT_ID_PLAYER
 	msgbox Welcome
 	applymovement 1, Birch_Exclaim
 	waitmovement 1
 	msgbox Welcome2
+	applymovement 1, Birch_Look_At_Pokemon
+	waitmovement 1
+	msgbox Give_A_Pokemon
+	applymovement 1, Birch_Get_Out_Of_The_Way
+	waitmovement 1
+	msgbox Birch_Choose
+	releaseall
+	return
+
+
+Choose_Pokemon_Trigger2::
+	applymovement OBJ_EVENT_ID_PLAYER, Lab_Trigger2
+	waitmovement OBJ_EVENT_ID_PLAYER
+	msgbox Welcome
+	applymovement 1, Birch_Exclaim
+	waitmovement 1
+	msgbox Welcome2
+	applymovement 1, Birch_Look_At_Pokemon
+	waitmovement 1
+	msgbox Give_A_Pokemon
+	applymovement 1, Birch_Get_Out_Of_The_Way
+	waitmovement 1
+	msgbox Birch_Choose
 	releaseall
 	return
 
@@ -72,7 +97,6 @@ WhimLab_EventScript_Rowlet::
 	compare VAR_RESULT, YES
 	goto_if_eq WhimLab_EventScript_Rowlet_1
 	hidemonpic
-	msgbox WhimLab_NotChosen
 	releaseall
 	return
 
@@ -81,6 +105,7 @@ WhimLab_EventScript_Rowlet_1:
 	playfanfare MUS_OBTAIN_B_POINTS
 	msgbox WhimLab_EventScript_Rowlet_Text_1
 	setflag FLAG_SYS_POKEMON_GET
+	setvar VAR_STARTER_MON, 0
 	removeobject 4
 	setflag FLAG_ROW_0x020
 	setvar VAR_WHIMLEAF_INTRO_STATE, 2
@@ -96,7 +121,6 @@ WhimLab_EventScript_Fennekin::
 	compare VAR_RESULT, YES
 	goto_if_eq WhimLab_EventScript_Fennekin_1
 	hidemonpic
-	msgbox WhimLab_NotChosen
 	releaseall
 	return
 
@@ -105,6 +129,7 @@ WhimLab_EventScript_Fennekin_1:
 	playfanfare MUS_OBTAIN_B_POINTS
 	msgbox WhimLab_EventScript_Fennekin_Text_1
 	setflag FLAG_SYS_POKEMON_GET
+	setvar VAR_STARTER_MON, 1
 	removeobject 5
 	setflag FLAG_FENN_0x021
 	setvar VAR_WHIMLEAF_INTRO_STATE, 2
@@ -120,7 +145,6 @@ WhimLab_EventScript_Oshawott::
 	compare VAR_RESULT, YES
 	goto_if_eq WhimLab_EventScript_Oshawott_1
 	hidemonpic
-	msgbox WhimLab_NotChosen
 	releaseall
 	return
 
@@ -129,6 +153,7 @@ WhimLab_EventScript_Oshawott_1:
 	playfanfare MUS_OBTAIN_B_POINTS
 	msgbox WhimLab_EventScript_Oshawott_Text_1
 	setflag FLAG_SYS_POKEMON_GET
+	setvar VAR_STARTER_MON, 2
 	removeobject 6
 	setflag FLAG_OSH_0x022
 	setvar VAR_WHIMLEAF_INTRO_STATE, 2
@@ -137,9 +162,46 @@ WhimLab_EventScript_Oshawott_1:
 	return
 
 
+Lab_Trigger1:
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
+Lab_Trigger2:
+	walk_right
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
 Birch_Exclaim:
 	emote_exclamation_mark
 	delay_16
+	step_end
+
+Birch_Look_At_Pokemon:
+	face_up
+	delay_16
+	walk_in_place_up
+	delay_8
+	delay_8
+	delay_8
+	face_down
+	delay_8
+	step_end
+
+Birch_Get_Out_Of_The_Way:
+	walk_right
+	walk_right
+	walk_up
+	delay_16
+	walk_in_place_faster_down
+	walk_in_place_faster_down
 	step_end
 
 WhimLab_EventScript_Rowlet_Text_0:
@@ -159,9 +221,6 @@ WhimLab_EventScript_Oshawott_Text_0:
 
 WhimLab_EventScript_Oshawott_Text_1:
 	.string "Recieved Oshawott$"
-
-WhimLab_NotChosen::
-	.string "yeah that one's stupid anyway$"
 
 Welcome::
 	.string "Hey there!\n"
@@ -187,4 +246,16 @@ Welcome2::
 	.string "and find PERSON?\p"
 	.string "They told me there was information\n"
 	.string "regarding the native pokemon population\l"
-	.string "that might be of interest to me.\p$"
+	.string "that might be of interest to me.\p"
+	.string "Could you help me please, {PLAYER}?$"
+
+Give_A_Pokemon::
+	.string "Of course, I wouldn't send you\n"
+	.string "out there all alone...\p"
+	.string "You can take any one of these pokemon\n"
+	.string "here on the table as a companion!\p"
+	.string "No, really, I insist!$"
+
+Birch_Choose::
+	.string "Don't be shy, {PLAYER}!\n"
+	.string "Which one will it be?$"
