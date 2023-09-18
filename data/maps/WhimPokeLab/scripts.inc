@@ -111,6 +111,7 @@ WhimLab_EventScript_Rowlet_1:
 	setvar VAR_WHIMLEAF_INTRO_STATE, 2
 	call NicknamePartyMon
 	releaseall
+	goto After_Choose_Pokemon
 	return
 
 
@@ -135,6 +136,7 @@ WhimLab_EventScript_Fennekin_1:
 	setvar VAR_WHIMLEAF_INTRO_STATE, 2
 	call NicknamePartyMon
 	releaseall
+	goto After_Choose_Pokemon
 	return
 
 
@@ -158,6 +160,52 @@ WhimLab_EventScript_Oshawott_1:
 	setflag FLAG_OSH_0x022
 	setvar VAR_WHIMLEAF_INTRO_STATE, 2
 	call NicknamePartyMon
+	releaseall
+	goto After_Choose_Pokemon
+	return
+
+
+After_Choose_Pokemon::
+	switch VAR_STARTER_MON
+	case 0, After_Choose_Pokemon_2
+	case 1, After_Choose_Pokemon_3
+	case 2, After_Choose_Pokemon_4
+	return
+
+After_Choose_Pokemon_2:
+	applymovement 1, Birch_Rowlet_Choice
+	waitmovement 1
+	applymovement OBJ_EVENT_ID_PLAYER, faceBirch
+	msgbox Player_Picked_A_Pokemon
+	releaseall
+	return
+
+After_Choose_Pokemon_3:
+	applymovement 1, Birch_Fennekin_Choice
+	waitmovement 1
+	applymovement OBJ_EVENT_ID_PLAYER, faceBirch
+	msgbox Player_Picked_A_Pokemon
+	releaseall
+	return
+
+After_Choose_Pokemon_4:
+	applymovement 1, Birch_Oshawott_Choice
+	waitmovement 1
+	applymovement OBJ_EVENT_ID_PLAYER, faceBirch
+	msgbox Player_Picked_A_Pokemon
+	releaseall
+	return
+
+
+Birch_Lab_Talks::
+	switch VAR_WHIMLEAF_INTRO_STATE
+	case 2, Birch_Lab_Talks_2
+	msgbox Birch_Lab_Talks_Text_0
+	releaseall
+	return
+
+Birch_Lab_Talks_2:
+	msgbox Complete_Your_Task
 	releaseall
 	return
 
@@ -204,6 +252,32 @@ Birch_Get_Out_Of_The_Way:
 	walk_in_place_faster_down
 	step_end
 
+Birch_Rowlet_Choice:
+	walk_left
+	walk_left
+	delay_8
+	walk_in_place_faster_left
+	delay_8
+	step_end
+
+Birch_Fennekin_Choice:
+	walk_left
+	delay_8
+	walk_in_place_faster_left
+	delay_8
+	step_end
+
+Birch_Oshawott_Choice:
+	faceplayer
+	delay_8
+	walk_in_place_faster_left
+	delay_8
+	step_end
+
+faceBirch:
+	face_right
+	step_end
+
 WhimLab_EventScript_Rowlet_Text_0:
 	.string "Do you want to choose {COLOR GREEN}{SHADOW LIGHT_GREEN} Rowlet?$"
 
@@ -221,6 +295,9 @@ WhimLab_EventScript_Oshawott_Text_0:
 
 WhimLab_EventScript_Oshawott_Text_1:
 	.string "Recieved Oshawott$"
+
+Birch_Lab_Talks_Text_0:
+	.string "hm. strange.$"
 
 Welcome::
 	.string "Hey there!\n"
@@ -259,3 +336,12 @@ Give_A_Pokemon::
 Birch_Choose::
 	.string "Don't be shy, {PLAYER}!\n"
 	.string "Which one will it be?$"
+
+Player_Picked_A_Pokemon::
+	.string "Ah, a fine choice indeed! \p"
+	.string "Now then, DAWNGEM TOWN awaits!\n"
+	.string "Safe Travels, {PLAYER}!$"
+
+Complete_Your_Task::
+	.string "Hurry on to DAWNGEM TOWN!\n"
+	.string "We can talk more later.$"

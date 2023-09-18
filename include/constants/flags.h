@@ -44,7 +44,7 @@
 #define FLAG_ROW_0x020    0x20 // Rowlet poke ball
 #define FLAG_FENN_0x021    0x21 // Fennekin poke ball
 #define FLAG_OSH_0x022    0x22 // Oshawott poke ball
-#define FLAG_UNUSED_0x023    0x23 // Unused Flag
+#define FLAG_Research_Papers    0x23 
 #define FLAG_UNUSED_0x024    0x24 // Unused Flag
 #define FLAG_UNUSED_0x025    0x25 // Unused Flag
 #define FLAG_UNUSED_0x026    0x26 // Unused Flag

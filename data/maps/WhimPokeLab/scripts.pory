@@ -77,8 +77,9 @@ script WhimLab_EventScript_Rowlet {
         removeobject(4)
         setflag(FLAG_ROW_0x020)
         setvar(VAR_WHIMLEAF_INTRO_STATE,2)
-        call(NicknamePartyMon) 
-        releaseall  
+        call(NicknamePartyMon)
+        releaseall
+        goto(After_Choose_Pokemon)  
     }
     else {
         hidemonpic
@@ -101,6 +102,7 @@ script WhimLab_EventScript_Fennekin {
         setvar(VAR_WHIMLEAF_INTRO_STATE,2)
         call(NicknamePartyMon)
         releaseall
+        goto(After_Choose_Pokemon)
            
     }
     else {
@@ -123,12 +125,48 @@ script WhimLab_EventScript_Oshawott {
         setflag(FLAG_OSH_0x022)
         setvar(VAR_WHIMLEAF_INTRO_STATE,2)
         call(NicknamePartyMon)
-        releaseall   
+        releaseall
+        goto(After_Choose_Pokemon)
     }
     else {
         hidemonpic
         releaseall
     }
+}
+
+script After_Choose_Pokemon {
+    switch(var(VAR_STARTER_MON)) {
+        case 0: //Rowlet
+            applymovement(1,Birch_Rowlet_Choice)
+            waitmovement(1)
+            applymovement(OBJ_EVENT_ID_PLAYER,faceBirch)
+            msgbox(Player_Picked_A_Pokemon)
+            releaseall
+        case 1: //Fennekin
+            applymovement(1,Birch_Fennekin_Choice)
+            waitmovement(1)
+            applymovement(OBJ_EVENT_ID_PLAYER,faceBirch)
+            msgbox(Player_Picked_A_Pokemon)
+            releaseall
+        case 2: //Oshawott
+            applymovement(1,Birch_Oshawott_Choice)
+            waitmovement(1)
+            applymovement(OBJ_EVENT_ID_PLAYER,faceBirch)
+            msgbox(Player_Picked_A_Pokemon)
+            releaseall
+    }
+}
+
+script Birch_Lab_Talks {
+    switch(var(VAR_WHIMLEAF_INTRO_STATE)) {
+        case 2: //task not completed
+            msgbox(Complete_Your_Task)
+            releaseall
+        default:
+            msgbox("hm. strange.")
+            releaseall
+    }
+
 }
 
 movement Lab_Trigger1 {
@@ -139,6 +177,53 @@ movement Lab_Trigger2 {
     walk_right
     walk_up * 5
 }
+
+movement Birch_Exclaim {
+    emote_exclamation_mark
+    delay_16
+}
+
+movement Birch_Look_At_Pokemon {
+    face_up
+    delay_16
+    walk_in_place_up
+    delay_8 * 3 
+    face_down
+    delay_8
+}
+
+movement Birch_Get_Out_Of_The_Way {
+    walk_right * 2
+    walk_up
+    delay_16
+    walk_in_place_faster_down * 2
+}
+
+movement Birch_Rowlet_Choice {
+    walk_left * 2
+    delay_8
+    walk_in_place_faster_left
+    delay_8
+}
+
+movement Birch_Fennekin_Choice {
+    walk_left
+    delay_8
+    walk_in_place_faster_left
+    delay_8
+}
+
+movement Birch_Oshawott_Choice {
+    faceplayer
+    delay_8
+    walk_in_place_faster_left
+    delay_8
+}
+
+movement faceBirch{
+    face_right
+}
+
 
 text Welcome {
     "Hey there!\n"
@@ -157,11 +242,6 @@ text Welcome {
     "he was helping us move some things in."
 }
 
-movement Birch_Exclaim {
-    emote_exclamation_mark
-    delay_16
-}
-
 text Welcome2 {
     "Say, how would you like to\n"
     "help me with some of my reasearch?\p"
@@ -174,15 +254,6 @@ text Welcome2 {
     "Could you help me please, {PLAYER}?"
 }
 
-movement Birch_Look_At_Pokemon {
-    face_up
-    delay_16
-    walk_in_place_up
-    delay_8 * 3 
-    face_down
-    delay_8
-}
-
 text Give_A_Pokemon {
     "Of course, I wouldn't send you\n"
     "out there all alone...\p"
@@ -191,14 +262,17 @@ text Give_A_Pokemon {
     "No, really, I insist!"
 }
 
-movement Birch_Get_Out_Of_The_Way {
-    walk_right * 2
-    walk_up
-    delay_16
-    walk_in_place_faster_down * 2
-}
-
 text Birch_Choose {
     "Don't be shy, {PLAYER}!\n" 
     "Which one will it be?"
+}
+
+text Player_Picked_A_Pokemon {
+    "Ah, a fine choice indeed! \p"
+    "Now then, DAWNGEM TOWN awaits!\n"
+    "Safe Travels, {PLAYER}!"
+}
+text Complete_Your_Task {
+    "Hurry on to DAWNGEM TOWN!\n"
+    "We can talk more later."
 }
