@@ -9,9 +9,7 @@ DawngemTown_EventScript_TownSign::
 
 Research_Papers::
 	lockall
-	giveitem ITEM_RARE_CANDY
-	setflag FLAG_Research_Papers
-	removeitem 1
+	finditem ITEM_RARE_CANDY
 	setvar VAR_WHIMLEAF_INTRO_STATE, 3
 	releaseall
 	return
