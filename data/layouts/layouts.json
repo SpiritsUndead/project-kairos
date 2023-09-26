@@ -4574,8 +4574,8 @@
     {
       "id": "LAYOUT_ROUTE2",
       "name": "Route2_Layout",
-      "width": 35,
-      "height": 19,
+      "width": 40,
+      "height": 68,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Rustboro",
       "border_filepath": "data/layouts/Route2/border.bin",
@@ -4590,6 +4590,16 @@
       "secondary_tileset": "gTileset_Fortree",
       "border_filepath": "data/layouts/IvoryberthForest/border.bin",
       "blockdata_filepath": "data/layouts/IvoryberthForest/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE3",
+      "name": "Route3_Layout",
+      "width": 49,
+      "height": 24,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Route3/border.bin",
+      "blockdata_filepath": "data/layouts/Route3/map.bin"
     }
   ]
 }

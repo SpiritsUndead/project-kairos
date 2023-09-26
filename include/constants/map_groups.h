@@ -71,6 +71,7 @@
 #define MAP_DAWNGEM_TOWN        (62 | (0 << 8))
 #define MAP_DAWNGEM_LAKE        (63 | (0 << 8))
 #define MAP_ROUTE2              (64 | (0 << 8))
+#define MAP_ROUTE3              (65 | (0 << 8))
 
 // gMapGroup_IndoorLittleroot
 #define MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F    (0 | (1 << 8))

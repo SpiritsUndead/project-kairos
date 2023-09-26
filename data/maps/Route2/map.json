@@ -15,8 +15,13 @@
   "connections": [
     {
       "map": "MAP_DAWNGEM_TOWN",
-      "offset": 6,
+      "offset": 56,
       "direction": "left"
+    },
+    {
+      "map": "MAP_ROUTE3",
+      "offset": -22,
+      "direction": "up"
     }
   ],
   "object_events": [
@@ -25,17 +30,31 @@
   "warp_events": [
     {
       "x": 21,
-      "y": 10,
+      "y": 60,
       "elevation": 0,
       "dest_map": "MAP_IVORYBERTH_FOREST",
       "dest_warp_id": "0"
     },
     {
       "x": 22,
-      "y": 10,
+      "y": 60,
       "elevation": 0,
       "dest_map": "MAP_IVORYBERTH_FOREST",
       "dest_warp_id": "1"
+    },
+    {
+      "x": 31,
+      "y": 41,
+      "elevation": 0,
+      "dest_map": "MAP_IVORYBERTH_FOREST",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 32,
+      "y": 41,
+      "elevation": 0,
+      "dest_map": "MAP_IVORYBERTH_FOREST",
+      "dest_warp_id": "3"
     }
   ],
   "coord_events": [
