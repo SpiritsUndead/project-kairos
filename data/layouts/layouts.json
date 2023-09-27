@@ -4595,11 +4595,21 @@
       "id": "LAYOUT_ROUTE3",
       "name": "Route3_Layout",
       "width": 49,
-      "height": 24,
+      "height": 16,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/Route3/border.bin",
       "blockdata_filepath": "data/layouts/Route3/map.bin"
+    },
+    {
+      "id": "LAYOUT_SUNREND_BASIN",
+      "name": "SunrendBasin_Layout",
+      "width": 46,
+      "height": 30,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Fortree",
+      "border_filepath": "data/layouts/SunrendBasin/border.bin",
+      "blockdata_filepath": "data/layouts/SunrendBasin/map.bin"
     }
   ]
 }

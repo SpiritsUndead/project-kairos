@@ -15,8 +15,13 @@
   "connections": [
     {
       "map": "MAP_DAWNGEM_TOWN",
-      "offset": 18,
+      "offset": 20,
       "direction": "down"
+    },
+    {
+      "map": "MAP_SUNREND_BASIN",
+      "offset": 16,
+      "direction": "up"
     }
   ],
   "object_events": [

@@ -1099,3 +1099,5 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/IvoryberthForest/scripts.inc"
 
 	.include "data/maps/Route3/scripts.inc"
+
+	.include "data/maps/SunrendBasin/scripts.inc"
