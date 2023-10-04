@@ -1101,3 +1101,5 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/Route3/scripts.inc"
 
 	.include "data/maps/SunrendBasin/scripts.inc"
+
+	.include "data/maps/Route5/scripts.inc"
