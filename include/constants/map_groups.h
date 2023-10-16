@@ -74,6 +74,12 @@
 #define MAP_ROUTE3              (65 | (0 << 8))
 #define MAP_SUNREND_BASIN       (66 | (0 << 8))
 #define MAP_ROUTE5              (67 | (0 << 8))
+#define MAP_ROUTE6              (68 | (0 << 8))
+#define MAP_LUSHLEAF_VILLAGE    (69 | (0 << 8))
+#define MAP_ROUTE7              (70 | (0 << 8))
+#define MAP_ROUTE8              (71 | (0 << 8))
+#define MAP_SMOKEBEAM_CEMETERY  (72 | (0 << 8))
+#define MAP_ROUTE9              (73 | (0 << 8))
 
 // gMapGroup_IndoorLittleroot
 #define MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F    (0 | (1 << 8))
@@ -413,6 +419,11 @@
 #define MAP_ALTERING_CAVE                            (106 | (24 << 8))
 #define MAP_METEOR_FALLS_STEVENS_CAVE                (107 | (24 << 8))
 #define MAP_IVORYBERTH_FOREST                        (108 | (24 << 8))
+#define MAP_DUSKCRAW_CAVE                            (109 | (24 << 8))
+#define MAP_DUSKCRAW_CAVE_B1F                        (110 | (24 << 8))
+#define MAP_DUSKCRAW_CAVE_B2F                        (111 | (24 << 8))
+#define MAP_DUSKCRAW_CAVE_2F                         (112 | (24 << 8))
+#define MAP_DUSKCRAW_GROTTO                          (113 | (24 << 8))
 
 // gMapGroup_IndoorDynamic
 #define MAP_SECRET_BASE_RED_CAVE1    (0 | (25 << 8))

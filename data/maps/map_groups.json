@@ -105,7 +105,13 @@
     "Route2",
     "Route3",
     "SunrendBasin",
-    "Route5"
+    "Route5",
+    "Route6",
+    "LushleafVillage",
+    "Route7",
+    "Route8",
+    "SmokebeamCemetery",
+    "Route9"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -444,7 +450,12 @@
     "TerraCave_End",
     "AlteringCave",
     "MeteorFalls_StevensCave",
-    "IvoryberthForest"
+    "IvoryberthForest",
+    "DuskcrawCave",
+    "DuskcrawCave_B1F",
+    "DuskcrawCave_B2F",
+    "DuskcrawCave_2F",
+    "DuskcrawGrotto"
   ],
   "gMapGroup_IndoorDynamic": [
     "SecretBase_RedCave1",

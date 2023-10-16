@@ -1103,3 +1103,25 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/SunrendBasin/scripts.inc"
 
 	.include "data/maps/Route5/scripts.inc"
+
+	.include "data/maps/DuskcrawCave/scripts.inc"
+
+	.include "data/maps/DuskcrawCave_B1F/scripts.inc"
+
+	.include "data/maps/DuskcrawCave_B2F/scripts.inc"
+
+	.include "data/maps/DuskcrawCave_2F/scripts.inc"
+
+	.include "data/maps/DuskcrawGrotto/scripts.inc"
+
+	.include "data/maps/Route6/scripts.inc"
+
+	.include "data/maps/LushleafVillage/scripts.inc"
+
+	.include "data/maps/Route7/scripts.inc"
+
+	.include "data/maps/Route8/scripts.inc"
+
+	.include "data/maps/SmokebeamCemetery/scripts.inc"
+
+	.include "data/maps/Route9/scripts.inc"

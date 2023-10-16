@@ -4594,7 +4594,7 @@
     {
       "id": "LAYOUT_ROUTE3",
       "name": "Route3_Layout",
-      "width": 49,
+      "width": 50,
       "height": 24,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
@@ -4620,6 +4620,116 @@
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/Route5/border.bin",
       "blockdata_filepath": "data/layouts/Route5/map.bin"
+    },
+    {
+      "id": "LAYOUT_DUSKCRAW_CAVE",
+      "name": "DuskcrawCave_Layout",
+      "width": 49,
+      "height": 29,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/DuskcrawCave/border.bin",
+      "blockdata_filepath": "data/layouts/DuskcrawCave/map.bin"
+    },
+    {
+      "id": "LAYOUT_DUSKCRAW_CAVE_B1F",
+      "name": "DuskcrawCave_B1F_Layout",
+      "width": 25,
+      "height": 23,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/DuskcrawCave_B1F/border.bin",
+      "blockdata_filepath": "data/layouts/DuskcrawCave_B1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_DUSKCRAW_CAVE_B2F",
+      "name": "DuskcrawCave_B2F_Layout",
+      "width": 28,
+      "height": 43,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/DuskcrawCave_B2F/border.bin",
+      "blockdata_filepath": "data/layouts/DuskcrawCave_B2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_DUSKCRAW_CAVE_2F",
+      "name": "DuskcrawCave_2F_Layout",
+      "width": 27,
+      "height": 28,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/DuskcrawCave_2F/border.bin",
+      "blockdata_filepath": "data/layouts/DuskcrawCave_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_DUSKCRAW_GROTTO",
+      "name": "DuskcrawGrotto_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/DuskcrawGrotto/border.bin",
+      "blockdata_filepath": "data/layouts/DuskcrawGrotto/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE6",
+      "name": "Route6_Layout",
+      "width": 46,
+      "height": 29,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Fortree",
+      "border_filepath": "data/layouts/Route6/border.bin",
+      "blockdata_filepath": "data/layouts/Route6/map.bin"
+    },
+    {
+      "id": "LAYOUT_LUSHLEAF_VILLAGE",
+      "name": "LushleafVillage_Layout",
+      "width": 31,
+      "height": 31,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Fortree",
+      "border_filepath": "data/layouts/LushleafVillage/border.bin",
+      "blockdata_filepath": "data/layouts/LushleafVillage/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE7",
+      "name": "Route7_Layout",
+      "width": 84,
+      "height": 22,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Fortree",
+      "border_filepath": "data/layouts/Route7/border.bin",
+      "blockdata_filepath": "data/layouts/Route7/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE8",
+      "name": "Route8_Layout",
+      "width": 32,
+      "height": 76,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Fortree",
+      "border_filepath": "data/layouts/Route8/border.bin",
+      "blockdata_filepath": "data/layouts/Route8/map.bin"
+    },
+    {
+      "id": "LAYOUT_SMOKEBEAM_CEMETERY",
+      "name": "SmokebeamCemetery_Layout",
+      "width": 28,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/SmokebeamCemetery/border.bin",
+      "blockdata_filepath": "data/layouts/SmokebeamCemetery/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE9",
+      "name": "Route9_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Fortree",
+      "border_filepath": "data/layouts/Route9/border.bin",
+      "blockdata_filepath": "data/layouts/Route9/map.bin"
     }
   ]
 }

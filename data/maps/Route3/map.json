@@ -22,6 +22,11 @@
       "map": "MAP_SUNREND_BASIN",
       "offset": -14,
       "direction": "left"
+    },
+    {
+      "map": "MAP_ROUTE8",
+      "offset": 20,
+      "direction": "up"
     }
   ],
   "object_events": [
