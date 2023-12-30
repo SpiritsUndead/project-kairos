@@ -15,8 +15,13 @@
   "connections": [
     {
       "map": "MAP_ROUTE8",
-      "offset": -12,
+      "offset": -20,
       "direction": "left"
+    },
+    {
+      "map": "MAP_RUSTRUSH_CAPE",
+      "offset": 76,
+      "direction": "up"
     }
   ],
   "object_events": [

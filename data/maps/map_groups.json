@@ -111,7 +111,13 @@
     "Route7",
     "Route8",
     "SmokebeamCemetery",
-    "Route9"
+    "Route9",
+    "RustrushCape",
+    "Route10",
+    "SeastoneHarbor",
+    "Route11",
+    "AshrashShoalsExterior",
+    "AshrashIsland"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",

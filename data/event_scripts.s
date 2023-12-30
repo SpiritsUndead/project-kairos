@@ -1125,3 +1125,15 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/SmokebeamCemetery/scripts.inc"
 
 	.include "data/maps/Route9/scripts.inc"
+
+	.include "data/maps/RustrushCape/scripts.inc"
+
+	.include "data/maps/Route10/scripts.inc"
+
+	.include "data/maps/SeastoneHarbor/scripts.inc"
+
+	.include "data/maps/Route11/scripts.inc"
+
+	.include "data/maps/AshrashShoalsExterior/scripts.inc"
+
+	.include "data/maps/AshrashIsland/scripts.inc"

@@ -1,7 +1,7 @@
 {
-  "id": "MAP_ROUTE3",
-  "name": "Route3",
-  "layout": "LAYOUT_ROUTE3",
+  "id": "MAP_ASHRASH_SHOALS_EXTERIOR",
+  "name": "AshrashShoalsExterior",
+  "layout": "LAYOUT_ASHRASH_SHOALS_EXTERIOR",
   "music": "MUS_ABANDONED_SHIP",
   "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
   "requires_flash": false,
@@ -14,24 +14,9 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_ROUTE2",
-      "offset": 22,
-      "direction": "down"
-    },
-    {
-      "map": "MAP_SUNREND_BASIN",
-      "offset": -14,
+      "map": "MAP_ROUTE11",
+      "offset": -2,
       "direction": "left"
-    },
-    {
-      "map": "MAP_ROUTE8",
-      "offset": 20,
-      "direction": "up"
-    },
-    {
-      "map": "MAP_ROUTE10",
-      "offset": 12,
-      "direction": "right"
     }
   ],
   "object_events": [
