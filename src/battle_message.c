@@ -3139,25 +3139,25 @@ static const u8 *BattleStringGetOpponentNameByTrainerId(u16 trainerId, u8 *text,
     return toCpy;
 }
 
-static const u8 *BattleStringGetOpponentName(u8 *text, u8 multiplayerId, u8 battler)
-{
-    const u8 *toCpy = NULL;
-
-    switch (GetBattlerPosition(battler))
-    {
-    case B_POSITION_OPPONENT_LEFT:
-        toCpy = BattleStringGetOpponentNameByTrainerId(gTrainerBattleOpponent_A, text, multiplayerId, battler);
-        break;
-    case B_POSITION_OPPONENT_RIGHT:
-        if (gBattleTypeFlags & (BATTLE_TYPE_TWO_OPPONENTS | BATTLE_TYPE_MULTI) && !BATTLE_TWO_VS_ONE_OPPONENT)
-            toCpy = BattleStringGetOpponentNameByTrainerId(gTrainerBattleOpponent_B, text, multiplayerId, battler);
-        else
-            toCpy = BattleStringGetOpponentNameByTrainerId(gTrainerBattleOpponent_A, text, multiplayerId, battler);
-        break;
-    }
-
-    return toCpy;
-}
+//static const u8 *BattleStringGetOpponentName(u8 *text, u8 multiplayerId, u8 battler)
+//{
+//    const u8 *toCpy = NULL;
+//
+//    switch (GetBattlerPosition(battler))
+//    {
+//    case B_POSITION_OPPONENT_LEFT:
+//        toCpy = BattleStringGetOpponentNameByTrainerId(gTrainerBattleOpponent_A, text, multiplayerId, battler);
+//        break;
+//    case B_POSITION_OPPONENT_RIGHT:
+//        if (gBattleTypeFlags & (BATTLE_TYPE_TWO_OPPONENTS | BATTLE_TYPE_MULTI) && !BATTLE_TWO_VS_ONE_OPPONENT)
+//            toCpy = BattleStringGetOpponentNameByTrainerId(gTrainerBattleOpponent_B, text, multiplayerId, battler);
+//        else
+//            toCpy = BattleStringGetOpponentNameByTrainerId(gTrainerBattleOpponent_A, text, multiplayerId, battler);
+//        break;
+//    }
+//
+//    return toCpy;
+//}
 
 static const u8 *BattleStringGetPlayerName(u8 *text, u8 battler)
 {
@@ -3196,13 +3196,13 @@ static const u8 *BattleStringGetPlayerName(u8 *text, u8 battler)
     return toCpy;
 }
 
-static const u8 *BattleStringGetTrainerName(u8 *text, u8 multiplayerId, u8 battler)
-{
-    if (GetBattlerSide(battler) == B_SIDE_PLAYER)
-        return BattleStringGetPlayerName(text, battler);
-    else
-        return BattleStringGetOpponentName(text, multiplayerId, battler);
-}
+//static const u8 *BattleStringGetTrainerName(u8 *text, u8 multiplayerId, u8 battler)
+//{
+//    if (GetBattlerSide(battler) == B_SIDE_PLAYER)
+//        return BattleStringGetPlayerName(text, battler);
+//    else
+//        return BattleStringGetOpponentName(text, multiplayerId, battler);
+//}
 
 static const u8 *BattleStringGetOpponentClassByTrainerId(u16 trainerId)
 {
@@ -3251,6 +3251,7 @@ u32 BattleStringExpandPlaceholders(const u8 *src, u8 *dst)
             src++;
             switch (*src)
             {
+                u32 i;
             case B_TXT_BUFF1:
                 if (gBattleTextBuff1[0] == B_BUFF_PLACEHOLDER_BEGIN)
                 {
