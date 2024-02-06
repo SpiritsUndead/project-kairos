@@ -4784,8 +4784,8 @@
     {
       "id": "LAYOUT_ASHRASH_ISLAND",
       "name": "AshrashIsland_Layout",
-      "width": 74,
-      "height": 38,
+      "width": 62,
+      "height": 27,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Dewford",
       "border_filepath": "data/layouts/AshrashIsland/border.bin",
