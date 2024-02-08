@@ -38,15 +38,15 @@ Choose_Pokemon_Trigger2::
 
 EventScript_Pokeball_One::
 	lockall
-	goto_if_unset FLAG_ROW_0x020, EventScript_Pokeball_One_2
+	goto_if_unset FLAG_GROOK_0x020, EventScript_Pokeball_One_2
 	return
 
 EventScript_Pokeball_One_1:
-	call WhimLab_EventScript_Rowlet
+	call WhimLab_EventScript_Grookey
 	return
 
 EventScript_Pokeball_One_2:
-	goto_if_unset FLAG_FENN_0x021, EventScript_Pokeball_One_4
+	goto_if_unset FLAG_FUE_0x021, EventScript_Pokeball_One_4
 	return
 
 EventScript_Pokeball_One_4:
@@ -56,15 +56,15 @@ EventScript_Pokeball_One_4:
 
 EventScript_Pokeball_Two::
 	lockall
-	goto_if_unset FLAG_ROW_0x020, EventScript_Pokeball_Two_2
+	goto_if_unset FLAG_GROOK_0x020, EventScript_Pokeball_Two_2
 	return
 
 EventScript_Pokeball_Two_1:
-	call WhimLab_EventScript_Fennekin
+	call WhimLab_EventScript_Fuecoco
 	return
 
 EventScript_Pokeball_Two_2:
-	goto_if_unset FLAG_FENN_0x021, EventScript_Pokeball_Two_4
+	goto_if_unset FLAG_FUE_0x021, EventScript_Pokeball_Two_4
 	return
 
 EventScript_Pokeball_Two_4:
@@ -74,7 +74,7 @@ EventScript_Pokeball_Two_4:
 
 EventScript_Pokeball_Three::
 	lockall
-	goto_if_unset FLAG_ROW_0x020, EventScript_Pokeball_Three_2
+	goto_if_unset FLAG_GROOK_0x020, EventScript_Pokeball_Three_2
 	return
 
 EventScript_Pokeball_Three_1:
@@ -82,7 +82,7 @@ EventScript_Pokeball_Three_1:
 	return
 
 EventScript_Pokeball_Three_2:
-	goto_if_unset FLAG_FENN_0x021, EventScript_Pokeball_Three_4
+	goto_if_unset FLAG_FUE_0x021, EventScript_Pokeball_Three_4
 	return
 
 EventScript_Pokeball_Three_4:
@@ -90,24 +90,24 @@ EventScript_Pokeball_Three_4:
 	return
 
 
-WhimLab_EventScript_Rowlet::
-	showmonpic SPECIES_ROWLET, 10, 3
-	playmoncry SPECIES_ROWLET, CRY_MODE_NORMAL
-	msgbox WhimLab_EventScript_Rowlet_Text_0, MSGBOX_YESNO
+WhimLab_EventScript_Grookey::
+	showmonpic SPECIES_GROOKEY, 10, 3
+	playmoncry SPECIES_GROOKEY, CRY_MODE_NORMAL
+	msgbox WhimLab_EventScript_Grookey_Text_0, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq WhimLab_EventScript_Rowlet_1
+	goto_if_eq WhimLab_EventScript_Grookey_1
 	hidemonpic
 	releaseall
 	return
 
-WhimLab_EventScript_Rowlet_1:
-	givemon SPECIES_MUDKIP, 5, ITEM_ORAN_BERRY
+WhimLab_EventScript_Grookey_1:
+	givemon SPECIES_GROOKEY, 5, ITEM_ORAN_BERRY
 	playfanfare MUS_OBTAIN_B_POINTS
-	msgbox WhimLab_EventScript_Rowlet_Text_1
+	msgbox WhimLab_EventScript_Grookey_Text_1
 	setflag FLAG_SYS_POKEMON_GET
 	setvar VAR_STARTER_MON, 0
 	removeobject 4
-	setflag FLAG_ROW_0x020
+	setflag FLAG_GROOK_0x020
 	setvar VAR_WHIMLEAF_INTRO_STATE, 2
 	call NicknamePartyMon
 	releaseall
@@ -115,24 +115,24 @@ WhimLab_EventScript_Rowlet_1:
 	return
 
 
-WhimLab_EventScript_Fennekin::
-	showmonpic SPECIES_FENNEKIN, 10, 3
-	playmoncry SPECIES_FENNEKIN, CRY_MODE_NORMAL
-	msgbox WhimLab_EventScript_Fennekin_Text_0, MSGBOX_YESNO
+WhimLab_EventScript_Fuecoco::
+	showmonpic SPECIES_FUECOCO, 10, 3
+	playmoncry SPECIES_FUECOCO, CRY_MODE_NORMAL
+	msgbox WhimLab_EventScript_Fuecoco_Text_0, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq WhimLab_EventScript_Fennekin_1
+	goto_if_eq WhimLab_EventScript_Fuecoco_1
 	hidemonpic
 	releaseall
 	return
 
-WhimLab_EventScript_Fennekin_1:
-	givemon SPECIES_FENNEKIN, 5, ITEM_ORAN_BERRY
+WhimLab_EventScript_Fuecoco_1:
+	givemon SPECIES_FUECOCO, 5, ITEM_ORAN_BERRY
 	playfanfare MUS_OBTAIN_B_POINTS
-	msgbox WhimLab_EventScript_Fennekin_Text_1
+	msgbox WhimLab_EventScript_Fuecoco_Text_1
 	setflag FLAG_SYS_POKEMON_GET
 	setvar VAR_STARTER_MON, 1
 	removeobject 5
-	setflag FLAG_FENN_0x021
+	setflag FLAG_FUE_0x021
 	setvar VAR_WHIMLEAF_INTRO_STATE, 2
 	call NicknamePartyMon
 	releaseall
@@ -173,7 +173,7 @@ After_Choose_Pokemon::
 	return
 
 After_Choose_Pokemon_2:
-	applymovement 1, Birch_Rowlet_Choice
+	applymovement 1, Birch_Grookey_Choice
 	waitmovement 1
 	applymovement OBJ_EVENT_ID_PLAYER, faceBirch
 	msgbox Player_Picked_A_Pokemon
@@ -181,7 +181,7 @@ After_Choose_Pokemon_2:
 	return
 
 After_Choose_Pokemon_3:
-	applymovement 1, Birch_Fennekin_Choice
+	applymovement 1, Birch_Fuecoco_Choice
 	waitmovement 1
 	applymovement OBJ_EVENT_ID_PLAYER, faceBirch
 	msgbox Player_Picked_A_Pokemon
@@ -252,7 +252,7 @@ Birch_Get_Out_Of_The_Way:
 	walk_in_place_faster_down
 	step_end
 
-Birch_Rowlet_Choice:
+Birch_Grookey_Choice:
 	walk_left
 	walk_left
 	delay_8
@@ -260,7 +260,7 @@ Birch_Rowlet_Choice:
 	delay_8
 	step_end
 
-Birch_Fennekin_Choice:
+Birch_Fuecoco_Choice:
 	walk_left
 	delay_8
 	walk_in_place_faster_left
@@ -278,17 +278,17 @@ faceBirch:
 	face_right
 	step_end
 
-WhimLab_EventScript_Rowlet_Text_0:
-	.string "Do you want to choose {COLOR GREEN}{SHADOW LIGHT_GREEN} Rowlet?$"
+WhimLab_EventScript_Grookey_Text_0:
+	.string "Do you want to choose {COLOR GREEN}{SHADOW LIGHT_GREEN} Grookey?$"
 
-WhimLab_EventScript_Rowlet_Text_1:
-	.string "Recieved Rowlet$"
+WhimLab_EventScript_Grookey_Text_1:
+	.string "Recieved Grookey$"
 
-WhimLab_EventScript_Fennekin_Text_0:
-	.string "Do you want to choose {COLOR RED}{SHADOW LIGHT_RED} Fennekin?$"
+WhimLab_EventScript_Fuecoco_Text_0:
+	.string "Do you want to choose {COLOR RED}{SHADOW LIGHT_RED} Fuecoco?$"
 
-WhimLab_EventScript_Fennekin_Text_1:
-	.string "Recieved Fennekin$"
+WhimLab_EventScript_Fuecoco_Text_1:
+	.string "Recieved Fuecoco$"
 
 WhimLab_EventScript_Oshawott_Text_0:
 	.string "Do you want to choose {COLOR BLUE}{SHADOW LIGHT_BLUE} Oshawott?$"

@@ -45,37 +45,37 @@ script Choose_Pokemon_Trigger2 {
 
 script EventScript_Pokeball_One { 
     lockall
-    if(!(flag(FLAG_ROW_0x020) || flag(FLAG_FENN_0x021) || flag(FLAG_OSH_0x022))) {
-        call(WhimLab_EventScript_Rowlet)
+    if(!(flag(FLAG_GROOK_0x020) || flag(FLAG_FUE_0x021) || flag(FLAG_OSH_0x022))) {
+        call(WhimLab_EventScript_Grookey)
     }
 }
 
 script EventScript_Pokeball_Two { 
     lockall
-    if(!(flag(FLAG_ROW_0x020) || flag(FLAG_FENN_0x021) || flag(FLAG_OSH_0x022))) {
-        call(WhimLab_EventScript_Fennekin)
+    if(!(flag(FLAG_GROOK_0x020) || flag(FLAG_FUE_0x021) || flag(FLAG_OSH_0x022))) {
+        call(WhimLab_EventScript_Fuecoco)
     }
 }
 
 script EventScript_Pokeball_Three { 
     lockall
-    if(!(flag(FLAG_ROW_0x020) || flag(FLAG_FENN_0x021) || flag(FLAG_OSH_0x022))) {
+    if(!(flag(FLAG_GROOK_0x020) || flag(FLAG_FUE_0x021) || flag(FLAG_OSH_0x022))) {
         call(WhimLab_EventScript_Oshawott)
     }
 }
 
-script WhimLab_EventScript_Rowlet {
-    showmonpic(SPECIES_ROWLET, 10,3)
-    playmoncry(SPECIES_ROWLET, CRY_MODE_NORMAL)
-    msgbox("Do you want to choose {COLOR GREEN}{SHADOW LIGHT_GREEN} Rowlet?", MSGBOX_YESNO)
+script WhimLab_EventScript_Grookey {
+    showmonpic(SPECIES_GROOKEY, 10,3)
+    playmoncry(SPECIES_GROOKEY, CRY_MODE_NORMAL)
+    msgbox("Do you want to choose {COLOR GREEN}{SHADOW LIGHT_GREEN} Grookey?", MSGBOX_YESNO)
     if(var(VAR_RESULT) == YES) {
-        givemon(SPECIES_MUDKIP, 5, ITEM_ORAN_BERRY)
+        givemon(SPECIES_GROOKEY, 5, ITEM_ORAN_BERRY)
         playfanfare(MUS_OBTAIN_B_POINTS)
-        msgbox("Recieved Rowlet")
+        msgbox("Recieved Grookey")
         setflag(FLAG_SYS_POKEMON_GET)
         setvar(VAR_STARTER_MON, 0)
         removeobject(4)
-        setflag(FLAG_ROW_0x020)
+        setflag(FLAG_GROOK_0x020)
         setvar(VAR_WHIMLEAF_INTRO_STATE,2)
         call(NicknamePartyMon)
         releaseall
@@ -87,18 +87,18 @@ script WhimLab_EventScript_Rowlet {
     }
 }
 
-script WhimLab_EventScript_Fennekin {
-    showmonpic(SPECIES_FENNEKIN, 10,3)
-    playmoncry(SPECIES_FENNEKIN, CRY_MODE_NORMAL)
-    msgbox("Do you want to choose {COLOR RED}{SHADOW LIGHT_RED} Fennekin?", MSGBOX_YESNO)
+script WhimLab_EventScript_Fuecoco {
+    showmonpic(SPECIES_FUECOCO, 10,3)
+    playmoncry(SPECIES_FUECOCO, CRY_MODE_NORMAL)
+    msgbox("Do you want to choose {COLOR RED}{SHADOW LIGHT_RED} Fuecoco?", MSGBOX_YESNO)
     if(var(VAR_RESULT) == YES) {
-        givemon(SPECIES_FENNEKIN, 5, ITEM_ORAN_BERRY)
+        givemon(SPECIES_FUECOCO, 5, ITEM_ORAN_BERRY)
         playfanfare(MUS_OBTAIN_B_POINTS)
-        msgbox("Recieved Fennekin")
+        msgbox("Recieved Fuecoco")
         setflag(FLAG_SYS_POKEMON_GET)
         setvar(VAR_STARTER_MON, 1)
         removeobject(5)
-        setflag(FLAG_FENN_0x021)
+        setflag(FLAG_FUE_0x021)
         setvar(VAR_WHIMLEAF_INTRO_STATE,2)
         call(NicknamePartyMon)
         releaseall
@@ -136,14 +136,14 @@ script WhimLab_EventScript_Oshawott {
 
 script After_Choose_Pokemon {
     switch(var(VAR_STARTER_MON)) {
-        case 0: //Rowlet
-            applymovement(1,Birch_Rowlet_Choice)
+        case 0: //Grookey
+            applymovement(1,Birch_Grookey_Choice)
             waitmovement(1)
             applymovement(OBJ_EVENT_ID_PLAYER,faceBirch)
             msgbox(Player_Picked_A_Pokemon)
             releaseall
-        case 1: //Fennekin
-            applymovement(1,Birch_Fennekin_Choice)
+        case 1: //Fuecoco
+            applymovement(1,Birch_Fuecoco_Choice)
             waitmovement(1)
             applymovement(OBJ_EVENT_ID_PLAYER,faceBirch)
             msgbox(Player_Picked_A_Pokemon)
@@ -199,14 +199,14 @@ movement Birch_Get_Out_Of_The_Way {
     walk_in_place_faster_down * 2
 }
 
-movement Birch_Rowlet_Choice {
+movement Birch_Grookey_Choice {
     walk_left * 2
     delay_8
     walk_in_place_faster_left
     delay_8
 }
 
-movement Birch_Fennekin_Choice {
+movement Birch_Fuecoco_Choice {
     walk_left
     delay_8
     walk_in_place_faster_left

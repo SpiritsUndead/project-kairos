@@ -42,8 +42,8 @@
 #define TEMP_FLAGS_END   FLAG_TEMP_1F
 #define NUM_TEMP_FLAGS   (TEMP_FLAGS_END - TEMP_FLAGS_START + 1)
 
-#define FLAG_ROW_0x020    0x20 // Rowlet poke ball
-#define FLAG_FENN_0x021    0x21 // Fennekin poke ball
+#define FLAG_GROOK_0x020    0x20 // Rowlet poke ball
+#define FLAG_FUE_0x021    0x21 // Fennekin poke ball
 #define FLAG_OSH_0x022    0x22 // Oshawott poke ball
 #define FLAG_Research_Papers    0x23 
 #define FLAG_UNUSED_0x024    0x24 // Unused Flag
