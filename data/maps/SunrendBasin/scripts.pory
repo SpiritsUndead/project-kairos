@@ -1,0 +1,12 @@
+mapscripts SunrendBasin_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION
+}
+
+script SunrendBasin_EventScript_TownSign {
+    msgbox(Sunrend_TownSign, MSGBOX_SIGN)
+}
+
+text Sunrend_TownSign {
+    "Sunrend Basin\n"
+    "“Where rays illuminate nature's secrets.”"
+}
