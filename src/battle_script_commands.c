@@ -12396,7 +12396,10 @@ static void Cmd_psywavedamageeffect(void)
     CMD_ARGS();
 
     s32 randDamage = B_PSYWAVE_DMG >= GEN_6 ? (Random() % 101) : ((Random() % 11) * 10);
-    gBattleMoveDamage = gBattleMons[gBattlerAttacker].level * (randDamage + 50) / 100;
+    //This syntax is called a ternary; it lets you assign a variable to one of two values based on a true/false check. Abstractly, the syntax is:
+    //myVariable = trueOrFalseCheck ? valueIfTrue : valueIfFalse`
+    //So in this specific example it essentially says "if we're using Gen 6+ Psywave damage, take a random number from 0-100 inclusive. If not, take a random number from 0-10 inclsuive and multiply by 10".
+    gBattleMoveDamage = gBattleMons[gBattlerAttacker].level * (randDamage + 50) / 100; // does 50% - 150% of users level
     gBattlescriptCurrInstr = cmd->nextInstr;
 }
 

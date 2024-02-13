@@ -86,6 +86,7 @@
 #define MAP_ROUTE11                 (77 | (0 << 8))
 #define MAP_ASHRASH_SHOALS_EXTERIOR (78 | (0 << 8))
 #define MAP_ASHRASH_ISLAND          (79 | (0 << 8))
+#define MAP_ROUTE12                 (80 | (0 << 8))
 
 // gMapGroup_IndoorLittleroot
 #define MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F    (0 | (1 << 8))

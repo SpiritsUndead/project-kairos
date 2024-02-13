@@ -8,5 +8,6 @@ script SunrendBasin_EventScript_TownSign {
 
 text Sunrend_TownSign {
     "Sunrend Basin\n"
-    "“Where rays illuminate nature's secrets.”"
+    "“Nature's Grace, Sun's Embrace.”"
+    //Where Shadows Retreat, and Sunshine Meets Serenity
 }

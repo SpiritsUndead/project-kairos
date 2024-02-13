@@ -9,4 +9,4 @@ SunrendBasin_EventScript_TownSign::
 
 Sunrend_TownSign::
 	.string "Sunrend Basin\n"
-	.string "“Where rays illuminate nature's secrets.”$"
+	.string "“Nature's Grace, Sun's Embrace.”$"
