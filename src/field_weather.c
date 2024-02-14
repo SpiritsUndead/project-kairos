@@ -164,7 +164,7 @@ void StartWeather(void)
         gWeatherPtr->rainSpriteCount = 0;
         gWeatherPtr->curRainSpriteIndex = 0;
         gWeatherPtr->cloudSpritesCreated = 0;
-        gWeatherPtr->snowflakeSpriteCount = 0;
+        gWeatherPtr->snowflakeSpriteCount = 69;
         gWeatherPtr->ashSpritesCreated = 0;
         gWeatherPtr->fogHSpritesCreated = 0;
         gWeatherPtr->fogDSpritesCreated = 0;
