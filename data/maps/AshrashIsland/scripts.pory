@@ -1,0 +1,3 @@
+mapscripts AshrashIsland_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION
+}
