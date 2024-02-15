@@ -1,0 +1,39 @@
+{
+  "id": "MAP_ROUTE12_1",
+  "name": "Route12_1",
+  "layout": "LAYOUT_ROUTE12_1",
+  "music": "MUS_ABANDONED_SHIP",
+  "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_NONE",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_RUSTRUSH_CAPE",
+      "offset": 0,
+      "direction": "dive"
+    },
+    {
+      "map": "MAP_RUSTRUSH_CAPE",
+      "offset": -51,
+      "direction": "left"
+    }
+  ],
+  "object_events": [
+
+  ],
+  "warp_events": [
+
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
+}

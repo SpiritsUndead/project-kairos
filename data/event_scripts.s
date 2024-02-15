@@ -1147,3 +1147,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/AshrashIsland/scripts.inc"
 
 	.include "data/maps/Route12/scripts.inc"
+
+	.include "data/maps/Route12_1/scripts.inc"

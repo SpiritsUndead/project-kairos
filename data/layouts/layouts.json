@@ -4800,6 +4800,16 @@
       "secondary_tileset": "gTileset_Slateport",
       "border_filepath": "data/layouts/Route12/border.bin",
       "blockdata_filepath": "data/layouts/Route12/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE12_1",
+      "name": "Route12_1_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Route12_1/border.bin",
+      "blockdata_filepath": "data/layouts/Route12_1/map.bin"
     }
   ]
 }
