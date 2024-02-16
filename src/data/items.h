@@ -4098,275 +4098,70 @@ const struct Item gItems[] =
         .secondaryId = TYPE_NORMAL,
     },
 
-    [ITEM_FIRE_GEM] =
+    [ITEM_0F8] =
     {
-        .name = _("Fire Gem"),
-        .price = 4000,
-        .holdEffect = HOLD_EFFECT_GEMS,
-        .holdEffectParam = GEM_BOOST_PARAM,
-        .description = sFireGemDesc,
-        .pocket = POCKET_ITEMS,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .secondaryId = TYPE_FIRE,
-    },
-
-    [ITEM_WATER_GEM] =
-    {
-        .name = _("Water Gem"),
-        .price = 4000,
-        .holdEffect = HOLD_EFFECT_GEMS,
-        .holdEffectParam = GEM_BOOST_PARAM,
-        .description = sWaterGemDesc,
-        .pocket = POCKET_ITEMS,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .secondaryId = TYPE_WATER,
-    },
-
-    [ITEM_ELECTRIC_GEM] =
-    {
-        .name = _("Electric Gem"),
-        .price = 4000,
-        .holdEffect = HOLD_EFFECT_GEMS,
-        .holdEffectParam = GEM_BOOST_PARAM,
-        .description = sElectricGemDesc,
-        .pocket = POCKET_ITEMS,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .secondaryId = TYPE_ELECTRIC,
-    },
-
-    [ITEM_GRASS_GEM] =
-    {
-        .name = _("Grass Gem"),
-        .price = 4000,
-        .holdEffect = HOLD_EFFECT_GEMS,
-        .holdEffectParam = GEM_BOOST_PARAM,
-        .description = sGrassGemDesc,
-        .pocket = POCKET_ITEMS,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .secondaryId = TYPE_GRASS,
-    },
-
-    [ITEM_ICE_GEM] =
-    {
-        .name = _("Ice Gem"),
-        .price = 4000,
-        .holdEffect = HOLD_EFFECT_GEMS,
-        .holdEffectParam = GEM_BOOST_PARAM,
-        .description = sIceGemDesc,
-        .pocket = POCKET_ITEMS,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .secondaryId = TYPE_ICE,
-    },
-
-    [ITEM_FIGHTING_GEM] =
-    {
-        .name = _("Fighting Gem"),
-        .price = 4000,
-        .holdEffect = HOLD_EFFECT_GEMS,
-        .holdEffectParam = GEM_BOOST_PARAM,
-        .description = sFightingGemDesc,
-        .pocket = POCKET_ITEMS,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .secondaryId = TYPE_FIGHTING,
-    },
-
-    [ITEM_POISON_GEM] =
-    {
-        .name = _("Poison Gem"),
-        .price = 4000,
-        .holdEffect = HOLD_EFFECT_GEMS,
-        .holdEffectParam = GEM_BOOST_PARAM,
-        .description = sPoisonGemDesc,
-        .pocket = POCKET_ITEMS,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .secondaryId = TYPE_POISON,
-    },
-
-    [ITEM_GROUND_GEM] =
-    {
-        .name = _("Ground Gem"),
-        .price = 4000,
-        .holdEffect = HOLD_EFFECT_GEMS,
-        .holdEffectParam = GEM_BOOST_PARAM,
-        .description = sGroundGemDesc,
-        .pocket = POCKET_ITEMS,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .secondaryId = TYPE_GROUND,
-    },
-
-    [ITEM_FLYING_GEM] =
-    {
-        .name = _("Flying Gem"),
-        .price = 4000,
-        .holdEffect = HOLD_EFFECT_GEMS,
-        .holdEffectParam = GEM_BOOST_PARAM,
-        .description = sFlyingGemDesc,
-        .pocket = POCKET_ITEMS,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .secondaryId = TYPE_FLYING,
-    },
-
-    [ITEM_PSYCHIC_GEM] =
-    {
-        .name = _("Psychic Gem"),
-        .price = 4000,
-        .holdEffect = HOLD_EFFECT_GEMS,
-        .holdEffectParam = GEM_BOOST_PARAM,
-        .description = sPsychicGemDesc,
-        .pocket = POCKET_ITEMS,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .secondaryId = TYPE_PSYCHIC,
-    },
-
-    [ITEM_BUG_GEM] =
-    {
-        .name = _("Bug Gem"),
-        .price = 4000,
-        .holdEffect = HOLD_EFFECT_GEMS,
-        .holdEffectParam = GEM_BOOST_PARAM,
-        .description = sBugGemDesc,
-        .pocket = POCKET_ITEMS,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .secondaryId = TYPE_BUG,
-    },
-
-    [ITEM_ROCK_GEM] =
-    {
-        .name = _("Rock Gem"),
-        .price = 4000,
-        .holdEffect = HOLD_EFFECT_GEMS,
-        .holdEffectParam = GEM_BOOST_PARAM,
-        .description = sRockGemDesc,
-        .pocket = POCKET_ITEMS,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .secondaryId = TYPE_ROCK,
-    },
-
-    [ITEM_GHOST_GEM] =
-    {
-        .name = _("Ghost Gem"),
-        .price = 4000,
-        .holdEffect = HOLD_EFFECT_GEMS,
-        .holdEffectParam = GEM_BOOST_PARAM,
-        .description = sGhostGemDesc,
-        .pocket = POCKET_ITEMS,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .secondaryId = TYPE_GHOST,
-    },
-
-    [ITEM_DRAGON_GEM] =
-    {
-        .name = _("Dragon Gem"),
-        .price = 4000,
-        .holdEffect = HOLD_EFFECT_GEMS,
-        .holdEffectParam = GEM_BOOST_PARAM,
-        .description = sDragonGemDesc,
-        .pocket = POCKET_ITEMS,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .secondaryId = TYPE_DRAGON,
-    },
-
-    [ITEM_DARK_GEM] =
-    {
-        .name = _("Dark Gem"),
-        .price = 4000,
-        .holdEffect = HOLD_EFFECT_GEMS,
-        .holdEffectParam = GEM_BOOST_PARAM,
-        .description = sDarkGemDesc,
-        .pocket = POCKET_ITEMS,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .secondaryId = TYPE_DARK,
-    },
-
-    [ITEM_STEEL_GEM] =
-    {
-        .name = _("Steel Gem"),
-        .price = 4000,
-        .holdEffect = HOLD_EFFECT_GEMS,
-        .holdEffectParam = GEM_BOOST_PARAM,
-        .description = sSteelGemDesc,
-        .pocket = POCKET_ITEMS,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .secondaryId = TYPE_STEEL,
-    },
-
-    [ITEM_FAIRY_GEM] =
-    {
-        .name = _("Fairy Gem"),
-        .price = 4000,
-        .holdEffect = HOLD_EFFECT_GEMS,
-        .holdEffectParam = GEM_BOOST_PARAM,
-        .description = sFairyGemDesc,
-        .pocket = POCKET_ITEMS,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .secondaryId = TYPE_FAIRY,
-    },
-
-// Z-Crystals
-
-    [ITEM_NORMALIUM_Z] =
-    {
-        .name = _("Normalium Z"),
+        .name = _("????????"),
+        .itemId = ITEM_NONE,
         .price = 0,
-        .holdEffect = HOLD_EFFECT_Z_CRYSTAL,
-        .description = sNormaliumZDesc,
+        .description = sDummyDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .secondaryId = TYPE_NORMAL
     },
 
-    [ITEM_FIRIUM_Z] =
+    [ITEM_0F9] =
     {
-        .name = _("Firium Z"),
+        .name = _("????????"),
+        .itemId = ITEM_NONE,
         .price = 0,
-        .holdEffect = HOLD_EFFECT_Z_CRYSTAL,
-        .description = sFiriumZDesc,
+        .description = sDummyDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .secondaryId = TYPE_FIRE
     },
 
-    [ITEM_WATERIUM_Z] =
+    [ITEM_0FA] =
     {
-        .name = _("Waterium Z"),
+        .name = _("????????"),
+        .itemId = ITEM_NONE,
         .price = 0,
-        .holdEffect = HOLD_EFFECT_Z_CRYSTAL,
-        .description = sWateriumZDesc,
+        .description = sDummyDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .secondaryId = TYPE_WATER
     },
 
-    [ITEM_ELECTRIUM_Z] =
+    [ITEM_0FB] =
     {
-        .name = _("Electrium Z"),
+        .name = _("????????"),
+        .itemId = ITEM_NONE,
         .price = 0,
-        .holdEffect = HOLD_EFFECT_Z_CRYSTAL,
-        .description = sElectriumZDesc,
+        .description = sDummyDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .secondaryId = TYPE_ELECTRIC
+    },
+
+    [ITEM_0FC] =
+    {
+        .name = _("????????"),
+        .itemId = ITEM_NONE,
+        .price = 0,
+        .description = sDummyDesc,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+    },
+
+    [ITEM_0FD] =
+    {
+        .name = _("????????"),
+        .itemId = ITEM_NONE,
+        .price = 0,
+        .description = sDummyDesc,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
 
     [ITEM_GRASSIUM_Z] =

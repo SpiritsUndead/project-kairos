@@ -53,5 +53,11 @@ enum {
 };
 
 bool32 CanThrowBall(void);
+void ItemUseOutOfBattle_Surfboard(u8);
+void ItemUseOutOfBattle_Axe(u8);
+void ItemUseOutOfBattle_Hammer(u8);
+void ItemUseOutOfBattle_DivingSuit(u8);
+void ItemUseOutOfBattle_Lantern(u8);
+void ItemUseOutOfBattle_PowerGlove(u8);
 
 #endif // GUARD_ITEM_USE_H
