@@ -530,4 +530,7 @@ extern const u8 BattleScript_DynamaxBegins[];
 extern const u8 BattleScript_DynamaxEnds[];
 extern const u8 BattleScript_MoveBlockedByDynamax[];
 
+//new abilities
+extern const u8 BattleScript_HumiliateActivates[];
+
 #endif // GUARD_BATTLE_SCRIPTS_H
