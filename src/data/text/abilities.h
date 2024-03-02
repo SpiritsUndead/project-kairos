@@ -298,6 +298,7 @@ static const u8 sEmbodyAspectCornerstoneDescription[] = _("Raises Defense.");
 static const u8 sToxicChainDescription[] = _("Moves can poison.");
 static const u8 sSupersweetSyrupDescription[] = _("Lowers the foe's Speed.");
 static const u8 sHumiliateDescription[] = _("Lowers the foe's Sp. Atk.");
+static const u8 sHighSpiritsDescription[] = _("Raises Special Attack.");
 
 #if B_EXPANDED_ABILITY_NAMES == TRUE
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
@@ -610,6 +611,7 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_TOXIC_CHAIN] = _("Toxic Chain"),
     [ABILITY_SUPERSWEET_SYRUP] = _("Supersweet Syrup"),
     [ABILITY_HUMILIATE] = _("Humiliate"),
+    [ABILITY_HIGH_SPIRITS] = _("High Spirits"),
 };
 #else   // 12 characters
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
@@ -922,6 +924,7 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_TOXIC_CHAIN] = _("Toxic Chain"),
     [ABILITY_SUPERSWEET_SYRUP] = _("SuprswtSyrup"),
     [ABILITY_HUMILIATE] = _("Humiliate"),
+    [ABILITY_HIGH_SPIRITS] = _("High Spirits"),
 };
 #endif
 
@@ -1235,4 +1238,5 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_TOXIC_CHAIN] = sToxicChainDescription,
     [ABILITY_SUPERSWEET_SYRUP] = sSupersweetSyrupDescription,
     [ABILITY_HUMILIATE] = sHumiliateDescription,
+    [ABILITY_HIGH_SPIRITS] =sHighSpiritsDescription,
 };
