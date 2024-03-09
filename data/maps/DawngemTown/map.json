@@ -2,7 +2,7 @@
   "id": "MAP_DAWNGEM_TOWN",
   "name": "DawngemTown",
   "layout": "LAYOUT_DAWNGEM_TOWN",
-  "music": "MUS_MINATO_KUSHINA",
+  "music": "MUS_FURRET_WALK",
   "region_map_section": "MAPSEC_OLDALE_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

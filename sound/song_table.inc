@@ -612,6 +612,8 @@ gSongTable::
 	song ph_nurse_held, 2, 2
 	song ph_nurse_solo, 2, 2
 	song mus_minato_kushina, 0, 0
+	song mus_unova_elite_four, 0, 0
+	song mus_furret_walk, 0, 0
 
 	.align 2
 dummy_song_header:

@@ -1195,6 +1195,8 @@ SECTIONS {
         sound/songs/midi/mus_rg_slow_pallet.o(.rodata);
         sound/songs/midi/mus_rg_teachy_tv_menu.o(.rodata);
         sound/songs/midi/mus_minato_kushina.o(.rodata);
+        sound/songs/midi/mus_unova_elite_four.o(.rodata);
+        sound/songs/midi/mus_furret_walk.o(.rodata);
         sound/songs/midi/ph_trap_blend.o(.rodata);
         sound/songs/midi/ph_trap_held.o(.rodata);
         sound/songs/midi/ph_trap_solo.o(.rodata);
