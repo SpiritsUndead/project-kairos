@@ -8,7 +8,8 @@ mapscripts WhimPokeLab_MapScripts {
 	// ?: new game
 	// 1: named rival
     // 2: Received Pokemon
-	// 3: Received pokedex
+	// 3: Received documents
+    // 4: Received Pokedex
 
 
 script Choose_Pokemon {
@@ -31,6 +32,7 @@ script Choose_Pokemon_Trigger2 {
     applymovement(OBJ_EVENT_ID_PLAYER,Lab_Trigger2)
     waitmovement(OBJ_EVENT_ID_PLAYER)
     msgbox(Welcome)
+    playse(SE_PIN)
     applymovement(1,Birch_Exclaim)
     waitmovement(1)
     msgbox(Welcome2)
@@ -157,10 +159,35 @@ script After_Choose_Pokemon {
     }
 }
 
+script GivePokedex{
+    lock
+    msgbox(TakePokedex, MSGBOX_DEFAULT)
+    playfanfare(MUS_OBTAIN_ITEM)
+	message("{PLAYER} received the POKéDEX!$")
+	waitfanfare
+    closemessage
+	setflag(FLAG_SYS_POKEDEX_GET)
+    setflag(FLAG_ADVENTURE_STARTED)
+	special(SetUnlockedPokedexFlags)
+	setflag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH)
+	setvar(VAR_CABLE_CLUB_TUTORIAL_STATE, 1)
+    msgbox(LittlerootTown_ProfessorBirchsLab_Text_ExplainPokedex, MSGBOX_DEFAULT)
+    msgbox("Also take these with you", MSGBOX_DEFAULT)
+    giveitem(ITEM_POKE_BALL, 5)
+    msgbox(format("These allow you to catch your own Pokemon in tall grass so you can collect research for the Pokedex"), MSGBOX_DEFAULT)
+    waitmessage
+    release
+	return
+}
+
 script Birch_Lab_Talks {
     switch(var(VAR_WHIMLEAF_INTRO_STATE)) {
         case 2: //task not completed
             msgbox(Complete_Your_Task)
+            releaseall
+        case 3: //returned with stuff
+            msgbox("nice.")
+            goto(GivePokedex)
             releaseall
         default:
             msgbox("hm. strange.")
@@ -275,4 +302,10 @@ text Player_Picked_A_Pokemon {
 text Complete_Your_Task {
     "Hurry on to DAWNGEM TOWN!\n"
     "We can talk more later."
+}
+
+text TakePokedex{
+    "Here, {PLAYER}, I ordered this for my\n"
+	"research, but I think you should have\l"
+	"this POKéDEX."
 }

@@ -42,9 +42,7 @@ script WhimleafTown_EventScript_TownSign {
 script WhimleafTown_EventScript_WarningSign {
     msgbox(WarningSign, MSGBOX_SIGN)
 }
-
-
-
+ 
 //dialogue scripts
 
 script WhimleafTown_EventScript_Mom {
@@ -58,10 +56,11 @@ script WhimleafTown_EventScript_Mom {
             msgbox("whim intro state is set to 2.")
             releaseall
             
-        case 3:  //player fully ready to embark on journey   
+        case 3:  //player grabbed goods, not returned to birch yet   
             msgbox("whim intro state is set to 3.") 
-            
-        case 4:   //presumably anytime thereafter that the player comes home   
+            releaseall
+        case 4:     
+        case 5:   //presumably anytime thereafter that the player comes home   
             msgbox(MomHealPlayer1)
             call(Common_EventScript_OutOfCenterPartyHeal)
             msgbox(MomHealPlayer2)

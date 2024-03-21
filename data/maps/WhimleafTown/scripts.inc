@@ -46,6 +46,7 @@ WhimleafTown_EventScript_Mom::
 	case 2, WhimleafTown_EventScript_Mom_3
 	case 3, WhimleafTown_EventScript_Mom_4
 	case 4, WhimleafTown_EventScript_Mom_5
+	case 5, WhimleafTown_EventScript_Mom_5
 	playse SE_PIN
 	applymovement 1, ForceNameRival
 	waitmovement 1
@@ -79,6 +80,7 @@ WhimleafTown_EventScript_Mom_3:
 
 WhimleafTown_EventScript_Mom_4:
 	msgbox WhimleafTown_EventScript_Mom_Text_2
+	releaseall
 	return
 
 WhimleafTown_EventScript_Mom_5:

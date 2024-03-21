@@ -23,6 +23,7 @@ Choose_Pokemon_Trigger2::
 	applymovement OBJ_EVENT_ID_PLAYER, Lab_Trigger2
 	waitmovement OBJ_EVENT_ID_PLAYER
 	msgbox Welcome
+	playse SE_PIN
 	applymovement 1, Birch_Exclaim
 	waitmovement 1
 	msgbox Welcome2
@@ -197,15 +198,43 @@ After_Choose_Pokemon_4:
 	return
 
 
+GivePokedex::
+	lock
+	msgbox TakePokedex, MSGBOX_DEFAULT
+	playfanfare MUS_OBTAIN_ITEM
+	message GivePokedex_Text_0
+	waitfanfare
+	closemessage
+	setflag FLAG_SYS_POKEDEX_GET
+	setflag FLAG_ADVENTURE_STARTED
+	special SetUnlockedPokedexFlags
+	setflag FLAG_RECEIVED_POKEDEX_FROM_BIRCH
+	setvar VAR_CABLE_CLUB_TUTORIAL_STATE, 1
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_ExplainPokedex, MSGBOX_DEFAULT
+	msgbox GivePokedex_Text_1, MSGBOX_DEFAULT
+	giveitem ITEM_POKE_BALL, 5
+	msgbox GivePokedex_Text_2, MSGBOX_DEFAULT
+	waitmessage
+	release
+	return
+
+
 Birch_Lab_Talks::
 	switch VAR_WHIMLEAF_INTRO_STATE
 	case 2, Birch_Lab_Talks_2
-	msgbox Birch_Lab_Talks_Text_0
+	case 3, Birch_Lab_Talks_3
+	msgbox Birch_Lab_Talks_Text_1
 	releaseall
 	return
 
 Birch_Lab_Talks_2:
 	msgbox Complete_Your_Task
+	releaseall
+	return
+
+Birch_Lab_Talks_3:
+	msgbox Birch_Lab_Talks_Text_0
+	goto GivePokedex
 	releaseall
 	return
 
@@ -296,7 +325,21 @@ WhimLab_EventScript_Oshawott_Text_0:
 WhimLab_EventScript_Oshawott_Text_1:
 	.string "Recieved Oshawott$"
 
+GivePokedex_Text_0:
+	.string "{PLAYER} received the POKéDEX!$"
+
+GivePokedex_Text_1:
+	.string "Also take these with you$"
+
+GivePokedex_Text_2:
+	.string "These allow you to catch your own\n"
+	.string "Pokemon in tall grass so you can\l"
+	.string "collect research for the Pokedex$"
+
 Birch_Lab_Talks_Text_0:
+	.string "nice.$"
+
+Birch_Lab_Talks_Text_1:
 	.string "hm. strange.$"
 
 Welcome::
@@ -345,3 +388,8 @@ Player_Picked_A_Pokemon::
 Complete_Your_Task::
 	.string "Hurry on to DAWNGEM TOWN!\n"
 	.string "We can talk more later.$"
+
+TakePokedex::
+	.string "Here, {PLAYER}, I ordered this for my\n"
+	.string "research, but I think you should have\l"
+	.string "this POKéDEX.$"
