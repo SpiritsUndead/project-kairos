@@ -297,7 +297,7 @@ Birch_Fuecoco_Choice:
 	step_end
 
 Birch_Oshawott_Choice:
-	faceplayer
+	face_left
 	delay_8
 	walk_in_place_faster_left
 	delay_8
