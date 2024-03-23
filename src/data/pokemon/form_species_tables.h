@@ -940,8 +940,8 @@ static const u16 sArceusFormSpeciesIdTable[] = {
 
 #if P_FAMILY_OSHAWOTT
 static const u16 sSamurottFormSpeciesIdTable[] = {
-    SPECIES_SAMUROTT,
     SPECIES_SAMUROTT_HISUIAN,
+    SPECIES_SAMUROTT,
     FORM_SPECIES_END,
 };
 #endif //P_FAMILY_OSHAWOTT
