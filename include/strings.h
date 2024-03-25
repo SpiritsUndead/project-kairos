@@ -3066,4 +3066,6 @@ extern const u8 gText_ViewStats[];
 extern const u8 gText_Fertilize[];
 extern const u8 gText_PlantBerry[];
 
+extern const u8 gText_Friendship[];
+
 #endif // GUARD_STRINGS_H

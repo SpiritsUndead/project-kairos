@@ -612,9 +612,9 @@ static const struct WindowTemplate sSummaryTemplate[] =
     },
     [PSS_LABEL_WINDOW_POKEMON_INFO_FRIENDSHIP] = {
         .bg = 0,
-        .tilemapLeft = 27,
+        .tilemapLeft = 19,
         .tilemapTop = 6,
-        .width = 3,
+        .width = 21,
         .height = 2,
         .paletteNum = 6,
         .baseBlock = 729,
@@ -3335,7 +3335,8 @@ static void PrintMonFriendship(void)
         ConvertIntToDecimalStringN(gStringVar1, friendship, STR_CONV_MODE_LEFT_ALIGN, 5);
   //  else
   //      StringCopy(gStringVar1, gText_Max);
-    PrintTextOnWindow(PSS_LABEL_WINDOW_POKEMON_INFO_FRIENDSHIP, gStringVar1, 1, 1, 0, 0);
+    PrintTextOnWindow(PSS_LABEL_WINDOW_POKEMON_INFO_FRIENDSHIP, gText_Friendship, 5, 1, 0, 0);
+    PrintTextOnWindow(PSS_LABEL_WINDOW_POKEMON_INFO_FRIENDSHIP, gStringVar1, 66, 1, 0, 0);
 }
 
 static void PrintMonAbilityName(void)

@@ -1861,3 +1861,5 @@ const u8 gText_ViewStats[] =          _("Stats");
 
 const u8 gText_Fertilize[] = _("FERTILIZE");
 const u8 gText_PlantBerry[] = _("PLANT BERRY");
+
+const u8 gText_Friendship[] = _("Friendship/");
