@@ -642,6 +642,9 @@ $(MID_SUBDIR)/mus_unova_elite_four.s: %.s: %.mid
 $(MID_SUBDIR)/mus_furret_walk.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G000 -V125
 
+$(MID_SUBDIR)/mus_nora.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G000 -V125	
+
 $(MID_SUBDIR)/ph_choice_blend.s: %.s: %.mid
 	$(MID) $< $@ -E -G130 -P4
 

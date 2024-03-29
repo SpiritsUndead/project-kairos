@@ -614,6 +614,7 @@ gSongTable::
 	song mus_minato_kushina, 0, 0
 	song mus_unova_elite_four, 0, 0
 	song mus_furret_walk, 0, 0
+	song mus_nora, 0, 0
 
 	.align 2
 dummy_song_header:

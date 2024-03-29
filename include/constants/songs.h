@@ -548,6 +548,7 @@
 #define MUS_MINATO_KUSHINA          610
 #define MUS_UNOVA_ELITE_FOUR        611
 #define MUS_FURRET_WALK             612
+#define MUS_NORA                    613  
 
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().
 
