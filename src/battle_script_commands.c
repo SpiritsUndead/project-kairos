@@ -910,6 +910,7 @@ static const u32 sStatusFlagsForMoveEffects[NUM_MOVE_EFFECTS] =
     [MOVE_EFFECT_PREVENT_ESCAPE] = STATUS2_ESCAPE_PREVENTION,
     [MOVE_EFFECT_NIGHTMARE]      = STATUS2_NIGHTMARE,
     [MOVE_EFFECT_THRASH]         = STATUS2_LOCK_CONFUSE,
+    [MOVE_EFFECT_HARSH_BURN]     = STATUS1_HARSH_BURN,
 };
 
 static const u8 *const sMoveEffectBS_Ptrs[] =
@@ -925,6 +926,7 @@ static const u8 *const sMoveEffectBS_Ptrs[] =
     [MOVE_EFFECT_PAYDAY]           = BattleScript_MoveEffectPayDay,
     [MOVE_EFFECT_WRAP]             = BattleScript_MoveEffectWrap,
     [MOVE_EFFECT_FROSTBITE]        = BattleScript_MoveEffectFrostbite,
+   // [MOVE_EFFECT_HARSH_BURN]       = BattleScript_MoveEffectHarshBurn,
 };
 
 static const struct WindowTemplate sUnusedWinTemplate =
