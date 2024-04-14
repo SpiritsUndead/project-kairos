@@ -4554,7 +4554,7 @@
     {
       "id": "LAYOUT_DAWNGEM_TOWN",
       "name": "DawngemTown_Layout",
-      "width": 28,
+      "width": 32,
       "height": 27,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
