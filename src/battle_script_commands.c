@@ -1309,6 +1309,20 @@ static void Cmd_attackcanceler(void)
         }
     }
 
+    if (GetBattlerAbility(gBattlerTarget) == ABILITY_COLOR_CHANGE
+        && gCurrentMove != MOVE_STRUGGLE
+        && !IS_BATTLER_OF_TYPE(gBattlerTarget, moveType))
+        {
+                SET_BATTLER_TYPE(gBattlerTarget, moveType);
+                PREPARE_TYPE_BUFFER(gBattleTextBuff1, moveType);
+                //DebugPrintfLevel(MGBA_LOG_WARN,"move: %d", gCurrentMove);
+                //DebugPrintfLevel(MGBA_LOG_WARN,"move type: %d", moveType);
+                //DebugPrintfLevel(MGBA_LOG_WARN,"target: %d", gBattlerTarget);
+                BattleScriptPushCursor();
+                gBattlescriptCurrInstr = BattleScript_ColorChangeActivates;
+                return;
+        }
+
     if (gSpecialStatuses[gBattlerAttacker].parentalBondState == PARENTAL_BOND_OFF
     && GetBattlerAbility(gBattlerAttacker) == ABILITY_PARENTAL_BOND
     && IsMoveAffectedByParentalBond(gCurrentMove, gBattlerAttacker)
