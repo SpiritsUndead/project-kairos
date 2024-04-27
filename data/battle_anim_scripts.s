@@ -875,6 +875,7 @@ gBattleAnims_Moves::
 	.4byte Move_PSYCHIC_NOISE
 	.4byte Move_UPPER_HAND
 	.4byte Move_MALIGNANT_CHAIN
+	.4byte Move_AMATERASU
 @@@@ Z MOVES
 	.4byte Move_BREAKNECK_BLITZ
 	.4byte Move_ALL_OUT_PUMMELING
@@ -34486,6 +34487,70 @@ Move_G_MAX_GOLD_RUSH:
 	createvisualtask AnimTask_DynamaxGrowth, 0x5, 0x1, 0x1
 	waitforvisualfinish
 	goto Move_PAY_DAY
+	end
+
+Move_AMATERASU:
+	loadspritegfx ANIM_TAG_TEAL_ALERT
+	loadspritegfx ANIM_TAG_SMALL_EMBER
+	loadspritegfx ANIM_TAG_OPENING_EYE
+	loadspritegfx ANIM_TAG_FIRE
+	loadspritegfx ANIM_TAG_FIRE_BLACK
+	loadspritegfx ANIM_TAG_FIRE_PLUME
+	
+	monbg ANIM_ATK_PARTNER
+	playsewithpan SE_M_CONFUSE_RAY, SOUND_PAN_TARGET
+	createvisualtask AnimTask_InvertScreenColor, 0x2, 0x101, 0x101, 0x101
+	createsprite gOpeningEyeSpriteTemplate, ANIM_ATTACKER, 40, 0, 0, 0, 0
+	delay 40
+	playsewithpan SE_M_LEER, SOUND_PAN_TARGET
+	delay 20
+	createsprite gBlackFireSpreadSpriteTemplate, ANIM_TARGET, 1, 0, 0, 192, 76, 70
+	createsprite gBlackFireSpreadSpriteTemplate, ANIM_TARGET, 1, 0, 0, -192, 76, 70
+	createsprite gBlackFireSpreadSpriteTemplate, ANIM_TARGET, 1, 0, 0, 20, 140, 70
+	createsprite gBlackFireSpreadSpriteTemplate, ANIM_TARGET, 1, 0, 0, -20, 140, 70
+	createsprite gBlackFireSpreadSpriteTemplate, ANIM_TARGET, 1, 0, 0, 192, -160, 70
+	createsprite gBlackFireSpreadSpriteTemplate, ANIM_TARGET, 1, 0, 0, -192, -160, 70
+	createsprite gBlackFireSpreadSpriteTemplate, ANIM_TARGET, 1, 0, 0, 82, -112, 70
+	createsprite gBlackFireSpreadSpriteTemplate, ANIM_TARGET, 1, 0, 0, -82, -112, 70
+	createsprite gBlackFireSpreadSpriteTemplate, ANIM_TARGET, 1, 0, 0, 160, -52, 70
+	createsprite gBlackFireSpreadSpriteTemplate, ANIM_TARGET, 1, 0, 0, -160, -52, 70
+	createsprite gBlackFireSpreadSpriteTemplate, ANIM_TARGET, 1, 0, 0, 224, -32, 70
+	createsprite gBlackFireSpreadSpriteTemplate, ANIM_TARGET, 1, 0, 0, -224, -32, 70
+	createsprite gBlackFireSpreadSpriteTemplate, ANIM_TARGET, 1, 0, 0, 112, -128, 70
+	createsprite gBlackFireSpreadSpriteTemplate, ANIM_TARGET, 1, 0, 0, -112, -128, 70
+	delay 20
+	playsewithpan SE_M_SACRED_FIRE2, SOUND_PAN_TARGET
+	createsprite gLargeBlackFlameScatterSpriteTemplate, ANIM_TARGET, 2, 0, 0, 30, 30, 0, 1
+	delay 1
+	createsprite gLargeBlackFlameScatterSpriteTemplate, ANIM_TARGET, 2, 0, 0, 30, 30, -1, -1
+	delay 1
+	createsprite gLargeBlackFlameScatterSpriteTemplate, ANIM_TARGET, 2, 0, 0, 30, 30, 2, 1
+	delay 1
+	createsprite gLargeBlackFlameScatterSpriteTemplate, ANIM_TARGET, 2, 0, 0, 30, 30, 1, -1
+	delay 1
+	createsprite gLargeBlackFlameScatterSpriteTemplate, ANIM_TARGET, 2, 0, 0, 30, 30, -1, 1
+	delay 1
+	createsprite gLargeBlackFlameScatterSpriteTemplate, ANIM_TARGET, 2, 0, 0, 30, 30, 1, -2
+	delay 1
+	createsprite gLargeBlackFlameScatterSpriteTemplate, ANIM_TARGET, 2, 0, 0, 30, 30, 3, 1
+	delay 20
+	createsprite gBlackFireSpreadSpriteTemplate, ANIM_TARGET, 1, 0, 0, 192, 76, 70
+	createsprite gBlackFireSpreadSpriteTemplate, ANIM_TARGET, 1, 0, 0, -192, 76, 70
+	createsprite gBlackFireSpreadSpriteTemplate, ANIM_TARGET, 1, 0, 0, 20, 140, 70
+	createsprite gBlackFireSpreadSpriteTemplate, ANIM_TARGET, 1, 0, 0, -20, 140, 70
+	createsprite gBlackFireSpreadSpriteTemplate, ANIM_TARGET, 1, 0, 0, 192, -160, 70
+	createsprite gBlackFireSpreadSpriteTemplate, ANIM_TARGET, 1, 0, 0, -192, -160, 70
+	createsprite gBlackFireSpreadSpriteTemplate, ANIM_TARGET, 1, 0, 0, 82, -112, 70
+	createsprite gBlackFireSpreadSpriteTemplate, ANIM_TARGET, 1, 0, 0, -82, -112, 70
+	createsprite gBlackFireSpreadSpriteTemplate, ANIM_TARGET, 1, 0, 0, 160, -52, 70
+	createsprite gBlackFireSpreadSpriteTemplate, ANIM_TARGET, 1, 0, 0, -160, -52, 70
+	createsprite gBlackFireSpreadSpriteTemplate, ANIM_TARGET, 1, 0, 0, 224, -32, 70
+	createsprite gBlackFireSpreadSpriteTemplate, ANIM_TARGET, 1, 0, 0, -224, -32, 70
+	createsprite gBlackFireSpreadSpriteTemplate, ANIM_TARGET, 1, 0, 0, 112, -128, 70
+	createsprite gBlackFireSpreadSpriteTemplate, ANIM_TARGET, 1, 0, 0, -112, -128, 70
+	waitforvisualfinish
+	createvisualtask AnimTask_InvertScreenColor, 0x2, 0x101, 0x101, 0x101
+	clearmonbg ANIM_DEF_PARTNER
 	end
 
 @@@ DYNAMAX AND MAX RAIDS
