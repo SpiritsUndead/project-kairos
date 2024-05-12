@@ -5725,7 +5725,49 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
                 effect++;
             }
             break;
-        }
+        case ABILITY_UNNERVE:
+            if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
+             && TARGET_TURN_DAMAGED
+             && gMovesInfo[gCurrentMove].makesContact == TRUE
+             && gBattleMons[gBattlerTarget].hp != 0
+             && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
+             && GetBattlerAbility(gBattlerTarget) != ABILITY_INTIMIDATE
+             && GetBattlerAbility(gBattlerTarget) != ABILITY_HUMILIATE
+             && GetBattlerAbility(gBattlerTarget) != ABILITY_SHIELD_DUST
+             && GetBattlerHoldEffect(gBattlerTarget, TRUE) != HOLD_EFFECT_COVERT_CLOAK
+             && GetBattlerHoldEffect(gBattlerTarget, TRUE) != HOLD_EFFECT_PROTECTIVE_PADS)
+            {
+                u16 fchance = 15;
+
+                if(MoveHasAdditionalEffect(gCurrentMove, MOVE_EFFECT_FLINCH))
+                {
+                    //flinch chance stacks with flinching moves.
+                    for (i = 0; i < gMovesInfo[move].numAdditionalEffects; i++)
+                        if (gMovesInfo[move].additionalEffects[i].moveEffect == MOVE_EFFECT_FLINCH)
+                        {
+                            fchance = gMovesInfo[gCurrentMove].additionalEffects[i].chance; // base flinch chance for move
+                            fchance += 15; //Unnerve buffed chance
+                        }
+                    }
+                
+
+                //check for holding flinch item
+                if (GetBattlerHoldEffect(gBattlerAttacker, TRUE) == HOLD_EFFECT_FLINCH)
+                {
+                    fchance += 10;
+                }
+
+                if(RandomPercentage(RNG_SECONDARY_EFFECT, fchance))
+                {
+                    gBattleScripting.moveEffect = MOVE_EFFECT_FLINCH;
+                    BattleScriptPushCursor();
+                    SetMoveEffect(FALSE, FALSE);
+                    BattleScriptPop();
+                    effect++;
+                }
+            }
+            break;
+        }//end switch (gLastUsedAbility)
         break;
     case ABILITYEFFECT_MOVE_END_OTHER: // Abilities that activate on *another* battler's moveend: Dancer, Soul-Heart, Receiver, Symbiosis
         switch (GetBattlerAbility(battler))
