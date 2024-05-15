@@ -2602,4 +2602,37 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
         .cantBeSwapped = TRUE,
         .cantBeTraced = TRUE,
     },
+
+    [ABILITY_HUMILIATE] =
+    {
+    #if B_EXPANDED_ABILITY_NAMES == TRUE
+        .name = _("Humiliate"),
+    #else
+        .name = _("Humiliate"),
+    #endif
+        .description = COMPOUND_STRING("Lowers the foe's Sp. Atk."),
+        .aiRating = 7,
+    },
+
+    [ABILITY_HIGH_SPIRITS] =
+    {
+    #if B_EXPANDED_ABILITY_NAMES == TRUE
+        .name = _("High Spirits"),
+    #else
+        .name = _("High Spirits"),
+    #endif
+        .description = COMPOUND_STRING("Raises Special Attack."),
+        .aiRating = 10,
+    },
+
+    [ABILITY_SINKING_SANDS] =
+    {
+    #if B_EXPANDED_ABILITY_NAMES == TRUE
+        .name = _("Sinking Sands"),
+    #else
+        .name = _("Sinkng Sands"),
+    #endif
+        .description = COMPOUND_STRING("Faster foes take extra damage."),
+        .aiRating = 4,
+    },
 };
