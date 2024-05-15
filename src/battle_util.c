@@ -5733,9 +5733,13 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
              && gMovesInfo[gCurrentMove].makesContact == TRUE
              && gBattleMons[gBattlerTarget].hp != 0
              && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
+             //abilties that block added flinch effects of unnerve
              && GetBattlerAbility(gBattlerTarget) != ABILITY_INTIMIDATE
              && GetBattlerAbility(gBattlerTarget) != ABILITY_HUMILIATE
              && GetBattlerAbility(gBattlerTarget) != ABILITY_SHIELD_DUST
+             && GetBattlerAbility(gBattlerTarget) != ABILITY_STALWART
+             && GetBattlerAbility(gBattlerTarget) != ABILITY_DEFIANT
+             //hold items that block flinch chance
              && GetBattlerHoldEffect(gBattlerTarget, TRUE) != HOLD_EFFECT_COVERT_CLOAK
              && GetBattlerHoldEffect(gBattlerTarget, TRUE) != HOLD_EFFECT_PROTECTIVE_PADS)
             {
