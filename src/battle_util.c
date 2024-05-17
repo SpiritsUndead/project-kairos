@@ -8947,6 +8947,20 @@ static inline u32 CalcMoveBasePowerAfterModifiers(u32 move, u32 battlerAtk, u32 
         else if (AreBattlersOfOppositeGender(battlerAtk, battlerDef))
             modifier = uq4_12_multiply(modifier, UQ_4_12(0.75));
         break;
+    case ABILITY_SINKING_SANDS:
+        uq4_12_t ratio = GetBattlerTotalSpeedStat(battlerDef) / GetBattlerTotalSpeedStat(battlerAtk);
+        if(ratio > 1 && ratio <= 1.1)
+            modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(1.1));
+        if(ratio > 1.1 && ratio <= 1.3)
+            modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(1.2));
+        if(ratio > 1.3 && ratio <= 1.6)
+            modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(1.4));
+        if(ratio > 1.6 && ratio <= 2)
+            modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(1.6));
+        if (ratio > 2)
+            modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(1.8));
+        break;
+
     case ABILITY_ANALYTIC:
         if (GetBattlerTurnOrderNum(battlerAtk) == gBattlersCount - 1 && move != MOVE_FUTURE_SIGHT && move != MOVE_DOOM_DESIRE)
            modifier = uq4_12_multiply(modifier, UQ_4_12(1.3));

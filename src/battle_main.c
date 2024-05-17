@@ -5073,6 +5073,7 @@ s32 GetWhichBattlerFasterArgs(u32 battler1, u32 battler2, bool32 ignoreChosenMov
         // QUICK CLAW / CUSTAP - always first
         // LAGGING TAIL - always last
         // STALL - always last
+        // SINKING SANDS - always last
 
         if (gProtectStructs[battler1].quickDraw && !gProtectStructs[battler2].quickDraw)
             strikesFirst = 1;
@@ -5094,6 +5095,10 @@ s32 GetWhichBattlerFasterArgs(u32 battler1, u32 battler2, bool32 ignoreChosenMov
             strikesFirst = -1;
         else if (ability2 == ABILITY_MYCELIUM_MIGHT && ability1 != ABILITY_MYCELIUM_MIGHT && IS_MOVE_STATUS(gChosenMoveByBattler[battler2]))
             strikesFirst = 1;
+        else if (ability1 == ABILITY_SINKING_SANDS && ability2 != ABILITY_SINKING_SANDS)
+            strikesFirst = -1;
+        else if (ability2 == ABILITY_SINKING_SANDS && ability1 != ABILITY_SINKING_SANDS)
+            strikesFirst = 1; 
         else
         {
             if (speedBattler1 == speedBattler2 && Random() & 1)
