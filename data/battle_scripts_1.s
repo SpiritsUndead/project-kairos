@@ -7222,6 +7222,23 @@ BattleScript_DoTurnDmg:
 BattleScript_DoTurnDmgEnd:
 	end2
 
+
+BattleScript_ToxicParasitesBothMonsPoisoned::
+	call BattleScript_AbilityPopUpTarget
+	printstring STRINGID_BOTHMONSPOISONED
+	waitmessage B_WAIT_TIME_LONG
+	end2
+
+BattleScript_ToxicParasitesActivate::
+	copybyte gBattlerAbility, gBattlerAttacker
+	call BattleScript_AbilityPopUpTarget
+	printstring STRINGID_TOXICPARASITESACTIVATE
+	waitmessage B_WAIT_TIME_LONG
+	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE | HITMARKER_PASSIVE_DAMAGE
+	healthbarupdate BS_ATTACKER
+	datahpupdate BS_ATTACKER
+	end2
+
 BattleScript_PoisonHealActivates::
 	copybyte gBattlerAbility, gBattlerAttacker
 	call BattleScript_AbilityPopUp

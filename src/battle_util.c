@@ -2471,7 +2471,106 @@ u8 DoBattlerEndTurnEffects(void)
                     effect++;
                 }
             }
-            gBattleStruct->turnEffectsTracker++;
+            if (ability == ABILITY_TOXIC_PARASITES)
+            {
+                
+                if (gBattlersCount == 2)
+                {
+                    u32 opponent = BATTLE_OPPOSITE(GetBattlerPosition(battler));
+                    if ((gBattleMons[opponent].status1 & STATUS1_PSN_ANY) && (!(gBattleMons[battler].status1 & STATUS1_PSN_ANY)))
+                    {
+                        if (!BATTLER_MAX_HP(battler) && !(gStatuses3[battler] & STATUS3_HEAL_BLOCK))
+                        {
+                            //recover hp
+                            gBattleMoveDamage = GetNonDynamaxMaxHP(battler) / 8;
+                            if (gBattleMoveDamage == 0)
+                                gBattleMoveDamage = 1;
+                            gBattleMoveDamage *= -1;
+                            DebugPrintfLevel(MGBA_LOG_WARN, "toxic parasites heal mon.");
+                            BattleScriptExecute(BattleScript_ToxicParasitesActivate);
+                            effect++;
+                        }
+                    }
+                    else if (((gBattleMons[opponent].status1 & STATUS1_PSN_ANY)) && (gBattleMons[battler].status1 & STATUS1_PSN_ANY)) 
+                    {           //both mons poisoned.
+                        if (!(gStatuses3[battler] & STATUS3_HEAL_BLOCK)) 
+                        {           //not heal blocked, healing and poison cancel out.
+                            BattleScriptExecute(BattleScript_ToxicParasitesBothMonsPoisoned);
+                            effect++;
+                        }
+                        else            //heal blocked, take damage tick no matter what.
+                        {           
+                            gBattleMoveDamage = GetNonDynamaxMaxHP(battler) / 8;
+                            if (gBattleMoveDamage == 0)
+                                gBattleMoveDamage = 1;
+                            BattleScriptExecute(BattleScript_PoisonTurnDmg);
+                            effect++;
+                        }
+                    }
+                }
+                else if (gBattlersCount > 2)
+                {
+                    DebugPrintfLevel(MGBA_LOG_WARN, "--> double battle.");
+                    u32 opp_side = (BATTLE_OPPOSITE(GetBattlerPosition(battler))) & BIT_SIDE; // side of the opposing Pokémon
+                    u32 opponent1 = GetBattlerAtPosition(opp_side);
+                    u32 opponent2 = GetBattlerAtPosition(opp_side + BIT_FLANK);
+                    u32 ally_side = GetBattlerAtPosition(battler) & BIT_SIDE;
+                    u32 ally = GetBattlerAtPosition(ally_side + BIT_FLANK);
+                    u32 count = 0;
+
+                    if (gBattleMons[opponent1].status1 & STATUS1_PSN_ANY)
+                        count++;
+                    if (gBattleMons[opponent2].status1 & STATUS1_PSN_ANY)
+                        count++;
+                    if (gBattleMons[ally].status1 & STATUS1_PSN_ANY)
+                        count++;
+                    if (gBattleMons[battler].status1 & STATUS1_PSN_ANY)
+                        count --; //removes self poision from healing, effectively still taking its share of damage
+
+                    if (((gBattleMons[battler].status1 & STATUS1_PSN_ANY)) && (gStatuses3[battler] & STATUS3_HEAL_BLOCK)) //heal blocked, do regular poison damage
+                    {
+                        gBattleMoveDamage = GetNonDynamaxMaxHP(battler) / 8;
+                        if (gBattleMoveDamage == 0)
+                            gBattleMoveDamage = 1;
+                        BattleScriptExecute(BattleScript_PoisonTurnDmg);
+                        effect++;   
+                    }
+                    else if  (!(gStatuses3[battler] & STATUS3_HEAL_BLOCK))  // not heal blocked, calc recovery.
+                    {
+                        if (count > 0) 
+                        {
+                            DebugPrintfLevel(MGBA_LOG_WARN, "recovery count: %d", count);
+                            if (!BATTLER_MAX_HP(battler) && !(gStatuses3[battler] & STATUS3_HEAL_BLOCK))
+                            {
+                                gBattleMoveDamage = GetNonDynamaxMaxHP(battler) / 8;
+                                if (gBattleMoveDamage == 0)
+                                    gBattleMoveDamage = 1;
+                                gBattleMoveDamage *= -1;
+                                DebugPrintfLevel(MGBA_LOG_WARN, "gBattleMoveDamage: %d", gBattleMoveDamage);
+                                DebugPrintfLevel(MGBA_LOG_WARN, "count: %d", count);
+                                gBattleMoveDamage *= count; // 1/8 per posioned mon on field
+                                BattleScriptExecute(BattleScript_ToxicParasitesActivate);
+                                effect++;
+                            }
+                        }
+                        else if ((count == 0) && (gBattleMons[battler].status1 & STATUS1_PSN_ANY)) // you and 1 other are poisoned, healing is cancelled out.
+                        {
+                            BattleScriptExecute(BattleScript_ToxicParasitesBothMonsPoisoned);
+                            effect++;
+                        }
+                    }
+                    
+                    else // do normal poison damage
+                    {
+                        gBattleMoveDamage = GetNonDynamaxMaxHP(battler) / 8;
+                        if (gBattleMoveDamage == 0)
+                            gBattleMoveDamage = 1;
+                        BattleScriptExecute(BattleScript_PoisonTurnDmg);
+                        effect++;
+                    }
+                }
+            }
+            gBattleStruct->turnEffectsTracker++;          
             break;
         case ENDTURN_BAD_POISON:  // toxic poison
             if ((gBattleMons[battler].status1 & STATUS1_TOXIC_POISON)

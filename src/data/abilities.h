@@ -2635,4 +2635,16 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
         .description = COMPOUND_STRING("Faster foes take extra damage."),
         .aiRating = 4,
     },
+
+    [ABILITY_TOXIC_PARASITES] =
+    {
+    #if B_EXPANDED_ABILITY_NAMES == TRUE
+        .name = _("Toxic Parasites"),
+    #else
+        .name = _("TxcParasites"),
+    #endif
+        .description = COMPOUND_STRING("Heal HP from poisoned Pokémon."),
+        .aiRating = 7,
+        .cantBeTraced = TRUE,
+    },
 };
