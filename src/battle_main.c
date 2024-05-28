@@ -5071,20 +5071,13 @@ s32 GetWhichBattlerFasterArgs(u32 battler1, u32 battler2, bool32 ignoreChosenMov
 
     if (priority1 == priority2)
     {
-<<<<<<< HEAD
-        // QUICK CLAW / CUSTAP - always first
-        // LAGGING TAIL - always last
-        // STALL - always last
-        // SINKING SANDS - always last
-=======
         // Quick Claw / Quick Draw / Custap Berry - always first
-        // Stall / Mycelium Might - last but before Lagging Tail
+        // Stall / Mycelium Might/ Sinking Sands - last but before Lagging Tail
         // Lagging Tail - always last
         bool32 battler1HasQuickEffect = gProtectStructs[battler1].quickDraw || gProtectStructs[battler1].usedCustapBerry;
         bool32 battler2HasQuickEffect = gProtectStructs[battler2].quickDraw || gProtectStructs[battler2].usedCustapBerry;
         bool32 battler1HasStallingAbility = ability1 == ABILITY_STALL || (ability1 == ABILITY_MYCELIUM_MIGHT && IS_MOVE_STATUS(gChosenMoveByBattler[battler1])) || ability1 == ABILITY_SINKING_SANDS;
         bool32 battler2HasStallingAbility = ability2 == ABILITY_STALL || (ability2 == ABILITY_MYCELIUM_MIGHT && IS_MOVE_STATUS(gChosenMoveByBattler[battler2])) || ability2 == ABILITY_SINKING_SANDS;
->>>>>>> bef1eb3eea01f727d76dfe8d7ac49f0283bd771a
 
         if (battler1HasQuickEffect && !battler2HasQuickEffect)
             strikesFirst = 1;
