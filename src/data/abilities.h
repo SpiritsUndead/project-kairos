@@ -2647,4 +2647,48 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
         .aiRating = 7,
         .cantBeTraced = TRUE,
     },
+
+    [ABILITY_CALL_OF_THE_VOID] =
+    {
+    #if B_EXPANDED_ABILITY_NAMES == TRUE
+        .name = _("Call of the Void"),
+    #else
+        .name = _("Void Caller"),
+    #endif
+        .description = COMPOUND_STRING("Ups Dark moves in a pinch."),
+        .aiRating = 5,
+    },
+
+    [ABILITY_POWER_SURGE] =
+    {
+    .name = _("Power Surge"),
+    .description = COMPOUND_STRING("Ups Electric moves in a pinch."),
+    .aiRating = 5,
+    },
+
+    [ABILITY_UNDERDOG] =
+    {
+    .name = _("Underdog"),
+    .description = COMPOUND_STRING("Ups Fighting moves in a pinch."),
+    .aiRating = 5,
+    },
+
+    [ABILITY_MIND_OVER_MATTER] =
+    {
+    #if B_EXPANDED_ABILITY_NAMES == TRUE
+        .name = _("Mind Over Matter"),
+    #else
+        .name = _("MindOvrMttr"),
+    #endif
+    .description = COMPOUND_STRING("Ups Psychic moves in a pinch."),
+    .aiRating = 5,
+    },
+
+    [ABILITY_WHITEOUT] =
+    {
+    .name = _("Whiteout"),
+    .description = COMPOUND_STRING("Ups Ice moves in a pinch."),
+    .aiRating = 5,
+    },
+
 };
