@@ -2691,4 +2691,22 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
     .aiRating = 5,
     },
 
+    [ABILITY_ENCHANTMENT] =
+    {
+    .name = _("Enchantment"),
+    .description = COMPOUND_STRING("Ups Fairy moves in a pinch."),
+    .aiRating = 5,
+    },
+
+    [ABILITY_ADRENALINE_BOOST] =
+    {
+    #if B_EXPANDED_ABILITY_NAMES == TRUE
+        .name = _("Adrenaline Boost"),
+    #else
+        .name = _("AdrenlineBst"),
+    #endif
+    .description = COMPOUND_STRING("KO's with powerful moves \nenvigorate the pokemon."),
+    .aiRating = 7,
+    }
+
 };
