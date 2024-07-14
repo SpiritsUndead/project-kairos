@@ -10631,6 +10631,14 @@ const u8 gMonFootprint_QuestionMark[] = INCBIN_U8("graphics/pokemon/question_mar
     const u8 gMonFootprint_Rillaboom[] = INCBIN_U8("graphics/pokemon/rillaboom/footprint.1bpp");
 #endif //P_FOOTPRINTS
 
+#if P_MEGA_EVOLUTIONS
+    const u32 gMonFrontPic_RillaboomMega[] = INCBIN_U32("graphics/pokemon/rillaboom/mega/front.4bpp.lz");
+    const u32 gMonPalette_RillaboomMega[] = INCBIN_U32("graphics/pokemon/rillaboom/mega/normal.gbapal.lz");
+    const u32 gMonBackPic_RillaboomMega[] = INCBIN_U32("graphics/pokemon/rillaboom/mega/back.4bpp.lz");
+    const u32 gMonShinyPalette_RillaboomMega[] = INCBIN_U32("graphics/pokemon/rillaboom/mega/front.gbapal.lz"); //todo
+    const u8 gMonIcon_RillaboomMega[] = INCBIN_U8("graphics/pokemon/rillaboom/mega/icon.4bpp");
+#endif //P_MEGA_EVOLUTIONS
+
 #if P_GIGANTAMAX_FORMS
     const u32 gMonFrontPic_RillaboomGigantamax[] = INCBIN_U32("graphics/pokemon/rillaboom/gigantamax/front.4bpp.lz");
     const u32 gMonBackPic_RillaboomGigantamax[] = INCBIN_U32("graphics/pokemon/rillaboom/gigantamax/back.4bpp.lz");

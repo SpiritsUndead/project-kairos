@@ -1767,6 +1767,7 @@ static const u16 sRillaboomFormSpeciesIdTable[] = {
     SPECIES_RILLABOOM,
 #if P_GIGANTAMAX_FORMS
     SPECIES_RILLABOOM_GIGANTAMAX,
+    SPECIES_RILLABOOM_MEGA,
 #endif
     FORM_SPECIES_END,
 };

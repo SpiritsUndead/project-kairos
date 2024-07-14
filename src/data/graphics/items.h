@@ -955,6 +955,9 @@ const u32 gItemIconPalette_Audinite[] = INCBIN_U32("graphics/items/icon_palettes
 const u32 gItemIcon_Diancite[] = INCBIN_U32("graphics/items/icons/diancite.4bpp.lz");
 const u32 gItemIconPalette_Diancite[] = INCBIN_U32("graphics/items/icon_palettes/diancite.gbapal.lz");
 
+const u32 gItemIcon_Rillaboomite[] = INCBIN_U32("graphics/items/icons/rillaboomite.4bpp.lz");
+const u32 gItemIconPalette_Rillaboomite[] = INCBIN_U32("graphics/items/icon_palettes/rillaboomite.gbapal.lz");
+
 // Gems
 
 const u32 gItemIcon_NormalGem[] = INCBIN_U32("graphics/items/icons/normal_gem.4bpp.lz");

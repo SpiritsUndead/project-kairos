@@ -999,6 +999,10 @@ static const struct FormChange sMelmetalFormChangeTable[] =
 #if P_FAMILY_GROOKEY
 static const struct FormChange sRillaboomFormChangeTable[] =
 {
+#if P_MEGA_EVOLUTIONS
+    {FORM_CHANGE_BATTLE_MEGA_EVOLUTION_ITEM,    SPECIES_RILLABOOM_MEGA, ITEM_RILLABOOMITE},
+#endif
+
 #if P_GIGANTAMAX_FORMS
     {FORM_CHANGE_BATTLE_GIGANTAMAX, SPECIES_RILLABOOM_GIGANTAMAX},
 #endif
