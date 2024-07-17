@@ -365,6 +365,7 @@ const u32 *const gItemIconTable[ITEMS_COUNT + 1][2] =
     [ITEM_AUDINITE] = {gItemIcon_Audinite, gItemIconPalette_Audinite},
     [ITEM_DIANCITE] = {gItemIcon_Diancite, gItemIconPalette_Diancite},
     [ITEM_RILLABOOMITE] = {gItemIcon_Rillaboomite, gItemIconPalette_Rillaboomite},
+    [ITEM_SKELEDIRGITE] = {gItemIcon_Skeledirgite, gItemIconPalette_Skeledirgite},
     // Gems
     [ITEM_NORMAL_GEM] = {gItemIcon_NormalGem, gItemIconPalette_NormalGem},
     [ITEM_FIRE_GEM] = {gItemIcon_FireGem, gItemIconPalette_FireGem},

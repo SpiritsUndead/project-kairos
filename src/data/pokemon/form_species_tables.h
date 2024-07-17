@@ -1767,8 +1767,11 @@ static const u16 sRillaboomFormSpeciesIdTable[] = {
     SPECIES_RILLABOOM,
 #if P_GIGANTAMAX_FORMS
     SPECIES_RILLABOOM_GIGANTAMAX,
+#endif //gmax
+
+#if P_MEGA_EVOLUTIONS
     SPECIES_RILLABOOM_MEGA,
-#endif
+#endif //megas
     FORM_SPECIES_END,
 };
 #endif //P_FAMILY_GROOKEY
@@ -2176,3 +2179,13 @@ static const u16 sTerapagosFormSpeciesIdTable[] = {
     FORM_SPECIES_END,
 };
 #endif //P_FAMILY_TERAPAGOS
+
+#if P_FAMILY_FUECOCO
+static const u16 sSkeledirgeFormSpeciesIdTable[] = {
+    SPECIES_SKELEDIRGE,
+#if P_MEGA_EVOLUTIONS
+    SPECIES_SKELEDIRGE_MEGA,
+#endif
+    FORM_SPECIES_END,
+};
+#endif //P_FAMILY_FUECOCO
