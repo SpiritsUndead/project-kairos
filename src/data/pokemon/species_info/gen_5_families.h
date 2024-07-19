@@ -594,6 +594,63 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .teachableLearnset = sSamurottHisuianTeachableLearnset,
         .formSpeciesIdTable = sSamurottFormSpeciesIdTable,
     },
+
+    #if P_MEGA_EVOLUTIONS
+    [SPECIES_SAMUROTT_HISUIAN_MEGA] =
+    {
+        .baseHP        = 90,
+        .baseAttack    = 108,
+        .baseDefense   = 80,
+        .baseSpeed     = 85,
+        .baseSpAttack  = 100,
+        .baseSpDefense = 65,
+        .types = MON_TYPES(TYPE_WATER, TYPE_DARK),
+        .catchRate = 45,
+        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 264 : 238,
+        .evYield_Attack = 3,
+        .genderRatio = PERCENT_FEMALE(12.5),
+        .eggCycles = 20,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_SLOW,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
+        .abilities = { ABILITY_TORRENT, ABILITY_NONE, ABILITY_SHARPNESS },
+        .bodyColor = BODY_COLOR_BLUE,
+        .speciesName = _("Samurott"),
+        .cryId = CRY_SAMUROTT,
+        .natDexNum = NATIONAL_DEX_SAMUROTT,
+        .categoryName = _("Formidable"),
+        .height = 15,
+        .weight = 582,
+        .description = COMPOUND_STRING(
+            "Hard of heart and deft of blade,\n"
+            "this rare form of Samurott is a\n"
+            "product of the Pokémon's evolution in the\n"
+            "region of Hisui."),
+        .pokemonScale = 268,
+        .pokemonOffset = 2,
+        .trainerScale = 271,
+        .trainerOffset = 0,
+        .frontPic = gMonFrontPic_SamurottHisuianMega,
+        .frontPicSize = MON_COORDS_SIZE(64, 64),
+        .frontPicYOffset = 0,
+        .frontAnimFrames = sAnims_SamurottHisuian,
+        //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
+        .backPic = gMonBackPic_SamurottHisuianMega,
+        .backPicSize = MON_COORDS_SIZE(64, 64),
+        .backPicYOffset = 0,
+        //.backAnimId = BACK_ANIM_NONE,
+        .palette = gMonPalette_SamurottHisuianMega,
+        .shinyPalette = gMonShinyPalette_SamurottHisuianMega,
+        .iconSprite = gMonIcon_SamurottHisuianMega,
+        .iconPalIndex = 2,
+        FOOTPRINT(Samurott)
+        .isHisuianForm = TRUE,
+        .levelUpLearnset = sSamurottHisuianLevelUpLearnset,
+        .teachableLearnset = sSamurottHisuianTeachableLearnset,
+        .formSpeciesIdTable = sSamurottFormSpeciesIdTable,
+        .formChangeTable = sSamurottHisuianFormChangeTable,
+    },
+    #endif //P_MEGA_EVOLUTIONS
 #endif //P_HISUIAN_FORMS
 #endif //P_FAMILY_OSHAWOTT
 

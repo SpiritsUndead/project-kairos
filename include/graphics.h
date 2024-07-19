@@ -982,6 +982,8 @@ extern const u32 gItemIcon_Rillaboomite[];
 extern const u32 gItemIconPalette_Rillaboomite[];
 extern const u32 gItemIcon_Skeledirgite[];
 extern const u32 gItemIconPalette_Skeledirgite[];
+extern const u32 gItemIcon_Samurottite[];
+extern const u32 gItemIconPalette_Samurottite[];
 // Gems
 extern const u32 gItemIcon_NormalGem[];
 extern const u32 gItemIconPalette_NormalGem[];

@@ -1630,8 +1630,9 @@
 #define SPECIES_MIMIKYU_TOTEM_BUSTED                    1523
 #define SPECIES_RILLABOOM_MEGA                          1524
 #define SPECIES_SKELEDIRGE_MEGA                         1525
+#define SPECIES_SAMUROTT_HISUIAN_MEGA                   1526
 
-#define SPECIES_EGG (SPECIES_SKELEDIRGE_MEGA  + 1)
+#define SPECIES_EGG (SPECIES_SAMUROTT_HISUIAN_MEGA  + 1)
 
 #define NUM_SPECIES SPECIES_EGG
 

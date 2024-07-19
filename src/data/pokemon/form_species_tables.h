@@ -1147,7 +1147,10 @@ static const u16 sSamurottFormSpeciesIdTable[] = {
     SPECIES_SAMUROTT,
 #if P_HISUIAN_FORMS
     SPECIES_SAMUROTT_HISUIAN,
-#endif
+    #if P_MEGA_EVOLUTIONS
+        SPECIES_SAMUROTT_HISUIAN_MEGA,
+    #endif // megas
+#endif // hisuian
     FORM_SPECIES_END,
 };
 #endif //P_FAMILY_OSHAWOTT

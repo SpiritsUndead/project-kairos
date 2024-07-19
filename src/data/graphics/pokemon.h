@@ -6770,6 +6770,14 @@ const u8 gMonFootprint_QuestionMark[] = INCBIN_U8("graphics/pokemon/question_mar
     const u32 gMonBackPic_SamurottHisuian[] = INCBIN_U32("graphics/pokemon/samurott/hisuian/back.4bpp.lz");
     const u32 gMonShinyPalette_SamurottHisuian[] = INCBIN_U32("graphics/pokemon/samurott/hisuian/shiny.gbapal.lz");
     const u8 gMonIcon_SamurottHisuian[] = INCBIN_U8("graphics/pokemon/samurott/hisuian/icon.4bpp");
+
+    #if P_MEGA_EVOLUTIONS
+        const u32 gMonFrontPic_SamurottHisuianMega[] = INCBIN_U32("graphics/pokemon/samurott/hisuian/mega/front.4bpp.lz");
+        const u32 gMonPalette_SamurottHisuianMega[] = INCBIN_U32("graphics/pokemon/samurott/hisuian/mega/normal.gbapal.lz");
+        const u32 gMonBackPic_SamurottHisuianMega[] = INCBIN_U32("graphics/pokemon/samurott/hisuian/mega/back.4bpp.lz");
+        const u32 gMonShinyPalette_SamurottHisuianMega[] = INCBIN_U32("graphics/pokemon/samurott/hisuian/mega/front.gbapal.lz");//todo
+        const u8 gMonIcon_SamurottHisuianMega[] = INCBIN_U8("graphics/pokemon/samurott/hisuian/mega/icon.4bpp");
+    #endif //P_MEGA_EVOLUTIONS
 #endif //P_HISUIAN_FORMS
 #endif //P_FAMILY_OSHAWOTT
 

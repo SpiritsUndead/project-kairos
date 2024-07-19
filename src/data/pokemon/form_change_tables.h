@@ -1291,5 +1291,14 @@ static const struct FormChange sSkeledirgeFormChangeTable[] = {
 };
 #endif //P_FAMILY_FUECOCO
 
+#if P_FAMILY_OSHAWOTT
+static const struct FormChange sSamurottHisuianFormChangeTable[] = {
+#if P_MEGA_EVOLUTIONS
+    {FORM_CHANGE_BATTLE_MEGA_EVOLUTION_ITEM,    SPECIES_SAMUROTT_HISUIAN_MEGA, ITEM_SAMUROTTITE},
+#endif
+    {FORM_CHANGE_TERMINATOR},
+};
+#endif //P_FAMILY_OSHAWOTT
+
 #undef WHEN_LEARNED
 #undef WHEN_FORGOTTEN
