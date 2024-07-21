@@ -6775,7 +6775,7 @@ const u8 gMonFootprint_QuestionMark[] = INCBIN_U8("graphics/pokemon/question_mar
         const u32 gMonFrontPic_SamurottHisuianMega[] = INCBIN_U32("graphics/pokemon/samurott/hisuian/mega/front.4bpp.lz");
         const u32 gMonPalette_SamurottHisuianMega[] = INCBIN_U32("graphics/pokemon/samurott/hisuian/mega/normal.gbapal.lz");
         const u32 gMonBackPic_SamurottHisuianMega[] = INCBIN_U32("graphics/pokemon/samurott/hisuian/mega/back.4bpp.lz");
-        const u32 gMonShinyPalette_SamurottHisuianMega[] = INCBIN_U32("graphics/pokemon/samurott/hisuian/mega/front.gbapal.lz");//todo
+        const u32 gMonShinyPalette_SamurottHisuianMega[] = INCBIN_U32("graphics/pokemon/samurott/hisuian/mega/shiny.gbapal.lz");
         const u8 gMonIcon_SamurottHisuianMega[] = INCBIN_U8("graphics/pokemon/samurott/hisuian/mega/icon.4bpp");
     #endif //P_MEGA_EVOLUTIONS
 #endif //P_HISUIAN_FORMS
@@ -10643,7 +10643,7 @@ const u8 gMonFootprint_QuestionMark[] = INCBIN_U8("graphics/pokemon/question_mar
     const u32 gMonFrontPic_RillaboomMega[] = INCBIN_U32("graphics/pokemon/rillaboom/mega/front.4bpp.lz");
     const u32 gMonPalette_RillaboomMega[] = INCBIN_U32("graphics/pokemon/rillaboom/mega/normal.gbapal.lz");
     const u32 gMonBackPic_RillaboomMega[] = INCBIN_U32("graphics/pokemon/rillaboom/mega/back.4bpp.lz");
-    const u32 gMonShinyPalette_RillaboomMega[] = INCBIN_U32("graphics/pokemon/rillaboom/mega/front.gbapal.lz"); //todo
+    const u32 gMonShinyPalette_RillaboomMega[] = INCBIN_U32("graphics/pokemon/rillaboom/mega/shiny.gbapal.lz");
     const u8 gMonIcon_RillaboomMega[] = INCBIN_U8("graphics/pokemon/rillaboom/mega/icon.4bpp");
 #endif //P_MEGA_EVOLUTIONS
 
@@ -11878,9 +11878,9 @@ const u8 gMonFootprint_QuestionMark[] = INCBIN_U8("graphics/pokemon/question_mar
 
 #if P_MEGA_EVOLUTIONS
     const u32 gMonFrontPic_SkeledirgeMega[] = INCBIN_U32("graphics/pokemon/skeledirge/mega/front.4bpp.lz");
-    const u32 gMonPalette_SkeledirgeMega[] = INCBIN_U32("graphics/pokemon/skeledirge/mega/normalback.gbapal.lz");
+    const u32 gMonPalette_SkeledirgeMega[] = INCBIN_U32("graphics/pokemon/skeledirge/mega/normal.gbapal.lz");
     const u32 gMonBackPic_SkeledirgeMega[] = INCBIN_U32("graphics/pokemon/skeledirge/mega/back.4bpp.lz");
-    const u32 gMonShinyPalette_SkeledirgeMega[] = INCBIN_U32("graphics/pokemon/skeledirge/mega/front.gbapal.lz"); //todo
+    const u32 gMonShinyPalette_SkeledirgeMega[] = INCBIN_U32("graphics/pokemon/skeledirge/mega/shiny.gbapal.lz");
     const u8 gMonIcon_SkeledirgeMega[] = INCBIN_U8("graphics/pokemon/skeledirge/mega/icon.4bpp");
 #endif //P_MEGA_EVOLUTIONS
 
