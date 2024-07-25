@@ -13090,6 +13090,13 @@ const u8 gMonFootprint_QuestionMark[] = INCBIN_U8("graphics/pokemon/question_mar
 #endif //P_FOOTPRINTS
 #endif //P_FAMILY_PECHARUNT
 
+    const u32 gMonFrontPic_Turtwick[] = INCBIN_U32("graphics/pokemon/turtwig/turtwick/front.4bpp.lz");
+    const u32 gMonPalette_Turtwick[] = INCBIN_U32("graphics/pokemon/turtwig/turtwick/normal.gbapal.lz");
+    const u32 gMonBackPic_Turtwick[] = INCBIN_U32("graphics/pokemon/turtwig/turtwick/back.4bpp.lz");
+    const u32 gMonShinyPalette_Turtwick[] = INCBIN_U32("graphics/pokemon/turtwig/turtwick/shiny.gbapal.lz");
+    const u8 gMonIcon_Turtwick[] = INCBIN_U8("graphics/pokemon/turtwig/turtwick/icon.4bpp");
+
+
     const u32 gMonFrontPic_Egg[] = INCBIN_U32("graphics/pokemon/egg/anim_front.4bpp.lz");
     const u32 gMonPalette_Egg[] = INCBIN_U32("graphics/pokemon/egg/normal.gbapal.lz");
     const u8 gMonIcon_Egg[] = INCBIN_U8("graphics/pokemon/egg/icon.4bpp");
