@@ -1632,8 +1632,9 @@
 #define SPECIES_SKELEDIRGE_MEGA                         1525
 #define SPECIES_SAMUROTT_HISUIAN_MEGA                   1526
 #define SPECIES_TURTWICK                                1527
+#define SPECIES_HEARTHLE                                1528
 
-#define SPECIES_EGG (SPECIES_TURTWICK  + 1)
+#define SPECIES_EGG (SPECIES_HEARTHLE  + 1)
 
 #define NUM_SPECIES SPECIES_EGG
 

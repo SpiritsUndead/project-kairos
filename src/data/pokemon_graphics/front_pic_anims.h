@@ -10151,6 +10151,7 @@ static const union AnimCmd sAnim_Egg_1[] =
 };
 
 PLACEHOLDER_ANIM_SINGLE_FRAME(Turtwick);
+PLACEHOLDER_ANIM_SINGLE_FRAME(Hearthle);
 
 #define SINGLE_ANIMATION(name)                      \
 static const union AnimCmd *const sAnims_##name[] = \
@@ -12817,4 +12818,5 @@ SINGLE_ANIMATION(TerapagosStellar);
 SINGLE_ANIMATION(Pecharunt);
 #endif //P_FAMILY_PECHARUNT
 SINGLE_ANIMATION(Turtwick);
+SINGLE_ANIMATION(Hearthle);
 SINGLE_ANIMATION(Egg);

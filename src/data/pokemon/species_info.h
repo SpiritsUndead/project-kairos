@@ -201,8 +201,8 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .teachableLearnset = sTurtwigTeachableLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 18, SPECIES_GROTLE}),
     },
-/*
-    [SPECIES_GROTLE] =
+
+    [SPECIES_HEARTHLE] =
     {
         .baseHP        = 75,
         .baseAttack    = 89,
@@ -210,7 +210,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .baseSpeed     = 36,
         .baseSpAttack  = 55,
         .baseSpDefense = 65,
-        .types = MON_TYPES(TYPE_GRASS),
+        .types = MON_TYPES(TYPE_FIRE),
         .catchRate = 45,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 142 : 141,
         .evYield_Attack = 1,
@@ -219,10 +219,10 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
-        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MONSTER, EGG_GROUP_GRASS),
-        .abilities = { ABILITY_OVERGROW, ABILITY_NONE, ABILITY_SHELL_ARMOR },
-        .bodyColor = BODY_COLOR_GREEN,
-        .speciesName = _("Grotle"),
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MONSTER, EGG_GROUP_FIELD),
+        .abilities = { ABILITY_BLAZE, ABILITY_NONE, ABILITY_SHELL_ARMOR },
+        .bodyColor = BODY_COLOR_RED,
+        .speciesName = _("Hearthle"),
         .cryId = CRY_GROTLE,
         .natDexNum = NATIONAL_DEX_GROTLE,
         .categoryName = _("Grove"),
@@ -237,25 +237,25 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .pokemonOffset = 9,
         .trainerScale = 256,
         .trainerOffset = 0,
-        .frontPic = gMonFrontPic_Grotle,
+        .frontPic = gMonFrontPic_Hearthle,
         .frontPicSize = MON_COORDS_SIZE(56, 56),
         .frontPicYOffset = 7,
-        .frontAnimFrames = sAnims_Grotle,
-        .frontAnimId = ANIM_V_STRETCH,
-        .backPic = gMonBackPic_Grotle,
+        .frontAnimFrames = sAnims_Hearthle,
+        //.frontAnimId = ANIM_V_STRETCH,
+        .backPic = gMonBackPic_Hearthle,
         .backPicSize = MON_COORDS_SIZE(64, 48),
-        .backPicYOffset = 10,
+        .backPicYOffset = 5,
         .backAnimId = BACK_ANIM_H_SLIDE,
-        .palette = gMonPalette_Grotle,
-        .shinyPalette = gMonShinyPalette_Grotle,
-        .iconSprite = gMonIcon_Grotle,
-        .iconPalIndex = 1,
+        .palette = gMonPalette_Hearthle,
+        .shinyPalette = gMonShinyPalette_Hearthle,
+        .iconSprite = gMonIcon_Hearthle,
+        .iconPalIndex = 0,
         FOOTPRINT(Grotle)
         .levelUpLearnset = sGrotleLevelUpLearnset,
         .teachableLearnset = sGrotleTeachableLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 32, SPECIES_TORTERRA}),
     },
-
+/*
     [SPECIES_TORTERRA] =
     {
         .baseHP        = 95,
