@@ -1634,8 +1634,9 @@
 #define SPECIES_TURTWICK                                1527
 #define SPECIES_HEARTHLE                                1528
 #define SPECIES_FORGETERRA                              1529
+#define SPECIES_MILOTIC_MEGA                            1530
 
-#define SPECIES_EGG (SPECIES_FORGETERRA  + 1)
+#define SPECIES_EGG (SPECIES_MILOTIC_MEGA  + 1)
 
 #define NUM_SPECIES SPECIES_EGG
 

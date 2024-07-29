@@ -4682,6 +4682,8 @@ static const union AnimCmd sAnim_Milotic_1[] =
     ANIMCMD_FRAME(0, 15),
     ANIMCMD_END,
 };
+
+PLACEHOLDER_ANIM_SINGLE_FRAME(MiloticMega);
 #endif //P_FAMILY_FEEBAS
 
 #if P_FAMILY_CASTFORM
@@ -10150,9 +10152,11 @@ static const union AnimCmd sAnim_Egg_1[] =
     ANIMCMD_END,
 };
 
+//gen4 type swaps
 PLACEHOLDER_ANIM_SINGLE_FRAME(Turtwick);
 PLACEHOLDER_ANIM_SINGLE_FRAME(Hearthle);
 PLACEHOLDER_ANIM_SINGLE_FRAME(Forgeterra);
+
 
 #define SINGLE_ANIMATION(name)                      \
 static const union AnimCmd *const sAnims_##name[] = \
@@ -11264,6 +11268,7 @@ SINGLE_ANIMATION(Armaldo);
 #if P_FAMILY_FEEBAS
 SINGLE_ANIMATION(Feebas);
 SINGLE_ANIMATION(Milotic);
+SINGLE_ANIMATION(MiloticMega);
 #endif //P_FAMILY_FEEBAS
 #if P_FAMILY_CASTFORM
 SINGLE_ANIMATION(CastformNormal);
@@ -12821,5 +12826,6 @@ SINGLE_ANIMATION(Pecharunt);
 SINGLE_ANIMATION(Turtwick);
 SINGLE_ANIMATION(Hearthle);
 SINGLE_ANIMATION(Forgeterra);
+
 
 SINGLE_ANIMATION(Egg);

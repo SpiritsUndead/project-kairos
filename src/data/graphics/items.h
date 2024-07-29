@@ -964,6 +964,9 @@ const u32 gItemIconPalette_Skeledirgite[] = INCBIN_U32("graphics/items/icon_pale
 const u32 gItemIcon_Samurottite[] = INCBIN_U32("graphics/items/icons/samurottite.4bpp.lz");
 const u32 gItemIconPalette_Samurottite[] = INCBIN_U32("graphics/items/icon_palettes/samurottite.gbapal.lz");
 
+const u32 gItemIcon_Milotite[] = INCBIN_U32("graphics/items/icons/milotite.4bpp.lz");
+const u32 gItemIconPalette_Milotite[] = INCBIN_U32("graphics/items/icon_palettes/milotite.gbapal.lz");
+
 // Gems
 
 const u32 gItemIcon_NormalGem[] = INCBIN_U32("graphics/items/icons/normal_gem.4bpp.lz");

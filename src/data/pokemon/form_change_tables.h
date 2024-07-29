@@ -1300,5 +1300,10 @@ static const struct FormChange sSamurottHisuianFormChangeTable[] = {
 };
 #endif //P_FAMILY_OSHAWOTT
 
+static const struct FormChange sMiloticFormChangeTable[] = {
+    {FORM_CHANGE_BATTLE_MEGA_EVOLUTION_ITEM,    SPECIES_MILOTIC_MEGA, ITEM_MILOTITE},
+    {FORM_CHANGE_TERMINATOR},
+};
+
 #undef WHEN_LEARNED
 #undef WHEN_FORGOTTEN

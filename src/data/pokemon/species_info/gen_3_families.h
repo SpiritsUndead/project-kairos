@@ -6880,6 +6880,69 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         FOOTPRINT(Milotic)
         .levelUpLearnset = sMiloticLevelUpLearnset,
         .teachableLearnset = sMiloticTeachableLearnset,
+        .formSpeciesIdTable = sMiloticFormSpeciesIdTable,
+        .formChangeTable = sMiloticFormChangeTable,
+    },
+
+    [SPECIES_MILOTIC_MEGA] =
+    {
+        .baseHP        = 95,
+        .baseAttack    = 60,
+        .baseDefense   = 79,
+        .baseSpeed     = 81,
+        .baseSpAttack  = 100,
+        .baseSpDefense = 125,
+        .types = MON_TYPES(TYPE_WATER),
+        .catchRate = 60,
+        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 189 : 213,
+        .evYield_SpDefense = 2,
+        .genderRatio = PERCENT_FEMALE(50),
+        .eggCycles = 20,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_ERRATIC,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_WATER_1, EGG_GROUP_DRAGON),
+    #if P_UPDATED_ABILITIES >= GEN_4
+        .abilities = { ABILITY_MARVEL_SCALE, ABILITY_COMPETITIVE, ABILITY_CUTE_CHARM },
+    #else
+        .abilities = { ABILITY_MARVEL_SCALE, ABILITY_NONE, ABILITY_CUTE_CHARM },
+    #endif
+        .bodyColor = BODY_COLOR_PINK,
+        .speciesName = _("Milotic"),
+        .cryId = CRY_MILOTIC,
+        .natDexNum = NATIONAL_DEX_MILOTIC,
+        .categoryName = _("Tender"),
+        .height = 62,
+        .weight = 1620,
+        .description = COMPOUND_STRING(
+            "It is said to live at the bottom of\n"
+            "large lakes. Considered to be the most\n"
+            "beautiful of all Pokémon, it has been\n"
+            "depicted in paintings and statues."),
+        .pokemonScale = 256,
+        .pokemonOffset = 0,
+        .trainerScale = 360,
+        .trainerOffset = 7,
+        .frontPic = gMonFrontPic_MiloticMega,
+        .frontPicSize = MON_COORDS_SIZE(64, 64),
+        .frontPicSizeFemale = MON_COORDS_SIZE(64, 64),
+        .frontPicYOffset = 2,
+        .frontAnimFrames = sAnims_MiloticMega,
+        .frontAnimId = ANIM_H_SLIDE_WOBBLE,
+        .frontAnimDelay = 45,
+        .backPic = gMonBackPic_MiloticMega,
+        .backPicSize = MON_COORDS_SIZE(64, 64),
+        .backPicSizeFemale = MON_COORDS_SIZE(64, 64),
+        .backPicYOffset = 0,
+        .backAnimId = BACK_ANIM_SHAKE_GLOW_BLUE,
+        .palette = gMonPalette_MiloticMega,
+        .shinyPalette = gMonShinyPalette_Milotic, //todo
+        .iconSprite = gMonIcon_MiloticMega,
+        .iconPalIndex = 2,
+        FOOTPRINT(Milotic)
+        .levelUpLearnset = sMiloticLevelUpLearnset,
+        .teachableLearnset = sMiloticTeachableLearnset,
+        .formSpeciesIdTable = sMiloticFormSpeciesIdTable,
+        .formChangeTable = sMiloticFormChangeTable,
     },
 #endif //P_FAMILY_FEEBAS
 

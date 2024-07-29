@@ -5397,6 +5397,21 @@ const struct Item gItemsInfo[] =
         .flingPower = 80,
     },
 
+    [ITEM_MILOTITE] =
+    {
+        .name = _("Milotite"),
+        .price = 0,
+        .holdEffect = HOLD_EFFECT_MEGA_STONE,
+        .description = COMPOUND_STRING(
+            "This stone enables\n"
+            "Milotic to Mega\n"
+            "Evolve in battle."),
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 80,
+    },
+
 // Gems
 
     [ITEM_NORMAL_GEM] =
