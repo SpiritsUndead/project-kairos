@@ -165,12 +165,12 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
 #if P_MEGA_EVOLUTIONS
     [SPECIES_RILLABOOM_MEGA] =
     { //todo bst changes
-        .baseHP        = 100,
-        .baseAttack    = 125,
-        .baseDefense   = 90,
-        .baseSpeed     = 85,
-        .baseSpAttack  = 60,
-        .baseSpDefense = 70,
+        .baseHP        = 120,
+        .baseAttack    = 150,
+        .baseDefense   = 110,
+        .baseSpeed     = 100,
+        .baseSpAttack  = 70,
+        .baseSpDefense = 80,
         .types = MON_TYPES(TYPE_GRASS),
         .catchRate = 45,
         .expYield = 265,
@@ -201,13 +201,13 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 3,
         .frontAnimFrames = sAnims_Rillaboom,
-        //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
+        .frontAnimId = ANIM_TWIST,
         .backPic = gMonBackPic_RillaboomMega,
         .backPicSize = MON_COORDS_SIZE(64, 56),
         .backPicYOffset = 0,
-        //.backAnimId = BACK_ANIM_NONE,
+        .backAnimId = BACK_ANIM_CONVEX_DOUBLE_ARC,
         .palette = gMonPalette_RillaboomMega,
-        .shinyPalette = gMonShinyPalette_RillaboomMega, //todo
+        .shinyPalette = gMonShinyPalette_RillaboomMega,
         .iconSprite = gMonIcon_RillaboomMega,
         .iconPalIndex = 1,
         FOOTPRINT(Rillaboom)

@@ -326,13 +326,13 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
 
     #if P_MEGA_EVOLUTIONS
     [SPECIES_SKELEDIRGE_MEGA] =
-    {  //todo bst changes
-        .baseHP        = 104,
-        .baseAttack    = 75,
-        .baseDefense   = 100,
-        .baseSpeed     = 66,
-        .baseSpAttack  = 110,
-        .baseSpDefense = 75,
+    {
+        .baseHP        = 125,
+        .baseAttack    = 80,
+        .baseDefense   = 115,
+        .baseSpeed     = 75,
+        .baseSpAttack  = 150,
+        .baseSpDefense = 85,
         .types = MON_TYPES(TYPE_FIRE, TYPE_GHOST),
         .catchRate = 45,
         .expYield = 265,
@@ -347,7 +347,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .speciesName = _("Skeledirge"),
         .cryId = CRY_SKELEDIRGE, //todo
         .natDexNum = NATIONAL_DEX_SKELEDIRGE,
-        .categoryName = _("Singer"),
+        .categoryName = _("Rock Star"),
         .height = 16,
         .weight = 3265,
         .description = COMPOUND_STRING( //todo
@@ -363,11 +363,11 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 5,
         .frontAnimFrames = sAnims_Skeledirge,
-        //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
+        .frontAnimId = ANIM_BOUNCE_ROTATE_TO_SIDES,
         .backPic = gMonBackPic_SkeledirgeMega,
         .backPicSize = MON_COORDS_SIZE(64, 64),
         .backPicYOffset = 0,
-        //.backAnimId = BACK_ANIM_NONE,
+        .backAnimId = BACK_ANIM_V_SHAKE_LOW,
         .palette = gMonPalette_SkeledirgeMega,
         .shinyPalette = gMonShinyPalette_SkeledirgeMega,
         .iconSprite = gMonIcon_SkeledirgeMega,
