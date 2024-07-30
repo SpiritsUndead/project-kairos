@@ -285,6 +285,7 @@ static const u16 sPonytaFormSpeciesIdTable[] = {
 
 static const u16 sRapidashFormSpeciesIdTable[] = {
     SPECIES_RAPIDASH,
+    SPECIES_RAPIDASH_MEGA,
 #if P_GALARIAN_FORMS
     SPECIES_RAPIDASH_GALARIAN,
 #endif

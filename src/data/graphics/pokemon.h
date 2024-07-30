@@ -1226,6 +1226,12 @@ const u8 gMonFootprint_QuestionMark[] = INCBIN_U8("graphics/pokemon/question_mar
     const u8 gMonFootprint_Rapidash[] = INCBIN_U8("graphics/pokemon/rapidash/footprint.1bpp");
 #endif //P_FOOTPRINTS
 
+    const u32 gMonFrontPic_RapidashMega[] = INCBIN_U32("graphics/pokemon/rapidash/mega/front.4bpp.lz");
+    const u32 gMonPalette_RapidashMega[] = INCBIN_U32("graphics/pokemon/rapidash/mega/normal.gbapal.lz");
+    const u32 gMonBackPic_RapidashMega[] = INCBIN_U32("graphics/pokemon/rapidash/mega/back.4bpp.lz");
+    const u32 gMonShinyPalette_RapidashMega[] = INCBIN_U32("graphics/pokemon/rapidash/mega/shiny.gbapal.lz");
+    const u8 gMonIcon_RapidashMega[] = INCBIN_U8("graphics/pokemon/rapidash/mega/icon.4bpp");
+
 #if P_GALARIAN_FORMS
     const u32 gMonFrontPic_PonytaGalarian[] = INCBIN_U32("graphics/pokemon/ponyta/galarian/front.4bpp.lz");
     const u32 gMonPalette_PonytaGalarian[] = INCBIN_U32("graphics/pokemon/ponyta/galarian/normal.gbapal.lz");
