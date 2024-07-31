@@ -3810,6 +3810,59 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .formChangeTable = sHattereneFormChangeTable,
     },
 
+    [SPECIES_HATTERENE_MEGA] =
+    {  //todo
+        .baseHP        = 57,
+        .baseAttack    = 90,
+        .baseDefense   = 95,
+        .baseSpeed     = 29,
+        .baseSpAttack  = 136,
+        .baseSpDefense = 103,
+        .types = MON_TYPES(TYPE_PSYCHIC, TYPE_FAIRY),
+        .catchRate = 45,
+        .expYield = 255,
+        .evYield_SpAttack = 3,
+        .genderRatio = MON_FEMALE,
+        .eggCycles = 20,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_SLOW,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FAIRY),
+        .abilities = { ABILITY_HEALER, ABILITY_ANTICIPATION, ABILITY_MAGIC_BOUNCE },
+        .bodyColor = BODY_COLOR_PINK,
+        .speciesName = _("Hatterene"),
+        .cryId = CRY_HATTERENE,
+        .natDexNum = NATIONAL_DEX_HATTERENE,
+        .categoryName = _("Silent"),
+        .height = 21,
+        .weight = 51,
+        .description = COMPOUND_STRING(
+            "It emits psychic power strong enough to\n"
+            "cause headaches as a deterrent to the\n"
+            "approach of others."),
+        .pokemonScale = 256,
+        .pokemonOffset = 0,
+        .trainerScale = 365,
+        .trainerOffset = 7,
+        .frontPic = gMonFrontPic_HattereneMega,
+        .frontPicSize = MON_COORDS_SIZE(48, 64),
+        .frontPicYOffset = 0,
+        .frontAnimFrames = sAnims_HattereneMega,
+        .frontAnimId = ANIM_RISING_WOBBLE,
+        .backPic = gMonBackPic_HattereneMega,
+        .backPicSize = MON_COORDS_SIZE(56, 64),
+        .backPicYOffset = 0,
+        .backAnimId = BACK_ANIM_DIP_RIGHT_SIDE,
+        .palette = gMonPalette_HattereneMega,
+        .shinyPalette = gMonShinyPalette_HattereneMega,
+        .iconSprite = gMonIcon_HattereneMega,
+        .iconPalIndex = 0,
+        FOOTPRINT(Hatterene)
+        .levelUpLearnset = sHattereneLevelUpLearnset,
+        .teachableLearnset = sHattereneTeachableLearnset,
+        .formSpeciesIdTable = sHattereneFormSpeciesIdTable,
+        .formChangeTable = sHattereneFormChangeTable,
+    },
+
 #if P_GIGANTAMAX_FORMS
     [SPECIES_HATTERENE_GIGANTAMAX] =
     {

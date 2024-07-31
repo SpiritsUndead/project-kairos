@@ -1141,6 +1141,8 @@ static const struct FormChange sCentiskorchFormChangeTable[] =
 #if P_FAMILY_HATENNA
 static const struct FormChange sHattereneFormChangeTable[] =
 {
+    {FORM_CHANGE_BATTLE_MEGA_EVOLUTION_ITEM, SPECIES_HATTERENE_MEGA, ITEM_HATTERENITE},
+    
 #if P_GIGANTAMAX_FORMS
     {FORM_CHANGE_BATTLE_GIGANTAMAX, SPECIES_HATTERENE_GIGANTAMAX},
 #endif

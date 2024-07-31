@@ -11256,6 +11256,13 @@ const u8 gMonFootprint_QuestionMark[] = INCBIN_U8("graphics/pokemon/question_mar
     const u32 gMonShinyPalette_HattereneGigantamax[] = INCBIN_U32("graphics/pokemon/hatterene/gigantamax/shiny.gbapal.lz");
     const u8 gMonIcon_HattereneGigantamax[] = INCBIN_U8("graphics/pokemon/hatterene/gigantamax/icon.4bpp");
 #endif //P_GIGANTAMAX_FORMS
+
+    const u32 gMonFrontPic_HattereneMega[] = INCBIN_U32("graphics/pokemon/hatterene/mega/front.4bpp.lz");
+    const u32 gMonBackPic_HattereneMega[] = INCBIN_U32("graphics/pokemon/hatterene/mega/back.4bpp.lz");
+    const u32 gMonPalette_HattereneMega[] = INCBIN_U32("graphics/pokemon/hatterene/mega/normal.gbapal.lz");
+    const u32 gMonShinyPalette_HattereneMega[] = INCBIN_U32("graphics/pokemon/hatterene/mega/shiny.gbapal.lz");
+    const u8 gMonIcon_HattereneMega[] = INCBIN_U8("graphics/pokemon/hatterene/mega/icon.4bpp");
+
 #endif //P_FAMILY_HATENNA
 
 #if P_FAMILY_IMPIDIMP

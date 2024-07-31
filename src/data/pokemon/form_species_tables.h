@@ -1918,6 +1918,7 @@ static const u16 sPolteageistFormSpeciesIdTable[] = {
 #if P_FAMILY_HATENNA
 static const u16 sHattereneFormSpeciesIdTable[] = {
     SPECIES_HATTERENE,
+    SPECIES_HATTERENE_MEGA,
 #if P_GIGANTAMAX_FORMS
     SPECIES_HATTERENE_GIGANTAMAX,
 #endif
