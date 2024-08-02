@@ -708,7 +708,7 @@
 #define STRINGID_TIDYINGUPCOMPLETE                    706
 
 #define STRINGID_PKMNCUTSSPATTACKWITH                 707
-#define STRINGID_BOTHMONSPOISONED                     709
+#define STRINGID_BOTHMONSPOISONED                     708
 #define STRINGID_TOXICPARASITESACTIVATE               709
 
 #define BATTLESTRINGS_COUNT                           710
