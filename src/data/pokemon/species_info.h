@@ -258,13 +258,13 @@ const struct SpeciesInfo gSpeciesInfo[] =
 
     [SPECIES_FORGETERRA] =
     {
-        .baseHP        = 95,
+        .baseHP        = 100,
         .baseAttack    = 109,
         .baseDefense   = 105,
         .baseSpeed     = 56,
-        .baseSpAttack  = 75,
+        .baseSpAttack  = 80,
         .baseSpDefense = 85,
-        .types = MON_TYPES(TYPE_GRASS, TYPE_GROUND),
+        .types = MON_TYPES(TYPE_FIRE, TYPE_STEEL),
         .catchRate = 45,
     #if P_UPDATED_EXP_YIELDS >= GEN_8
         .expYield = 263,
