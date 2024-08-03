@@ -23729,7 +23729,7 @@ F_TRAINER_FEMALE |
     [TRAINER_BRENDAN_ROUTE_103_MUDKIP] =
     {
 #line 9440
-        .trainerName = _("{B_RIVAL_NAME}"),
+        .trainerName = _("BRENDAN"),
 #line 9441
         .trainerClass = TRAINER_CLASS_RIVAL,
 #line 9442
@@ -23761,7 +23761,7 @@ F_TRAINER_FEMALE |
     [TRAINER_BRENDAN_ROUTE_110_MUDKIP] =
     {
 #line 9453
-        .trainerName = _("{B_RIVAL_NAME}"),
+        .trainerName = _("BRENDAN"),
 #line 9454
         .trainerClass = TRAINER_CLASS_RIVAL,
 #line 9455
@@ -23815,7 +23815,7 @@ F_TRAINER_FEMALE |
     [TRAINER_BRENDAN_ROUTE_119_MUDKIP] =
     {
 #line 9474
-        .trainerName = _("{B_RIVAL_NAME}"),
+        .trainerName = _("BRENDAN"),
 #line 9475
         .trainerClass = TRAINER_CLASS_RIVAL,
 #line 9476
@@ -23869,7 +23869,7 @@ F_TRAINER_FEMALE |
     [TRAINER_BRENDAN_ROUTE_103_TREECKO] =
     {
 #line 9495
-        .trainerName = _("{B_RIVAL_NAME}"),
+        .trainerName = _("BRENDAN"),
 #line 9496
         .trainerClass = TRAINER_CLASS_RIVAL,
 #line 9497
@@ -23901,7 +23901,7 @@ F_TRAINER_FEMALE |
     [TRAINER_BRENDAN_ROUTE_110_TREECKO] =
     {
 #line 9508
-        .trainerName = _("{B_RIVAL_NAME}"),
+        .trainerName = _("BRENDAN"),
 #line 9509
         .trainerClass = TRAINER_CLASS_RIVAL,
 #line 9510
@@ -23955,7 +23955,7 @@ F_TRAINER_FEMALE |
     [TRAINER_BRENDAN_ROUTE_119_TREECKO] =
     {
 #line 9529
-        .trainerName = _("{B_RIVAL_NAME}"),
+        .trainerName = _("BRENDAN"),
 #line 9530
         .trainerClass = TRAINER_CLASS_RIVAL,
 #line 9531
@@ -24009,7 +24009,7 @@ F_TRAINER_FEMALE |
     [TRAINER_BRENDAN_ROUTE_103_TORCHIC] =
     {
 #line 9550
-        .trainerName = _("{B_RIVAL_NAME}"),
+        .trainerName = _("BRENDAN"),
 #line 9551
         .trainerClass = TRAINER_CLASS_RIVAL,
 #line 9552
@@ -24041,7 +24041,7 @@ F_TRAINER_FEMALE |
     [TRAINER_BRENDAN_ROUTE_110_TORCHIC] =
     {
 #line 9563
-        .trainerName = _("{B_RIVAL_NAME}"),
+        .trainerName = _("BRENDAN"),
 #line 9564
         .trainerClass = TRAINER_CLASS_RIVAL,
 #line 9565
@@ -24095,7 +24095,7 @@ F_TRAINER_FEMALE |
     [TRAINER_BRENDAN_ROUTE_119_TORCHIC] =
     {
 #line 9584
-        .trainerName = _("{B_RIVAL_NAME}"),
+        .trainerName = _("BRENDAN"),
 #line 9585
         .trainerClass = TRAINER_CLASS_RIVAL,
 #line 9586
@@ -24149,7 +24149,7 @@ F_TRAINER_FEMALE |
     [TRAINER_MAY_ROUTE_103_MUDKIP] =
     {
 #line 9605
-        .trainerName = _("{B_RIVAL_NAME}"),
+        .trainerName = _("MAY"),
 #line 9606
         .trainerClass = TRAINER_CLASS_RIVAL,
 #line 9607
@@ -24183,7 +24183,7 @@ F_TRAINER_FEMALE |
     [TRAINER_MAY_ROUTE_110_MUDKIP] =
     {
 #line 9618
-        .trainerName = _("{B_RIVAL_NAME}"),
+        .trainerName = _("MAY"),
 #line 9619
         .trainerClass = TRAINER_CLASS_RIVAL,
 #line 9620
@@ -24239,7 +24239,7 @@ F_TRAINER_FEMALE |
     [TRAINER_MAY_ROUTE_119_MUDKIP] =
     {
 #line 9639
-        .trainerName = _("{B_RIVAL_NAME}"),
+        .trainerName = _("MAY"),
 #line 9640
         .trainerClass = TRAINER_CLASS_RIVAL,
 #line 9641
@@ -24295,7 +24295,7 @@ F_TRAINER_FEMALE |
     [TRAINER_MAY_ROUTE_103_TREECKO] =
     {
 #line 9660
-        .trainerName = _("{B_RIVAL_NAME}"),
+        .trainerName = _("MAY"),
 #line 9661
         .trainerClass = TRAINER_CLASS_RIVAL,
 #line 9662
@@ -24329,7 +24329,7 @@ F_TRAINER_FEMALE |
     [TRAINER_MAY_ROUTE_110_TREECKO] =
     {
 #line 9673
-        .trainerName = _("{B_RIVAL_NAME}"),
+        .trainerName = _("MAY"),
 #line 9674
         .trainerClass = TRAINER_CLASS_RIVAL,
 #line 9675
@@ -24385,7 +24385,7 @@ F_TRAINER_FEMALE |
     [TRAINER_MAY_ROUTE_119_TREECKO] =
     {
 #line 9694
-        .trainerName = _("{B_RIVAL_NAME}"),
+        .trainerName = _("MAY"),
 #line 9695
         .trainerClass = TRAINER_CLASS_RIVAL,
 #line 9696
@@ -24441,7 +24441,7 @@ F_TRAINER_FEMALE |
     [TRAINER_MAY_ROUTE_103_TORCHIC] =
     {
 #line 9715
-        .trainerName = _("{B_RIVAL_NAME}"),
+        .trainerName = _("MAY"),
 #line 9716
         .trainerClass = TRAINER_CLASS_RIVAL,
 #line 9717
@@ -24475,7 +24475,7 @@ F_TRAINER_FEMALE |
     [TRAINER_MAY_ROUTE_110_TORCHIC] =
     {
 #line 9728
-        .trainerName = _("{B_RIVAL_NAME}"),
+        .trainerName = _("MAY"),
 #line 9729
         .trainerClass = TRAINER_CLASS_RIVAL,
 #line 9730
@@ -24531,7 +24531,7 @@ F_TRAINER_FEMALE |
     [TRAINER_MAY_ROUTE_119_TORCHIC] =
     {
 #line 9749
-        .trainerName = _("{B_RIVAL_NAME}"),
+        .trainerName = _("MAY"),
 #line 9750
         .trainerClass = TRAINER_CLASS_RIVAL,
 #line 9751
@@ -27186,7 +27186,7 @@ F_TRAINER_FEMALE |
     [TRAINER_BRENDAN_RUSTBORO_TREECKO] =
     {
 #line 10781
-        .trainerName = _("{B_RIVAL_NAME}"),
+        .trainerName = _("BRENDAN"),
 #line 10782
         .trainerClass = TRAINER_CLASS_RIVAL,
 #line 10783
@@ -27229,7 +27229,7 @@ F_TRAINER_FEMALE |
     [TRAINER_BRENDAN_RUSTBORO_MUDKIP] =
     {
 #line 10798
-        .trainerName = _("{B_RIVAL_NAME}"),
+        .trainerName = _("BRENDAN"),
 #line 10799
         .trainerClass = TRAINER_CLASS_RIVAL,
 #line 10800
@@ -27504,8 +27504,7 @@ F_TRAINER_FEMALE |
     [TRAINER_BRENDAN_RUSTBORO_TORCHIC] =
     {
 #line 10905
-        .trainerName = _("{B_RIVAL_NAME}"),
-
+        .trainerName = _("BRENDAN"),
 #line 10906
         .trainerClass = TRAINER_CLASS_RIVAL,
 #line 10907
@@ -27548,7 +27547,7 @@ F_TRAINER_FEMALE |
     [TRAINER_MAY_RUSTBORO_MUDKIP] =
     {
 #line 10922
-        .trainerName = _("{B_RIVAL_NAME}"),
+        .trainerName = _("MAY"),
 #line 10923
         .trainerClass = TRAINER_CLASS_RIVAL,
 #line 10924
@@ -30697,7 +30696,7 @@ F_TRAINER_FEMALE |
     [TRAINER_BRENDAN_LILYCOVE_MUDKIP] =
     {
 #line 12184
-        .trainerName = _("{B_RIVAL_NAME}"),
+        .trainerName = _("BRENDAN"),
 #line 12185
         .trainerClass = TRAINER_CLASS_RIVAL,
 #line 12186
@@ -30762,7 +30761,7 @@ F_TRAINER_FEMALE |
     [TRAINER_BRENDAN_LILYCOVE_TREECKO] =
     {
 #line 12209
-        .trainerName = _("{B_RIVAL_NAME}"),
+        .trainerName = _("BRENDAN"),
 #line 12210
         .trainerClass = TRAINER_CLASS_RIVAL,
 #line 12211
@@ -30827,7 +30826,7 @@ F_TRAINER_FEMALE |
     [TRAINER_BRENDAN_LILYCOVE_TORCHIC] =
     {
 #line 12234
-        .trainerName = _("{B_RIVAL_NAME}"),
+        .trainerName = _("BRENDAN"),
 #line 12235
         .trainerClass = TRAINER_CLASS_RIVAL,
 #line 12236
@@ -30892,7 +30891,7 @@ F_TRAINER_FEMALE |
     [TRAINER_MAY_LILYCOVE_MUDKIP] =
     {
 #line 12259
-        .trainerName = _("{B_RIVAL_NAME}"),
+        .trainerName = _("MAY"),
 #line 12260
         .trainerClass = TRAINER_CLASS_RIVAL,
 #line 12261
@@ -30959,7 +30958,7 @@ F_TRAINER_FEMALE |
     [TRAINER_MAY_LILYCOVE_TREECKO] =
     {
 #line 12284
-        .trainerName = _("{B_RIVAL_NAME}"),
+        .trainerName = _("MAY"),
 #line 12285
         .trainerClass = TRAINER_CLASS_RIVAL,
 #line 12286
@@ -31026,7 +31025,7 @@ F_TRAINER_FEMALE |
     [TRAINER_MAY_LILYCOVE_TORCHIC] =
     {
 #line 12309
-        .trainerName = _("{B_RIVAL_NAME}"),
+        .trainerName = _("MAY"),
 #line 12310
         .trainerClass = TRAINER_CLASS_RIVAL,
 #line 12311
@@ -35451,7 +35450,7 @@ F_TRAINER_FEMALE |
     [TRAINER_MAY_RUSTBORO_TREECKO] =
     {
 #line 14058
-        .trainerName = _("{B_RIVAL_NAME}"),
+        .trainerName = _("MAY"),
 #line 14059
         .trainerClass = TRAINER_CLASS_RIVAL,
 #line 14060
@@ -35496,7 +35495,7 @@ F_TRAINER_FEMALE |
     [TRAINER_MAY_RUSTBORO_TORCHIC] =
     {
 #line 14075
-        .trainerName = _("{B_RIVAL_NAME}"),
+        .trainerName = _("MAY"),
 #line 14076
         .trainerClass = TRAINER_CLASS_RIVAL,
 #line 14077
@@ -42126,7 +42125,7 @@ F_TRAINER_FEMALE |
     [TRAINER_BRENDAN_PLACEHOLDER] =
     {
 #line 16789
-        .trainerName = _("{B_RIVAL_NAME}"),
+        .trainerName = _("BRENDAN"),
 #line 16790
         .trainerClass = TRAINER_CLASS_RS_PROTAG,
 #line 16791
@@ -42156,7 +42155,7 @@ F_TRAINER_FEMALE |
     [TRAINER_MAY_PLACEHOLDER] =
     {
 #line 16801
-        .trainerName = _("{B_RIVAL_NAME}"),
+        .trainerName = _("MAY"),
 #line 16802
         .trainerClass = TRAINER_CLASS_RS_PROTAG,
 #line 16803

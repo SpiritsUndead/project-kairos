@@ -19,7 +19,7 @@ EventScript_CutTreeDown:: @ fallthrough
 @ Use cut from party menu
 EventScript_UseCut::
 	lockall
-	goto EventScript_CutTreeCommon
+	goto EventScript_CutTree
 
 Movement_CutTreeDown:
 	cut_tree
@@ -50,7 +50,7 @@ Text_CantCut:
 @ Use rock smash from party menu
 EventScript_UseRockSmash::
 	lockall
-	goto EventScript_RockSmashCommon
+	goto EventScript_RockSmash
 
 @ Interact with smashable rock
 EventScript_RockSmash::

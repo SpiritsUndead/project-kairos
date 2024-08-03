@@ -100,7 +100,7 @@ static const struct GlyphWidthFunc sGlyphWidthFuncs[] =
     { FONT_BRAILLE,        GetGlyphWidth_Braille },
     { FONT_NARROW,         GetGlyphWidth_Narrow },
     { FONT_SMALL_NARROW,   GetGlyphWidth_SmallNarrow },
-    { FONT_BW_SUMMARY_SCREEN, GetGlyphWidth_Short },,
+    { FONT_BW_SUMMARY_SCREEN, GetGlyphWidth_Short },
     { FONT_NARROWER,       GetGlyphWidth_Narrower },
     { FONT_SMALL_NARROWER, GetGlyphWidth_SmallNarrower },
     { FONT_SHORT_NARROW,   GetGlyphWidth_ShortNarrow },
