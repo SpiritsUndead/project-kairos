@@ -2712,6 +2712,55 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
     #endif
     .description = COMPOUND_STRING("KO's with powerful moves \nenvigorate the pokemon."),
     .aiRating = 7,
-    }
+    },
+
+    [ABILITY_CONFLAGRATE] =
+    {
+        .name = _("Conflagrate"),
+        .description = COMPOUND_STRING("Normal moves become Fire."),
+        .aiRating = 8,
+    },
+
+    [ABILITY_CORRUPTION] =
+    {
+        .name = _("Corruption"),
+        .description = COMPOUND_STRING("Normal moves become Dark."),
+        .aiRating = 8,
+    },
+
+    [ABILITY_BRAWLER] =
+    {
+        .name = _("Brawler"),
+        .description = COMPOUND_STRING("Normal moves become Fighting."),
+        .aiRating = 8,
+    },
+
+    [ABILTIY_ANNEALED] =
+    {
+        .name = _("Annealed"),
+        .description = COMPOUND_STRING("Normal moves become Steel."),
+        .aiRating = 8,
+    },
+
+    [ABILITY_CEMENTATION] =
+    {
+        .name = _("Cementation"),
+        .description = COMPOUND_STRING("Normal moves become Rock."),
+        .aiRating = 8,
+    },
+
+    [ABILITY_ETHEREAL] =
+    {
+        .name = _("Ethereal"),
+        .description = COMPOUND_STRING("Normal moves become Ghost."),
+        .aiRating = 8,
+    },
+
+    [ABILITY_INTELLECTUAL] =
+    {
+        .name = _("Intelectual"),
+        .description = COMPOUND_STRING("Normal moves become Psychic."),
+        .aiRating = 8,
+    },
 
 };

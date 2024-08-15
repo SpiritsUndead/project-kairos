@@ -614,6 +614,13 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_HUMILIATE] = _("Humiliate"),
     [ABILITY_HIGH_SPIRITS] = _("High Spirits"),
     [ABILITY_SINKING_SANDS] = _("Sinking Sands"),
+    [ABILITY_CONFLAGRATE] = _("Conflagrate"),
+    [ABILITY_CORRUPTION] = _("Corruption"),
+    [ABILITY_BRAWLER] = _("Brawler"),
+    [ABILITY_ANNEALED] = _("Annealed"),
+    [ABILITY_CEMENTATION] = _("Cementation"),
+    [ABILITY_ETHEREAL] = _("Ethereal"),
+    [ABILITY_INTELLECTUAL] = _("Intellectual"),
 };
 #else   // 12 characters
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
@@ -1243,4 +1250,11 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_HUMILIATE] = sHumiliateDescription,
     [ABILITY_HIGH_SPIRITS] =sHighSpiritsDescription,
     [ABILITY_SINKING_SANDS] = sSinkingSandsDescription,
+    [ABILITY_CONFLAGRATE] = sConflagrateDescription,
+    [ABILITY_CORRUPTION] = sCorruptionDescription,
+    [ABILITY_BRAWLER] = sBrawlerDescription,
+    [ABILTIY_ANNEALED] = sAnnealedDescription,
+    [ABILITY_CEMENTATION] = sCementationDescription,
+    [ABILITY_ETHEREAL] = sEtherealDescription,
+    [ABILITY_INTELLECTUAL] = sIntellectualDescription,
 };

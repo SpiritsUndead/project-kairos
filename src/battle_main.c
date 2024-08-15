@@ -5704,6 +5704,27 @@ bool32 TrySetAteType(u32 move, u32 battlerAtk, u32 attackerAbility)
     case ABILITY_GALVANIZE:
         ateType = TYPE_ELECTRIC;
         break;
+    case ABILITY_CONFLAGRATE:
+        ateType = TYPE_FIRE;
+        break;
+    case ABILITY_CORRUPTION:
+        ateType = TYPE_DARK;
+        break;
+    case ABILITY_BRAWLER:
+        ateType = TYPE_FIGHTING;
+        break;
+    case ABILTIY_ANNEALED:
+        ateType = TYPE_STEEL;
+        break;
+    case ABILITY_CEMENTATION:
+        ateType = TYPE_ROCK;
+        break;
+    case ABILITY_ETHEREAL:
+        ateType = TYPE_GHOST;
+        break;
+    case ABILITY_INTELLECTUAL:
+        ateType = TYPE_PSYCHIC;
+        break;
     default:
         ateType = TYPE_NONE;
         break;
