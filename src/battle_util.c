@@ -10642,6 +10642,11 @@ static inline uq4_12_t CalcTypeEffectivenessMultiplierInternal(u32 move, u32 mov
         modifier = UQ_4_12(0.0);
     }
 
+    else if (moveType == TYPE_GHOST && defAbility == ABILITY_SOULLESS)
+    {
+        modifier = UQ_4_12(0.0);
+    }
+
     // Thousand Arrows ignores type modifiers for flying mons
     if (!IsBattlerGrounded(battlerDef) && (gMovesInfo[move].ignoreTypeIfFlyingAndUngrounded)
         && (GetBattlerType(battlerDef, 0, FALSE) == TYPE_FLYING || GetBattlerType(battlerDef, 1, FALSE) == TYPE_FLYING || GetBattlerType(battlerDef, 2, FALSE) == TYPE_FLYING))
@@ -10702,6 +10707,9 @@ uq4_12_t CalcPartyMonTypeEffectivenessMultiplier(u16 move, u16 speciesDef, u16 a
             modifier = UQ_4_12(0.0);
         if (abilityDef == ABILITY_WONDER_GUARD && modifier <= UQ_4_12(1.0) && gMovesInfo[move].power)
             modifier = UQ_4_12(0.0);
+        if (moveType == TYPE_GHOST && abilityDef == ABILITY_SOULLESS)
+            modifier = UQ_4_12(0.0);
+
     }
 
     UpdateMoveResultFlags(modifier);

@@ -2763,4 +2763,11 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
         .aiRating = 8,
     },
 
+    [ABILITY_SOULLESS] =
+    {
+        .name = _("Soulless"),
+        .description = COMPOUND_STRING("Ghost attacks have no effect."),
+        .aiRating = 7,
+    },    
+
 };

@@ -621,6 +621,7 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_CEMENTATION] = _("Cementation"),
     [ABILITY_ETHEREAL] = _("Ethereal"),
     [ABILITY_INTELLECTUAL] = _("Intellectual"),
+    [ABILITY_SOULLESS] = _("Soulless"),
 };
 #else   // 12 characters
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
@@ -1257,4 +1258,5 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_CEMENTATION] = sCementationDescription,
     [ABILITY_ETHEREAL] = sEtherealDescription,
     [ABILITY_INTELLECTUAL] = sIntellectualDescription,
+    [ABILITY_SOULLESS] = sSoullessDescription,
 };
