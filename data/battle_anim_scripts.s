@@ -33782,3 +33782,48 @@ General_DynamaxGrowth:: @ PORTED FROM CFRU
 	createvisualtask AnimTask_DynamaxGrowth, 0x5, 0x1, 0x0
 	waitforvisualfinish
 	end
+
+Move_ROAST::
+
+	loadspritegfx ANIM_TAG_WISP_FIRE
+	loadspritegfx ANIM_TAG_SMALL_EMBER
+	
+	monbg ANIM_DEF_PARTNER
+	setalpha 12, 18
+	loopsewithpan SE_M_EMBER, SOUND_PAN_ATTACKER, 5, 2
+	createvisualtask AnimTask_BlendColorCycle, 2, F_PAL_ATTACKER, 2, 2, 0, 11, RGB_RED
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_ATTACKER, 1, 0, 32, 1
+	createsprite gVerticalDipSpriteTemplate, ANIM_ATTACKER, 2, 0x8, 0x1, 0x0
+	delay 0x32
+
+	createsprite gPyroBallEmberBallTemplate, ANIM_ATTACKER, 2, 20, 0, 0, 0, 40, -25
+	playsewithpan SE_M_FLAME_WHEEL, 192
+	
+	delay 2
+	createsprite gPyroBallEmberBallTemplate, ANIM_ATTACKER, 2, 20, 0, 5, 0, 40, -25
+	playsewithpan SE_M_FLAME_WHEEL, SOUND_PAN_TARGET
+	delay 2
+	createsprite gPyroBallEmberBallTemplate, ANIM_ATTACKER, 2, 20, 0, -5, 0, 40, -25
+	playsewithpan SE_M_FLAME_WHEEL, SOUND_PAN_TARGET
+	delay 30
+
+	playsewithpan SE_M_FLAME_WHEEL2, SOUND_PAN_TARGET
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_TARGET, 4, 0, 13, 1
+	createvisualtask AnimTask_BlendColorCycle, 2, F_PAL_TARGET, 2, 2, 0, 11, RGB_RED
+	createvisualtask AnimTask_ShakeMonInPlace, 2, ANIM_TARGET, 4, 0, 12, 1
+	createvisualtask AnimTask_ShakeMonInPlace, 2, ANIM_TARGET, 4, 0, 12, 1
+	createvisualtask AnimTask_ShakeMonInPlace, 2, ANIM_TARGET, 4, 0, 12, 1
+	delay 5
+	createsprite gWillOWispFireSpriteTemplate, ANIM_ATTACKER, 2, 0
+	createsprite gWillOWispFireSpriteTemplate, ANIM_ATTACKER, 2, 42
+	createsprite gWillOWispFireSpriteTemplate, ANIM_ATTACKER, 2, 84	
+	createsprite gWillOWispFireSpriteTemplate, ANIM_ATTACKER, 2, 126
+	createsprite gWillOWispFireSpriteTemplate, ANIM_ATTACKER, 2, 168	
+	createsprite gWillOWispFireSpriteTemplate, ANIM_ATTACKER, 2, 210
+
+	playsewithpan SE_M_SACRED_FIRE2, SOUND_PAN_TARGET
+	waitforvisualfinish
+	delay 0x23
+	clearmonbg ANIM_DEF_PARTNER
+	blendoff
+	end

@@ -22034,6 +22034,29 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
             .chance = 30,
         }),
         .magicCoatAffected = TRUE,
-    }
+    },
 
+    [MOVE_ROAST] =
+    {
+        .name = COMPOUND_STRING("Roast"),
+        .description = COMPOUND_STRING(
+            "Sears the foe with flames,\n"
+            "making it Fire-type. No\n"
+            "additional effect."),
+        .effect = EFFECT_SOAK,
+        .power = 0,
+        .type = TYPE_FIRE,
+        .accuracy = 100,
+        .pp = 20,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .argument = TYPE_FIRE,
+        .magicCoatAffected = TRUE,
+        .contestEffect = CONTEST_EFFECT_WORSEN_CONDITION_OF_PREV_MONS,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = Move_ROAST,
+    },
 };
