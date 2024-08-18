@@ -910,8 +910,9 @@
 // New Moves
 #define MOVE_AMATERASU 848
 #define MOVE_ROAST 849
+#define MOVE_ENERGIZE 850
 
-#define MOVES_COUNT_GEN9 850
+#define MOVES_COUNT_GEN9 851
 
 #define MOVES_COUNT         MOVES_COUNT_GEN9
 

@@ -22059,4 +22059,29 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .contestComboMoves = {0},
         .battleAnimScript = Move_ROAST,
     },
+
+    [MOVE_ENERGIZE] =
+    {
+        .name = COMPOUND_STRING("Energize"),
+        .description = COMPOUND_STRING(
+            "Showers the foe with ionized\n"
+            "particles, Electrifying them.\n"
+            "No additional effect."),
+        .effect = EFFECT_THIRD_TYPE,
+        .power = 0,
+        .type = TYPE_ELECTRIC,
+        .accuracy = 100,
+        .pp = 20,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .argument = TYPE_ELECTRIC,
+        .zMove = { .effect = Z_EFFECT_ALL_STATS_UP_1 },
+        .magicCoatAffected = TRUE,
+        .contestEffect = CONTEST_EFFECT_WORSEN_CONDITION_OF_PREV_MONS,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = Move_ENERGIZE,
+    },
 };
