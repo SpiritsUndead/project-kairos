@@ -33833,7 +33833,6 @@ Move_ENERGIZE::
 	loadspritegfx ANIM_TAG_SPARK_2
 	loadspritegfx ANIM_TAG_ELECTRIC_ORBS @Electric Balls
 	loadspritegfx ANIM_TAG_CIRCLE_OF_LIGHT @Electric Circle	
-	
 	createvisualtask AnimTask_BlendColorCycle, 2, (F_PAL_BG | F_PAL_BATTLERS), -31, 1, 5, 5, RGB(31, 31, 20)
 	playsewithpan SE_M_THUNDERBOLT2, SOUND_PAN_ATTACKER
 	createvisualtask AnimTask_WindUpLunge, 5, ANIM_ATTACKER, -12, 4, 10, 10, 12, 6
@@ -33868,3 +33867,35 @@ Move_ENERGIZE::
 	playsewithpan SE_M_CHARGE, SOUND_PAN_TARGET
 	waitforvisualfinish
 	end
+
+Move_FIRE_JAB::
+	loadspritegfx ANIM_TAG_IMPACT
+	loadspritegfx ANIM_TAG_HANDS_AND_FEET
+	loadspritegfx ANIM_TAG_SMALL_EMBER
+
+	monbg ANIM_DEF_PARTNER
+	
+	
+	createvisualtask AnimTask_IsTargetSameSide, 0x2,
+	createvisualtask AnimTask_SnatchOpposingMonMove, 0x2,
+
+	delay 32
+
+	createsprite gFistFootRandomPosSpriteTemplate, ANIM_TARGET, 3, 1, 10, 3
+	createvisualtask AnimTask_ShakeMonInPlace, 2, ANIM_TARGET, 8, 0, 16, 1
+
+
+
+	@createsprite gFistFootSpriteTemplate, ANIM_TARGET, 3, 0, 0, 8, 1, 0
+	@createsprite gBasicHitSplatSpriteTemplate, ANIM_TARGET, 2, 0, 0, ANIM_TARGET, 1
+	@createvisualtask AnimTask_ShakeMon, 2, ANIM_TARGET, 0, 3, 15, 1
+	call FireSpreadEffect
+	@delay 4
+	playsewithpan SE_M_FLAME_WHEEL2, SOUND_PAN_TARGET
+	waitforvisualfinish
+	@createvisualtask AnimTask_BlendBattleAnimPal, 10, F_PAL_TARGET, 2, 2, 0, 11, RGB_RED
+	waitforvisualfinish
+
+	clearmonbg ANIM_DEF_PARTNER
+	end
+

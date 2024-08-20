@@ -22084,4 +22084,26 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .contestComboMoves = {0},
         .battleAnimScript = Move_ENERGIZE,
     },
+
+    [MOVE_FIRE_JAB] =
+    {
+        .name = COMPOUND_STRING("Fire Jab"),
+        .description = COMPOUND_STRING(
+            "User rushes the foe with\n"
+            "a fiery blow before\n"
+            "switching out."),
+        .effect = EFFECT_HIT_ESCAPE,
+        .power = 70,
+        .type = TYPE_FIRE,
+        .accuracy = 100,
+        .pp = 20,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .contestEffect = CONTEST_EFFECT_AVOID_STARTLE,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = Move_FIRE_JAB,
+    },
 };
