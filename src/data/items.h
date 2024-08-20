@@ -6047,6 +6047,8 @@ const struct Item gItemsInfo[] =
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 80,
+        .iconPic = gItemIcon_Rillaboomite,
+        .iconPalette = gItemIconPalette_Rillaboomite,
     },
 
     [ITEM_SKELEDIRGITE] =
@@ -6062,6 +6064,8 @@ const struct Item gItemsInfo[] =
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 80,
+        .iconPic = gItemIcon_Skeledirgite,
+        .iconPalette = gItemIconPalette_Skeledirgite,
     },
 
     [ITEM_SAMUROTTITE] =
@@ -6077,6 +6081,8 @@ const struct Item gItemsInfo[] =
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 80,
+        .iconPic = gItemIcon_Samurottite,
+        .iconPalette = gItemIconPalette_Samurottite,
     },
 
     [ITEM_MILOTITE] =
@@ -6092,6 +6098,8 @@ const struct Item gItemsInfo[] =
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 80,
+        .iconPic = gItemIcon_Milotite,
+        .iconPalette = gItemIconPalette_Milotite,
     },
 
     [ITEM_RAPIDASHITE] =
@@ -6107,6 +6115,8 @@ const struct Item gItemsInfo[] =
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 80,
+        .iconPic = gItemIcon_Rapidashite,
+        .iconPalette = gItemIconPalette_Rapidashite,
     },
 
     [ITEM_HATTERENITE] =
@@ -6122,6 +6132,25 @@ const struct Item gItemsInfo[] =
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 80,
+        .iconPic = gItemIcon_Hatterenite,
+        .iconPalette = gItemIconPalette_Hatterenite,
+    },
+
+    [ITEM_SANDSLASHITE] =
+    {
+        .name = _("Sandslashite"),
+        .price = 0,
+        .holdEffect = HOLD_EFFECT_MEGA_STONE,
+        .description = COMPOUND_STRING(
+            "This stone enables\n"
+            "Sandslash to Mega\n"
+            "Evolve in battle."),
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 80,
+        .iconPic = gItemIcon_Sandslashite,
+        .iconPalette = gItemIconPalette_Sandslashite,
     },
 
 // Gems

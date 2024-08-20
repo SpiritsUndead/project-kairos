@@ -872,6 +872,14 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
     const u32 gMonBackPic_SandslashAlolan[] = INCBIN_U32("graphics/pokemon/sandslash/alolan/back.4bpp.lz");
     const u32 gMonShinyPalette_SandslashAlolan[] = INCBIN_U32("graphics/pokemon/sandslash/alolan/shiny.gbapal.lz");
     const u8 gMonIcon_SandslashAlolan[] = INCBIN_U8("graphics/pokemon/sandslash/alolan/icon.4bpp");
+
+    const u32 gMonFrontPic_SandslashAlolanMega[] = INCBIN_U32("graphics/pokemon/sandslash/alolan/mega/front.4bpp.lz");
+    const u32 gMonPalette_SandslashAlolanMega[] = INCBIN_U32("graphics/pokemon/sandslash/alolan/mega/normal.gbapal.lz");
+    const u32 gMonBackPic_SandslashAlolanMega[] = INCBIN_U32("graphics/pokemon/sandslash/alolan/mega/back.4bpp.lz");
+    const u32 gMonShinyPalette_SandslashAlolanMega[] = INCBIN_U32("graphics/pokemon/sandslash/alolan/normal.gbapal.lz"); //todo
+    const u8 gMonIcon_SandslashAlolanMega[] = INCBIN_U8("graphics/pokemon/sandslash/alolan/mega/icon.4bpp");
+
+    
 #if OW_POKEMON_OBJECT_EVENTS
     const u32 gObjectEventPic_SandslashAlolan[] = INCBIN_COMP("graphics/pokemon/sandslash/alolan/overworld.4bpp");
 #if OW_PKMN_OBJECTS_SHARE_PALETTES == FALSE

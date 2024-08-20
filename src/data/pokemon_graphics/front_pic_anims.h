@@ -414,6 +414,7 @@ static const union AnimCmd sAnim_Sandslash_1[] =
 #if P_ALOLAN_FORMS
 PLACEHOLDER_ANIM_SINGLE_FRAME(SandshrewAlolan);
 PLACEHOLDER_ANIM_SINGLE_FRAME(SandslashAlolan);
+PLACEHOLDER_ANIM_SINGLE_FRAME(SandslashAlolanMega);
 #endif //P_ALOLAN_FORMS
 #endif //P_FAMILY_SANDSHREW
 
@@ -10282,6 +10283,7 @@ SINGLE_ANIMATION(Sandslash);
 #if P_ALOLAN_FORMS
 SINGLE_ANIMATION(SandshrewAlolan);
 SINGLE_ANIMATION(SandslashAlolan);
+SINGLE_ANIMATION(SandslashAlolanMega);
 #endif //P_ALOLAN_FORMS
 #endif //P_FAMILY_SANDSHREW
 #if P_FAMILY_NIDORAN

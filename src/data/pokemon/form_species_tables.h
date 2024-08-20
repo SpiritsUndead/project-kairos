@@ -145,6 +145,7 @@ static const u16 sSandslashFormSpeciesIdTable[] = {
     SPECIES_SANDSLASH,
 #if P_ALOLAN_FORMS
     SPECIES_SANDSLASH_ALOLAN,
+    SPECIES_SANDSLASH_ALOLAN_MEGA,
 #endif
     FORM_SPECIES_END,
 };
