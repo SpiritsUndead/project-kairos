@@ -976,6 +976,8 @@ const u32 gItemIconPalette_Hatterenite[] = INCBIN_U32("graphics/items/icon_palet
 const u32 gItemIcon_Sandslashite[] = INCBIN_U32("graphics/items/icons/sandslashite.4bpp.lz");
 const u32 gItemIconPalette_Sandslashite[] = INCBIN_U32("graphics/items/icon_palettes/sandslashite.gbapal.lz");
 
+const u32 gItemIcon_Palossite[] = INCBIN_U32("graphics/items/icons/palossite.4bpp.lz");
+const u32 gItemIconPalette_Palossite[] = INCBIN_U32("graphics/items/icon_palettes/palossite.gbapal.lz");
 
 
 // Gems

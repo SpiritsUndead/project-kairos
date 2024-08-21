@@ -6153,6 +6153,23 @@ const struct Item gItemsInfo[] =
         .iconPalette = gItemIconPalette_Sandslashite,
     },
 
+    [ITEM_PALOSSITE] =
+    {
+        .name = _("Palossite"),
+        .price = 0,
+        .holdEffect = HOLD_EFFECT_MEGA_STONE,
+        .description = COMPOUND_STRING(
+            "This stone enables\n"
+            "Palossand to Mega\n"
+            "Evolve in battle."),
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 80,
+        .iconPic = gItemIcon_Palossite,
+        .iconPalette = gItemIconPalette_Palossite,
+    },
+
 // Gems
 
     [ITEM_NORMAL_GEM] =

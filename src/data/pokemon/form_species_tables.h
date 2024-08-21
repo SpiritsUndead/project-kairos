@@ -2207,3 +2207,9 @@ static const u16 sMiloticFormSpeciesIdTable[] = {
     SPECIES_MILOTIC_MEGA,
     FORM_SPECIES_END,
 };
+
+static const u16 sPalossandFormSpeciesIdTable[] = {
+    SPECIES_PALOSSAND,
+    SPECIES_PALOSSAND_MEGA,
+    FORM_SPECIES_END,
+};

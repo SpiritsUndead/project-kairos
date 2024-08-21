@@ -1006,11 +1006,12 @@
 #define ITEM_RAPIDASHITE 832
 #define ITEM_HATTERENITE 833
 #define ITEM_SANDSLASHITE 834
+#define ITEM_PALOSSITE 835
 
 // HOPO BERRY
 // LEGEND PLATE
 
-#define ITEMS_COUNT 835
+#define ITEMS_COUNT 836
 #define ITEM_FIELD_ARROW ITEMS_COUNT
 
 // A special item id associated with "Cancel"/"Exit" etc. in a list of items or decorations

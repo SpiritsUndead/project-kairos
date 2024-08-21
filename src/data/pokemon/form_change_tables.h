@@ -1332,5 +1332,10 @@ static const struct FormChange sSandslashAlolanFormChangeTable[] = {
     {FORM_CHANGE_TERMINATOR},
 };
 
+static const struct FormChange sPalossandFormChangeTable[] = {
+    {FORM_CHANGE_BATTLE_MEGA_EVOLUTION_ITEM,    SPECIES_PALOSSAND_MEGA, ITEM_PALOSSITE},
+    {FORM_CHANGE_TERMINATOR},
+};
+
 #undef WHEN_LEARNED
 #undef WHEN_FORGOTTEN

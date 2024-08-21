@@ -1638,8 +1638,9 @@
 #define SPECIES_RAPIDASH_MEGA                           1531
 #define SPECIES_HATTERENE_MEGA                          1532
 #define SPECIES_SANDSLASH_ALOLAN_MEGA                   1533
+#define SPECIES_PALOSSAND_MEGA                          1534
 
-#define SPECIES_EGG (SPECIES_SANDSLASH_ALOLAN_MEGA  + 1)
+#define SPECIES_EGG (SPECIES_PALOSSAND_MEGA  + 1)
 
 #define NUM_SPECIES SPECIES_EGG
 
