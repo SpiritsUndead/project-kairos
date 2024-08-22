@@ -18201,6 +18201,13 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
 #endif //OW_PKMN_OBJECTS_SHARE_PALETTES
 #endif //OW_POKEMON_OBJECT_EVENTS
 #endif //P_GIGANTAMAX_FORMS
+
+    const u32 gMonFrontPic_CorviknightMega[] = INCBIN_U32("graphics/pokemon/corviknight/mega/front.4bpp.lz");
+    const u32 gMonBackPic_CorviknightMega[] = INCBIN_U32("graphics/pokemon/corviknight/mega/back.4bpp.lz");
+    const u32 gMonPalette_CorviknightMega[] = INCBIN_U32("graphics/pokemon/corviknight/mega/normal.gbapal.lz");
+    const u32 gMonShinyPalette_CorviknightMega[] = INCBIN_U32("graphics/pokemon/corviknight/shiny.gbapal.lz"); //todo
+    const u8 gMonIcon_CorviknightMega[] = INCBIN_U8("graphics/pokemon/corviknight/mega/icon.4bpp");
+
 #endif //P_FAMILY_ROOKIDEE
 
 #if P_FAMILY_BLIPBUG

@@ -1807,6 +1807,7 @@ static const u16 sCorviknightFormSpeciesIdTable[] = {
 #if P_GIGANTAMAX_FORMS
     SPECIES_CORVIKNIGHT_GIGANTAMAX,
 #endif
+    SPECIES_CORVIKNIGHT_MEGA,
     FORM_SPECIES_END,
 };
 #endif //P_FAMILY_ROOKIDEE

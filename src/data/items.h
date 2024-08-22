@@ -6170,6 +6170,23 @@ const struct Item gItemsInfo[] =
         .iconPalette = gItemIconPalette_Palossite,
     },
 
+    [ITEM_CORVITE] =
+    {
+        .name = _("Corvite"),
+        .price = 0,
+        .holdEffect = HOLD_EFFECT_MEGA_STONE,
+        .description = COMPOUND_STRING(
+            "This stone enables\n"
+            "Corviknight to Mega\n"
+            "Evolve in battle."),
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 80,
+        .iconPic = gItemIcon_Corvite,
+        .iconPalette = gItemIconPalette_Corvite,
+    },
+
 // Gems
 
     [ITEM_NORMAL_GEM] =

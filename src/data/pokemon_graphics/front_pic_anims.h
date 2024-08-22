@@ -9507,6 +9507,7 @@ static const union AnimCmd sAnim_Corviknight_1[] =
 #if P_GIGANTAMAX_FORMS
 PLACEHOLDER_ANIM_SINGLE_FRAME(CorviknightGigantamax);
 #endif //P_GIGANTAMAX_FORMS
+PLACEHOLDER_ANIM_SINGLE_FRAME(CorviknightMega);
 #endif //P_FAMILY_ROOKIDEE
 
 #if P_FAMILY_BLIPBUG
@@ -12362,6 +12363,7 @@ SINGLE_ANIMATION(Greedent);
 SINGLE_ANIMATION(Rookidee);
 SINGLE_ANIMATION(Corvisquire);
 SINGLE_ANIMATION(Corviknight);
+SINGLE_ANIMATION(CorviknightMega);
 #if P_GIGANTAMAX_FORMS
 SINGLE_ANIMATION(CorviknightGigantamax);
 #endif //P_GIGANTAMAX_FORMS

@@ -1155,6 +1155,60 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .formChangeTable = sCorviknightFormChangeTable,
     },
 #endif //P_GIGANTAMAX_FORMS
+
+[SPECIES_CORVIKNIGHT_MEGA] =
+    {     //todo bst
+        .baseHP        = 98,
+        .baseAttack    = 87,
+        .baseDefense   = 105,
+        .baseSpeed     = 67,
+        .baseSpAttack  = 53,
+        .baseSpDefense = 85,
+        .types = MON_TYPES(TYPE_FLYING, TYPE_STEEL),
+        .catchRate = 45,
+        .expYield = 248,
+        .evYield_Defense = 3,
+        .genderRatio = PERCENT_FEMALE(50),
+        .eggCycles = 15,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_SLOW,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FLYING),
+        .abilities = { ABILITY_PRESSURE, ABILITY_UNNERVE, ABILITY_MIRROR_ARMOR },
+        .bodyColor = BODY_COLOR_PURPLE,
+        .speciesName = HANDLE_EXPANDED_SPECIES_NAME("Corviknigh", "Corviknight"),
+        .cryId = CRY_CORVIKNIGHT,
+        .natDexNum = NATIONAL_DEX_CORVIKNIGHT,
+        .categoryName = _("Raven"),
+        .height = 22,
+        .weight = 750,
+        .description = COMPOUND_STRING(
+            "This Pokémon reigns supreme in the skies\n"
+            "of the Galar region. The black luster of\n"
+            "its steel body could drive terror into\n"
+            "the heart of any foe."),
+        .pokemonScale = 256,
+        .pokemonOffset = 0,
+        .trainerScale = 348,
+        .trainerOffset = 6,
+        .frontPic = gMonFrontPic_CorviknightMega,
+        .frontPicSize = MON_COORDS_SIZE(56, 64),
+        .frontPicYOffset = 2,
+        .frontAnimFrames = sAnims_CorviknightMega,
+        .frontAnimId = ANIM_H_JUMPS,
+        .backPic = gMonBackPic_CorviknightMega,
+        .backPicSize = MON_COORDS_SIZE(64, 64),
+        .backPicYOffset = 0,
+        .backAnimId = BACK_ANIM_CONVEX_DOUBLE_ARC,
+        .palette = gMonPalette_CorviknightMega,
+        .shinyPalette = gMonShinyPalette_CorviknightMega,
+        .iconSprite = gMonIcon_CorviknightMega,
+        .iconPalIndex = 0,
+        FOOTPRINT(Corviknight)
+        .levelUpLearnset = sCorviknightLevelUpLearnset,
+        .teachableLearnset = sCorviknightTeachableLearnset,
+        .formSpeciesIdTable = sCorviknightFormSpeciesIdTable,
+        .formChangeTable = sCorviknightFormChangeTable,
+    },
 #endif //P_FAMILY_ROOKIDEE
 
 #if P_FAMILY_BLIPBUG
