@@ -22106,4 +22106,26 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .contestComboMoves = {0},
         .battleAnimScript = Move_FIRE_JAB,
     },
+
+    [MOVE_POISONOUS_GRAZE] =
+    {
+        .name = COMPOUND_STRING("Poisonous Graze"),
+        .description = COMPOUND_STRING(
+            "User slashes its opponent\n"
+            "with poisonous claws on\n"
+            "its way off the battlefield."),
+        .effect = EFFECT_HIT_ESCAPE,
+        .power = 70,
+        .type = TYPE_POISON,
+        .accuracy = 100,
+        .pp = 20,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .contestEffect = CONTEST_EFFECT_AVOID_STARTLE,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = Move_POISONOUS_GRAZE,
+    },
 };

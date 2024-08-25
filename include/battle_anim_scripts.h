@@ -940,5 +940,6 @@ extern const u8 Move_G_MAX_RAPID_FLOW[];
 extern const u8 Move_ROAST[];
 extern const u8 Move_ENERGIZE[];
 extern const u8 Move_FIRE_JAB[];
+extern const u8 Move_POISONOUS_GRAZE[];
 
 #endif // GUARD_BATTLE_ANIM_SCRIPTS_H
