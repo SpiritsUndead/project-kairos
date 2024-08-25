@@ -1244,6 +1244,7 @@ static void Cmd_attackcanceler(void)
         && gCurrentMove != MOVE_STRUGGLE
         && gMovesInfo[gCurrentMove].power != 0 // will not color change on a status move. 
         && !IS_BATTLER_OF_TYPE(gBattlerTarget, moveType)
+        && moveType != TYPE_MYSTERY
         && moveType != TYPE_STELLAR)
         {
                 SET_BATTLER_TYPE(gBattlerTarget, moveType);
