@@ -2255,4 +2255,11 @@ const struct BattleMoveEffect gBattleMoveEffects[NUM_BATTLE_MOVE_EFFECTS] =
         .battleScript = BattleScript_EffectHit,
         .battleTvScore = 0, // TODO: Assign points
     },
+
+    [EFFECT_WINTERS_GRASP] =
+    {
+        .battleScript = BattleScript_EffectWintersGrasp,
+        .battleTvScore = 5,
+        .encourageEncore = TRUE,
+    },
 };

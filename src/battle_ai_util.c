@@ -1423,6 +1423,7 @@ bool32 IsNonVolatileStatusMoveEffect(u32 moveEffect)
     case EFFECT_PARALYZE:
     case EFFECT_WILL_O_WISP:
     case EFFECT_YAWN:
+    case EFFECT_WINTERS_GRASP:
         return TRUE;
     default:
         return FALSE;
@@ -3251,6 +3252,7 @@ bool32 PartnerMoveEffectIsStatusSameTarget(u32 battlerAtkPartner, u32 battlerDef
        || gMovesInfo[partnerMove].effect == EFFECT_TOXIC
        || gMovesInfo[partnerMove].effect == EFFECT_PARALYZE
        || gMovesInfo[partnerMove].effect == EFFECT_WILL_O_WISP
+       || gMovesInfo[partnerMove].effect == EFFECT_WINTERS_GRASP
        || gMovesInfo[partnerMove].effect == EFFECT_YAWN))
         return TRUE;
     return FALSE;

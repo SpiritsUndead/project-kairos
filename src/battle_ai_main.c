@@ -879,6 +879,7 @@ static s32 AI_CheckBadMove(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
                 case EFFECT_WILL_O_WISP:
                 case EFFECT_TOXIC:
                 case EFFECT_LEECH_SEED:
+                case EFFECT_WINTERS_GRASP:
                     ADJUST_SCORE(-5);
                     break;
                 case EFFECT_CURSE:
@@ -1793,6 +1794,10 @@ static s32 AI_CheckBadMove(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
             if (!AI_CanBurn(battlerAtk, battlerDef, aiData->abilities[battlerDef], BATTLE_PARTNER(battlerAtk), move, aiData->partnerMove))
                 ADJUST_SCORE(-10);
             break;
+
+        //todo effect WINTERS_GRASP check for if target cant be frostbitten
+
+
         case EFFECT_MEMENTO:
             if (CountUsablePartyMons(battlerAtk) == 0 || DoesPartnerHaveSameMoveEffect(BATTLE_PARTNER(battlerAtk), battlerDef, move, aiData->partnerMove))
                 ADJUST_SCORE(-10);
@@ -3588,6 +3593,7 @@ static u32 AI_CalcMoveEffectScore(u32 battlerAtk, u32 battlerDef, u32 move)
           || HasMoveEffect(battlerDef, EFFECT_POISON)
           || HasMoveEffect(battlerDef, EFFECT_PARALYZE)
           || HasMoveEffect(battlerDef, EFFECT_WILL_O_WISP)
+            //todo Winters Grasp?
           || HasMoveEffect(battlerDef, EFFECT_CONFUSE)
           || HasMoveEffect(battlerDef, EFFECT_LEECH_SEED))
             ADJUST_SCORE(GOOD_EFFECT);
@@ -3973,6 +3979,7 @@ static u32 AI_CalcMoveEffectScore(u32 battlerAtk, u32 battlerDef, u32 move)
     case EFFECT_WILL_O_WISP:
         IncreaseBurnScore(battlerAtk, battlerDef, move, &score);
         break;
+      //todo winters grasp effect?
     case EFFECT_FOLLOW_ME:
         if (isDoubleBattle
           && move != MOVE_SPOTLIGHT
@@ -4847,6 +4854,7 @@ static s32 AI_SetupFirstTurn(u32 battlerAtk, u32 battlerDef, u32 move, s32 score
     case EFFECT_TORMENT:
     case EFFECT_FLATTER:
     case EFFECT_WILL_O_WISP:
+    //todo Winters grasp?
     case EFFECT_INGRAIN:
     case EFFECT_IMPRISON:
     case EFFECT_TICKLE:

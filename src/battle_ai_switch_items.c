@@ -102,6 +102,7 @@ static bool32 HasBadOdds(u32 battler, bool32 emitResult)
         if (aiMove != MOVE_NONE)
         {
             // Check if mon has an "important" status move
+            //todo WInters Grasp?
             if (aiMoveEffect == EFFECT_REFLECT || aiMoveEffect == EFFECT_LIGHT_SCREEN
             || aiMoveEffect == EFFECT_SPIKES || aiMoveEffect == EFFECT_TOXIC_SPIKES || aiMoveEffect == EFFECT_STEALTH_ROCK || aiMoveEffect == EFFECT_STICKY_WEB || aiMoveEffect == EFFECT_LEECH_SEED
             || aiMoveEffect == EFFECT_EXPLOSION

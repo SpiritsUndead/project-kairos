@@ -851,5 +851,6 @@ extern const u8 BattleScript_FickleBeamDoubled[];
 
 extern const u8 BattleScript_ToxicParasitesBothMonsPoisoned[];
 extern const u8 BattleScript_ToxicParasitesActivate[];
+extern const u8 BattleScript_EffectWintersGrasp[];
 
 #endif // GUARD_BATTLE_SCRIPTS_H

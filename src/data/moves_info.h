@@ -1567,7 +1567,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
             // The following effect is also relevant in battle_pike.c
             // If you cherry-pick this to use something other than the config, make sure to update it there too
             .moveEffect = MOVE_EFFECT_FREEZE_OR_FROSTBITE,
-            .chance = 10,
+            .chance = 100,
         }),
         .contestEffect = CONTEST_EFFECT_STARTLE_MONS_SAME_TYPE_APPEAL,
         .contestCategory = CONTEST_CATEGORY_BEAUTY,
@@ -22127,5 +22127,23 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .contestComboStarterId = 0,
         .contestComboMoves = {0},
         .battleAnimScript = Move_POISONOUS_GRAZE,
+    },
+
+    [MOVE_WINTERS_GRASP] =
+    {
+        .name = COMPOUND_STRING("Winter's Grasp"),
+        .description = COMPOUND_STRING(
+            "The foe becomes frostbitten \n"
+            "by an icy storm."),
+        .effect = EFFECT_WINTERS_GRASP,
+        .power = 0,
+        .type = TYPE_ICE,
+        .argument = TYPE_ICE,
+        .accuracy = B_UPDATED_MOVE_DATA >= GEN_6 ? 85 : 75,
+        .pp = 15,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .battleAnimScript = Move_WINTERS_GRASP,
     },
 };

@@ -34554,4 +34554,40 @@ Move_POISONOUS_GRAZE::
 	clearmonbg ANIM_DEF_PARTNER
 	end
 		
+Move_WINTERS_GRASP::
+
+	loadspritegfx ANIM_TAG_ICE_CRYSTALS @ice
+	loadspritegfx ANIM_TAG_BLACK_SMOKE @smoke
+	loadspritegfx ANIM_TAG_ICE_CHUNK @White Colour
+
+	loadspritegfx ANIM_TAG_SNOWFLAKES
+	playsewithpan SE_M_GUST, SOUND_PAN_ATTACKER
+	createvisualtask AnimTask_BlendBattleAnimPal, 10, (F_PAL_BG | F_PAL_BATTLERS_2), 2, 0, 4, RGB(11, 18, 22)
+	waitforvisualfinish
+	createvisualtask AnimTask_CreateSnowflakes, 2, 0, 3, 120
+	@createvisualtask AnimTask_CreateSnowflakes, 2, 0, 3, 120
+	@createvisualtask AnimTask_CreateSnowflakes, 2, 0, 3, 120
+
+	delay 16	
+
+	createsprite gGlaciateSmokeTemplate, ANIM_TARGET, 4, 0x0, 0xfff4, 0x68, 0x0, 0x4b
+	createsprite gGlaciateSmokeTemplate, ANIM_TARGET, 4, 0x0, 0xfff4, 0x48, 0x1, 0x4b
+	createsprite gGlaciateSmokeTemplate, ANIM_TARGET, 4, 0x0, 0xfffa, 0x38, 0x1, 0x4b
+	createsprite gGlaciateSmokeTemplate, ANIM_TARGET, 4, 0x0, 0xfffa, 0x58, 0x0, 0x4b
+	createsprite gGlaciateSmokeTemplate, ANIM_TARGET, 4, 0x0, 0x0, 0x38, 0x0, 0x4b
+	createsprite gGlaciateSmokeTemplate, ANIM_TARGET, 4, 0x0, 0x0, 0x58, 0x1, 0x4b
+	createsprite gGlaciateSmokeTemplate, ANIM_TARGET, 4, 0x0, 0x6, 0x48, 0x0, 0x4b
+	createsprite gGlaciateSmokeTemplate, ANIM_TARGET, 4, 0x0, 0x6, 0x68, 0x1, 0x4b
+	createsprite gGlaciateSmokeTemplate, ANIM_TARGET, 4, 0x0, 0xc, 0x48, 0x0, 0x4b
+	createsprite gGlaciateSmokeTemplate, ANIM_TARGET, 4, 0x0, 0xc, 0x38, 0x1, 0x4b
+	createsprite gGlaciateSmokeTemplate, ANIM_TARGET, 4, 0x0, 0x12, 0x50, 0x0, 0x4b
+	createsprite gGlaciateSmokeTemplate, ANIM_TARGET, 4, 0x0, 0x12, 0x48, 0x1, 0x4b
+
+	delay 8
+
+	waitforvisualfinish
+	createvisualtask AnimTask_BlendBattleAnimPal, 10, (F_PAL_BG | F_PAL_BATTLERS_2), 2, 4, 0, RGB(11, 18, 22)
+	waitforvisualfinish
+
+	end
 

@@ -10116,3 +10116,24 @@ BattleScript_HumiliateContrary:
 BattleScript_HumiliateContrary_WontIncrease:
 	printstring STRINGID_TARGETSTATWONTGOHIGHER
 	goto BattleScript_HumiliateEffect_WaitString
+
+BattleScript_EffectWintersGrasp::
+	attackcanceler
+	attackstring
+	ppreduce
+	jumpifsubstituteblocks BattleScript_ButItFailed
+	jumpifstatus BS_TARGET, STATUS1_FROSTBITE, BattleScript_ButItFailed
+	jumpiftype BS_TARGET, TYPE_ICE, BattleScript_NotAffected
+	jumpifability BS_TARGET, ABILITY_COMATOSE, BattleScript_AbilityProtectsDoesntAffect
+	jumpifability BS_TARGET, ABILITY_PURIFYING_SALT, BattleScript_AbilityProtectsDoesntAffect
+	jumpifflowerveil BattleScript_FlowerVeilProtects
+	jumpifleafguardprotected BS_TARGET, BattleScript_AbilityProtectsDoesntAffect
+	jumpifshieldsdown BS_TARGET, BattleScript_AbilityProtectsDoesntAffect
+	jumpifstatus BS_TARGET, STATUS1_ANY, BattleScript_ButItFailed
+	jumpifterrainaffected BS_TARGET, STATUS_FIELD_MISTY_TERRAIN, BattleScript_MistyTerrainPrevents
+	accuracycheck BattleScript_ButItFailed, ACC_CURR_MOVE
+	jumpifsafeguard BattleScript_SafeguardProtected
+	attackanimation
+	waitanimation
+	seteffectprimary MOVE_EFFECT_FROSTBITE
+	goto BattleScript_MoveEnd
