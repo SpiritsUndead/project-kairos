@@ -942,5 +942,6 @@ extern const u8 Move_ENERGIZE[];
 extern const u8 Move_FIRE_JAB[];
 extern const u8 Move_POISONOUS_GRAZE[];
 extern const u8 Move_WINTERS_GRASP[];
+extern const u8 Move_NIGHT_RUSH[];
 
 #endif // GUARD_BATTLE_ANIM_SCRIPTS_H

@@ -34591,3 +34591,73 @@ Move_WINTERS_GRASP::
 
 	end
 
+Move_NIGHT_RUSH::
+	loadspritegfx ANIM_TAG_MOON
+	loadspritegfx ANIM_TAG_IMPACT @hit
+	loadspritegfx ANIM_TAG_POISON_BUBBLE @purple color
+	loadspritegfx ANIM_TAG_GREEN_SPARKLE
+	loadspritegfx ANIM_TAG_BLUE_STAR
+
+	monbg ANIM_ATTACKER
+	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 1, 1, 0, 16, 0   @sets background to black
+	delay 1
+	playsewithpan SE_M_FAINT_ATTACK, SOUND_PAN_ATTACKER
+	createvisualtask AnimTask_TranslateMonEllipticalRespectSide, 2, ANIM_ATTACKER, 18, 6, 1, 3
+	
+	createvisualtask AnimTask_AttackerFadeToInvisible, 2, 1
+	waitforvisualfinish
+	clearmonbg ANIM_ATTACKER
+	invisible ANIM_ATTACKER
+	delay 1
+	createvisualtask AnimTask_SetAttackerInvisibleWaitForSignal, 2
+	setalpha 12, 8
+	monbg ANIM_TARGET
+	delay 1
+
+	playsewithpan SE_M_JUMP_KICK, SOUND_PAN_ATTACKER
+
+
+	delay 8
+	createvisualtask AnimTask_ShakeMon, 2, ANIM_TARGET, 5, 0, 6, 1
+
+	playsewithpan SE_M_VITAL_THROW2, SOUND_PAN_TARGET
+
+
+	createvisualtask AnimTask_ShakeMon2, 5, ANIM_TARGET, 4, 0, 30, 1
+	createsprite gDarkestLariatImpactTemplate, ANIM_ATTACKER, 3, 0, 0, 1, 0
+	playsewithpan SE_M_COMET_PUNCH, +63
+	delay 5
+	createsprite gDarkestLariatImpactTemplate, ANIM_ATTACKER, 3, 24, 8, 1, 0
+	playsewithpan SE_M_COMET_PUNCH, +63
+	delay 5
+	createsprite gDarkestLariatImpactTemplate, ANIM_ATTACKER, 3, -24, -16, 1, 0
+	playsewithpan SE_M_COMET_PUNCH, +63
+	delay 5
+	createsprite gDarkestLariatImpactTemplate, ANIM_ATTACKER, 3, 8, 4, 1, 0
+	playsewithpan SE_M_COMET_PUNCH, +63
+	delay 5
+	createsprite gDarkestLariatImpactTemplate, ANIM_ATTACKER, 3, -16, 19, 1, 0
+	playsewithpan SE_M_COMET_PUNCH, +63
+	delay 5
+	createsprite gDarkestLariatImpactTemplate, ANIM_ATTACKER, 3, 18, -18, 1, 0
+	playsewithpan SE_M_COMET_PUNCH, +63
+	waitforvisualfinish
+	
+	clearmonbg ANIM_TARGET
+	delay 1
+	setarg 7, 0x1000
+
+	delay 32
+	createvisualtask AnimTask_InitAttackerFadeFromInvisible, 2
+	monbg ANIM_ATTACKER
+	createvisualtask AnimTask_AttackerFadeFromInvisible, 2, 1
+	waitforvisualfinish
+	clearmonbg ANIM_ATTACKER
+
+	delay 1
+	createvisualtask AnimTask_MoonlightEndFade, 2
+	waitforvisualfinish
+	delay 1
+	waitbgfadein
+	waitforvisualfinish
+	end
