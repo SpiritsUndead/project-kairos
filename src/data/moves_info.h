@@ -22151,8 +22151,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
     {
         .name = COMPOUND_STRING("Night Rush"),
         .description = COMPOUND_STRING(
-            "An extremely fast attack\n"
-            "that always strikes first."),
+            "The user strikes quickly from the cover of darkness."),
         .effect = EFFECT_HIT,
         .power = 40,
         .type = TYPE_DARK,
@@ -22167,5 +22166,24 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .contestComboStarterId = 0,
         .contestComboMoves = {COMBO_STARTER_DOUBLE_TEAM},
         .battleAnimScript = Move_NIGHT_RUSH,
-    },    
+    },
+
+    [MOVE_SHADOW_SWAP] =
+    {
+        .name = COMPOUND_STRING("Shadow Swap"),
+        .description = sUTurnDescription,
+        .effect = EFFECT_HIT_ESCAPE,
+        .power = 70,
+        .type = TYPE_GHOST,
+        .accuracy = 100,
+        .pp = 20,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .contestEffect = CONTEST_EFFECT_AVOID_STARTLE,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = Move_SHADOW_SWAP,
+    },
 };

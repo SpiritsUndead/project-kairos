@@ -34661,3 +34661,32 @@ Move_NIGHT_RUSH::
 	waitbgfadein
 	waitforvisualfinish
 	end
+
+Move_SHADOW_SWAP::
+	loadspritegfx ANIM_TAG_GHOSTLY_SPIRIT
+	@set night shade
+
+	monbg ANIM_ATTACKER
+	splitbgprio ANIM_ATTACKER
+	playsewithpan SE_M_PSYBEAM, SOUND_PAN_ATTACKER
+	fadetobg BG_GHOST
+	waitbgfadein
+	delay 10
+	playsewithpan SE_M_LEER, SOUND_PAN_ATTACKER
+	createvisualtask AnimTask_NightShadeClone, 5, 112
+	delay 16
+	createvisualtask AnimTask_DoubleTeam, 2
+	call DoubleTeamAnimRet
+	delay 32
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_TARGET, 8, 0, 20, 1
+	createvisualtask AnimTask_BlendColorCycle, 2, F_PAL_TARGET, 0, 2, 0, 13, RGB_BLACK
+	monbg ANIM_DEF_PARTNER
+	playsewithpan SE_M_NIGHTMARE, SOUND_PAN_TARGET
+	createsprite gCurseGhostSpriteTemplate, ANIM_TARGET, 2
+	waitforvisualfinish
+	clearmonbg ANIM_DEF_PARTNER
+	clearmonbg ANIM_ATTACKER
+	delay 1
+	restorebg
+	waitbgfadein
+	end
