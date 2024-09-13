@@ -944,5 +944,6 @@ extern const u8 Move_POISONOUS_GRAZE[];
 extern const u8 Move_WINTERS_GRASP[];
 extern const u8 Move_NIGHT_RUSH[];
 extern const u8 Move_SHADOW_SWAP[];
+extern const u8 Move_PIXIE_PUNCH[];
 
 #endif // GUARD_BATTLE_ANIM_SCRIPTS_H

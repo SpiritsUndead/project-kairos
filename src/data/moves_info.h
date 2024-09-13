@@ -22186,4 +22186,36 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .contestComboMoves = {0},
         .battleAnimScript = Move_SHADOW_SWAP,
     },
+
+    [MOVE_PIXIE_PUNCH] =
+    {
+        .name = COMPOUND_STRING("Pixie Punch"),
+        .description = COMPOUND_STRING(
+            "A punch that is overflowing\n"
+            "with fairy energy."),
+        .effect = EFFECT_HIT,
+        .power = 75,
+        .type = TYPE_FAIRY,
+        .accuracy = 100,
+        .pp = 15,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .punchingMove = TRUE,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_ATK_PLUS_1,
+            .self = TRUE,
+            .chance = 10,
+        },
+        {
+            .moveEffect = MOVE_EFFECT_ATK_MINUS_1,
+            .chance = 10,
+        }),
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_BEAUTY,
+        .contestComboStarterId = COMBO_STARTER_FIRE_PUNCH,
+        .contestComboMoves = {COMBO_STARTER_ICE_PUNCH, COMBO_STARTER_SUNNY_DAY, COMBO_STARTER_THUNDER_PUNCH},
+        .battleAnimScript = Move_PIXIE_PUNCH,
+    },
 };

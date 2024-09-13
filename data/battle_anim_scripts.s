@@ -34690,3 +34690,94 @@ Move_SHADOW_SWAP::
 	restorebg
 	waitbgfadein
 	end
+
+Move_PIXIE_PUNCH::
+	@loadspritegfx ANIM_TAG_CIRCLE_OF_LIGHT @charge
+	@loadspritegfx ANIM_TAG_ELECTRIC_ORBS @createvisualtask particles
+	@loadspritegfx ANIM_TAG_ORBS @beam particles
+	@loadspritegfx ANIM_TAG_ELECTRICITY @discharge
+	@loadspritegfx ANIM_TAG_PINK_PETAL @pink color
+	loadspritegfx ANIM_TAG_HANDS_AND_FEET
+	loadspritegfx ANIM_TAG_IMPACT
+	loadspritegfx ANIM_TAG_EXPLOSION @explosion
+	loadspritegfx ANIM_TAG_PINK_CLOUD
+	loadspritegfx ANIM_TAG_FINGER
+	loadspritegfx ANIM_TAG_WATER_GUN @blue colour
+	loadspritegfx ANIM_TAG_DUCK
+	loadspritegfx ANIM_TAG_PINK_HEART
+
+
+	monbg ANIM_DEF_PARTNER
+	setalpha 12, 8
+	@createvisualtask AnimTask_BlendBattleAnimPal, 0xa, F_PAL_BG, 0x1, 0x0, 0x8, 0x6e7d
+	@waitforvisualfinish
+
+	@playsewithpan SE_M_GUST, SOUND_PAN_TARGET
+	@loopsewithpan SE_M_GUST, SOUND_PAN_TARGET, 2, 12
+	loopsewithpan SE_M_WING_ATTACK, SOUND_PAN_TARGET, 2, 14
+
+	createsprite gPixiePunchCloudTemplate, ANIM_TARGET, 2, 1, 0, 0, -32, 16
+	delay 2
+	createsprite gPixiePunchCloudTemplate, ANIM_TARGET, 2, 1, 0, 22, -22, 16
+	delay 2
+	createsprite gPixiePunchCloudTemplate, ANIM_TARGET, 2, 1, 0, 30, 0, 16
+	delay 2
+	createsprite gPixiePunchCloudTemplate, ANIM_TARGET, 2, 1, 0, 20, 20, 16
+	delay 2
+	createsprite gPixiePunchCloudTemplate, ANIM_TARGET, 2, 1, 0, 0, 28, 16
+	delay 2
+	createsprite gPixiePunchCloudTemplate, ANIM_TARGET, 2, 1, 0, -19, 19, 16
+	delay 2
+	createsprite gPixiePunchCloudTemplate, ANIM_TARGET, 2, 1, 0, -27, 0, 16
+	delay 2
+	createsprite gPixiePunchCloudTemplate, ANIM_TARGET, 2, 1, 0, -18, -18, 16
+	delay 2
+	createsprite gPixiePunchCloudTemplate, ANIM_TARGET, 2, 1, 0, 0, -25, 16
+	delay 2
+	createsprite gPixiePunchCloudTemplate, ANIM_TARGET, 2, 1, 0, 17, -17, 16
+	delay 2
+	createsprite gPixiePunchCloudTemplate, ANIM_TARGET, 2, 1, 0, 23, 0, 16
+	delay 2
+	createsprite gPixiePunchCloudTemplate, ANIM_TARGET, 2, 1, 0, 16, 16, 16
+	waitforvisualfinish
+
+	
+
+	
+	
+	@createsprite gStrangeSteamPinkCloudTemplate, ANIM_TARGET, 3, 0x14, 0xfff6, 0x14, 0x0, 0x16, 0x14, 0x1
+	@createsprite gFairyWindCloudTemplate, ANIM_TARGET, 1, 0
+	@createsprite gFairyWindCloudTemplate, ANIM_TARGET, 1, 64
+	@createsprite gFairyWindCloudTemplate, ANIM_TARGET, 1, 128
+	@createsprite gFairyWindCloudTemplate, ANIM_TARGET, 1, 196
+	@playsewithpan SE_M_FLAME_WHEEL, SOUND_PAN_TARGET
+	@waitforvisualfinish
+
+
+	createvisualtask AnimTask_BlendParticle, 5, ANIM_TAG_FINGER, 0, 10, 10, 0x4798
+
+	playsewithpan SE_M_COMET_PUNCH, SOUND_PAN_TARGET
+	createsprite gFistFootSpriteTemplate, ANIM_TARGET, 3, 0, 0, 8, 1, 0
+	createsprite gBasicHitSplatSpriteTemplate, ANIM_TARGET, 2, 0, 0, ANIM_TARGET, 1
+	createvisualtask AnimTask_ShakeMon, 2, ANIM_TARGET, 0, 3, 15, 1
+	waitplaysewithpan SE_M_CRABHAMMER, SOUND_PAN_ATTACKER, 0x14
+	
+	createsprite gStrangeSteamPinkPoofTemplate, ANIM_TARGET, 3, 0x10, 0x8, 0xa0, 0xffe0
+	createsprite gStrangeSteamBluePoofTemplate, ANIM_TARGET, 3, 0x10, 0x8, 0xff00, 0xffd8
+	createsprite gStrangeSteamGreenPoofTemplate, ANIM_TARGET, 3, 0x10, 0x8, 0x80, 0xfff0
+	createsprite gStrangeSteamBluePoofTemplate, ANIM_TARGET, 3, 0x10, 0x8, 0x1a0, 0xffda
+	createsprite gStrangeSteamGreenPoofTemplate, ANIM_TARGET, 3, 0x10, 0x8, 0xff80, 0xffea
+	createsprite gStrangeSteamPinkPoofTemplate, ANIM_TARGET, 3, 0x10, 0x8, 0xfe80, 0xffe1
+
+	@call FireSpreadEffect
+	@delay 4
+	@playsewithpan SE_M_FLAMETHROWER, SOUND_PAN_TARGET
+	waitforvisualfinish
+	createvisualtask AnimTask_BlendBattleAnimPal, 10, F_PAL_TARGET, 0, 9, 0, RGB_RED
+	waitforvisualfinish
+
+	@call StrangeSteamCloud
+
+	clearmonbg ANIM_DEF_PARTNER
+	blendoff	
+	end

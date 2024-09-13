@@ -1440,6 +1440,18 @@ const struct SpriteTemplate gFairyWindCloudTemplate =
     .callback = AnimTranslateLinearSingleSineWave
 };
 
+//used in pixie punch
+const struct SpriteTemplate gPixiePunchCloudTemplate =
+{
+    .tileTag = ANIM_TAG_PINK_CLOUD,
+    .paletteTag = ANIM_TAG_PINK_CLOUD,
+    .oam = &gOamData_AffineNormal_ObjNormal_32x32,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = gSwiftStarAffineAnimTable,
+    .callback = AnimNeedleArmSpike,
+};
+
 //confide
 const struct SpriteTemplate gConfideBubbleTemplate =
 {
@@ -4067,6 +4079,40 @@ const struct SpriteTemplate gStrangeSteamBlueCloudTemplate =
     .images = NULL,
     .affineAnims = gAffineAnims_ShadowBall,
     .callback = AnimDirtScatter
+};
+
+//used in pixie punch
+const struct SpriteTemplate gStrangeSteamPinkPoofTemplate =
+{
+    .tileTag = ANIM_TAG_PINK_CLOUD,
+    .paletteTag = ANIM_TAG_PINK_CLOUD,
+    .oam = &gOamData_AffineNormal_ObjNormal_32x32,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = gAffineAnims_ShadowBall,
+    .callback = AnimDizzyPunchDuck
+};
+
+const struct SpriteTemplate gStrangeSteamGreenPoofTemplate =
+{
+    .tileTag = ANIM_TAG_PINK_CLOUD,
+    .paletteTag = ANIM_TAG_FINGER,
+    .oam = &gOamData_AffineNormal_ObjNormal_32x32,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = gAffineAnims_ShadowBall,
+    .callback = AnimDizzyPunchDuck
+};
+
+const struct SpriteTemplate gStrangeSteamBluePoofTemplate =
+{
+    .tileTag = ANIM_TAG_PINK_CLOUD,
+    .paletteTag = ANIM_TAG_WATER_GUN,
+    .oam = &gOamData_AffineNormal_ObjNormal_32x32,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = gAffineAnims_ShadowBall,
+    .callback = AnimDizzyPunchDuck
 };
 
 //life dew
