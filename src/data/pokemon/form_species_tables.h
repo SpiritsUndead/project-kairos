@@ -417,6 +417,11 @@ static const u16 sMarowakFormSpeciesIdTable[] = {
 #endif //P_FAMILY_CUBONE
 
 #if P_FAMILY_KOFFING
+static const u16 sKoffingFormSpeciesIdTable[] = {
+    SPECIES_KOFFING_GALARIAN,
+    SPECIES_KOFFING,    
+    FORM_SPECIES_END,
+};
 static const u16 sWeezingFormSpeciesIdTable[] = {
     SPECIES_WEEZING_GALARIAN,
     SPECIES_WEEZING,    
