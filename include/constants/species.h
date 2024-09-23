@@ -1640,8 +1640,9 @@
 #define SPECIES_SANDSLASH_ALOLAN_MEGA                   1533
 #define SPECIES_PALOSSAND_MEGA                          1534
 #define SPECIES_CORVIKNIGHT_MEGA                        1535
+#define SPECIES_KOFFING_GALARIAN                        1536
 
-#define SPECIES_EGG (SPECIES_CORVIKNIGHT_MEGA  + 1)
+#define SPECIES_EGG (SPECIES_KOFFING_GALARIAN  + 1)
 
 #define NUM_SPECIES SPECIES_EGG
 

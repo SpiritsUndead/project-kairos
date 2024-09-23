@@ -3006,6 +3006,17 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
 #endif //OW_PKMN_OBJECTS_SHARE_PALETTES
 #endif //OW_POKEMON_OBJECT_EVENTS
 
+    const u32 gMonFrontPic_KoffingGalarian[] = INCBIN_U32("graphics/pokemon/koffing/galarian/anim_front.4bpp.lz");
+    const u32 gMonPalette_KoffingGalarian[] = INCBIN_U32("graphics/pokemon/koffing/galarian/normal.gbapal.lz");
+    const u32 gMonBackPic_KoffingGalarian[] = INCBIN_U32("graphics/pokemon/koffing/galarian/back.4bpp.lz");
+    //const u32 gMonShinyPalette_KoffingGalarian[] = INCBIN_U32("graphics/pokemon/koffing/galarian/shiny.gbapal.lz"); //todo
+    const u8 gMonIcon_KoffingGalarian[] = INCBIN_U8("graphics/pokemon/koffing/galarian/icon.4bpp");
+    const u8 gMonFootprint_KoffingGalarian[] = INCBIN_U8("graphics/pokemon/koffing/footprint.1bpp");
+
+
+
+
+
     const u32 gMonFrontPic_Weezing[] = INCBIN_U32("graphics/pokemon/weezing/anim_front.4bpp.lz");
     const u32 gMonPalette_Weezing[] = INCBIN_U32("graphics/pokemon/weezing/normal.gbapal.lz");
     const u32 gMonBackPic_Weezing[] = INCBIN_U32("graphics/pokemon/weezing/back.4bpp.lz");
