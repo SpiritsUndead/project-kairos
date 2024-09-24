@@ -12462,7 +12462,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpeed     = 35,
         .baseSpAttack  = 60,
         .baseSpDefense = 45,
-        .types = MON_TYPES(TYPE_POISON),
+        .types = MON_TYPES(TYPE_POISON, TYPE_FAIRY),
         .catchRate = 190,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 68 : 114,
         .evYield_Defense = 1,
@@ -12488,7 +12488,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             "Getting up close to a Koffing will give\n"
             "you a chance to observe, through its thin\n"
             "skin, the toxic gases swirling inside. It\n"
-            "blows up at the slightest stimulation."),
+            "will blow up if you try to take its hat."),
         .pokemonScale = 369,
         .pokemonOffset = -1,
         .trainerScale = 256,
