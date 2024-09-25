@@ -1860,6 +1860,7 @@ static const u16 sCramorantFormSpeciesIdTable[] = {
 static const u16 sToxtricityFormSpeciesIdTable[] = {
     SPECIES_TOXTRICITY_AMPED,
     SPECIES_TOXTRICITY_LOW_KEY,
+    SPECIES_TOXTRICITY_MEGA,
 #if P_GIGANTAMAX_FORMS
     SPECIES_TOXTRICITY_AMPED_GIGANTAMAX,
 #endif

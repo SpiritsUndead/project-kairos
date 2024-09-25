@@ -6187,6 +6187,23 @@ const struct Item gItemsInfo[] =
         .iconPalette = gItemIconPalette_Corvite,
     },
 
+    [ITEM_TOXTRICITITE] =
+    {
+        .name = _("Toxtricitite"),
+        .price = 0,
+        .holdEffect = HOLD_EFFECT_MEGA_STONE,
+        .description = COMPOUND_STRING(
+            "This stone enables\n"
+            "Toxtricity to Mega\n"
+            "Evolve in battle."),
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 80,
+        .iconPic = gItemIcon_Toxtricitite,
+        .iconPalette = gItemIconPalette_Toxtricitite,
+    },
+
 // Gems
 
     [ITEM_NORMAL_GEM] =

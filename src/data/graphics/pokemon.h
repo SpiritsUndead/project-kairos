@@ -18839,7 +18839,12 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
 #endif //OW_PKMN_OBJECTS_SHARE_PALETTES
 #endif //OW_POKEMON_OBJECT_EVENTS
 
-#if P_GIGANTAMAX_FORMS
+    const u32 gMonFrontPic_ToxtricityMega[] = INCBIN_U32("graphics/pokemon/toxtricity/mega/front.4bpp.lz");
+    const u32 gMonBackPic_ToxtricityMega[] = INCBIN_U32("graphics/pokemon/toxtricity/mega/back.4bpp.lz");
+    const u32 gMonPalette_ToxtricityMega[] = INCBIN_U32("graphics/pokemon/toxtricity/mega/normal.gbapal.lz");
+    const u32 gMonShinyPalette_ToxtricityMega[] = INCBIN_U32("graphics/pokemon/toxtricity/mega/shiny.gbapal.lz");
+    const u8 gMonIcon_ToxtricityMega[] = INCBIN_U8("graphics/pokemon/toxtricity/mega/icon.4bpp");
+
     const u32 gMonFrontPic_ToxtricityGigantamax[] = INCBIN_U32("graphics/pokemon/toxtricity/gigantamax/front.4bpp.lz");
     const u32 gMonBackPic_ToxtricityGigantamax[] = INCBIN_U32("graphics/pokemon/toxtricity/gigantamax/back.4bpp.lz");
     const u32 gMonPalette_ToxtricityGigantamax[] = INCBIN_U32("graphics/pokemon/toxtricity/gigantamax/normal.gbapal.lz");
@@ -18852,7 +18857,6 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
     // const u32 gShinyOverworldPalette_ToxtricityGigantamax[] = INCBIN_U32("graphics/pokemon/toxtricity/gigantamax/overworld_shiny.gbapal.lz");
 #endif //OW_PKMN_OBJECTS_SHARE_PALETTES
 #endif //OW_POKEMON_OBJECT_EVENTS
-#endif //P_GIGANTAMAX_FORMS
 #endif //P_FAMILY_TOXEL
 
 #if P_FAMILY_SIZZLIPEDE

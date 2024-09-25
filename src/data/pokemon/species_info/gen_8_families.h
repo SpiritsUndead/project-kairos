@@ -3577,6 +3577,60 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .formChangeTable = sToxtricityAmpedFormChangeTable,
     },
 #endif //P_GIGANTAMAX_FORMS
+
+    [SPECIES_TOXTRICITY_MEGA] =
+    {
+        .baseHP        = 75,
+        .baseAttack    = 98,
+        .baseDefense   = 70,
+        .baseSpeed     = 75,
+        .baseSpAttack  = 114,
+        .baseSpDefense = 70,
+        .types = MON_TYPES(TYPE_ELECTRIC, TYPE_POISON),
+        .catchRate = 45,
+        .expYield = 176,
+        .evYield_SpAttack = 2,
+        .genderRatio = PERCENT_FEMALE(50),
+        .eggCycles = 25,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_SLOW,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_HUMAN_LIKE),
+        .abilities = { ABILITY_PUNK_ROCK, ABILITY_PLUS, ABILITY_TECHNICIAN },
+        .bodyColor = BODY_COLOR_PURPLE,
+        .speciesName = _("Toxtricity"),
+        .cryId = CRY_TOXTRICITY_AMPED,
+        .natDexNum = NATIONAL_DEX_TOXTRICITY,
+        .categoryName = _("Punk"),
+        .height = 240,
+        .weight = 0,
+        .description = COMPOUND_STRING(
+            "Capable of generating 15,000 volts\n"
+            "of electricity, this Pokémon looks\n"
+            "down on all that would challenge it."),
+        .pokemonScale = 259,
+        .pokemonOffset = 1,
+        .trainerScale = 296,
+        .trainerOffset = 1,
+        .frontPic = gMonFrontPic_ToxtricityMega,
+        .frontPicSize = MON_COORDS_SIZE(64, 64),
+        .frontPicYOffset = 0,
+        .frontAnimFrames = sAnims_ToxtricityGigantamax,
+        //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
+        .backPic = gMonBackPic_ToxtricityMega,
+        .backPicSize = MON_COORDS_SIZE(64, 64),
+        .backPicYOffset = 0,
+        //.backAnimId = BACK_ANIM_NONE,
+        .palette = gMonPalette_ToxtricityMega,
+        .shinyPalette = gMonShinyPalette_ToxtricityMega,
+        .iconSprite = gMonIcon_ToxtricityMega,
+        .iconPalIndex = 0,
+        FOOTPRINT(Toxtricity)
+        .isGigantamax = TRUE,
+        .levelUpLearnset = sToxtricityAmpedLevelUpLearnset,
+        .teachableLearnset = sToxtricityAmpedTeachableLearnset,
+        .formSpeciesIdTable = sToxtricityFormSpeciesIdTable,
+        .formChangeTable = sToxtricityAmpedFormChangeTable,
+    },
 #endif //P_FAMILY_TOXEL
 
 #if P_FAMILY_SIZZLIPEDE

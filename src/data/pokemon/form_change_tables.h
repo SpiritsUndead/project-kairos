@@ -1123,6 +1123,7 @@ static const struct FormChange sCramorantFormChangeTable[] = {
 #if P_FAMILY_TOXEL
 static const struct FormChange sToxtricityAmpedFormChangeTable[] =
 {
+    {FORM_CHANGE_BATTLE_MEGA_EVOLUTION_ITEM,    SPECIES_TOXTRICITY_MEGA, ITEM_TOXTRICITITE},
 #if P_GIGANTAMAX_FORMS
     {FORM_CHANGE_BATTLE_GIGANTAMAX, SPECIES_TOXTRICITY_AMPED_GIGANTAMAX},
 #endif
@@ -1131,6 +1132,7 @@ static const struct FormChange sToxtricityAmpedFormChangeTable[] =
 
 static const struct FormChange sToxtricityLowKeyFormChangeTable[] =
 {
+    {FORM_CHANGE_BATTLE_MEGA_EVOLUTION_ITEM,    SPECIES_TOXTRICITY_MEGA, ITEM_TOXTRICITITE},
 #if P_GIGANTAMAX_FORMS
     {FORM_CHANGE_BATTLE_GIGANTAMAX, SPECIES_TOXTRICITY_LOW_KEY_GIGANTAMAX},
 #endif

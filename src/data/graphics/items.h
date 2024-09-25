@@ -982,6 +982,9 @@ const u32 gItemIconPalette_Palossite[] = INCBIN_U32("graphics/items/icon_palette
 const u32 gItemIcon_Corvite[] = INCBIN_U32("graphics/items/icons/corvite.4bpp.lz");
 const u32 gItemIconPalette_Corvite[] = INCBIN_U32("graphics/items/icon_palettes/corvite.gbapal.lz");
 
+const u32 gItemIcon_Toxtricitite[] = INCBIN_U32("graphics/items/icons/toxtricitite.4bpp.lz");
+const u32 gItemIconPalette_Toxtricitite[] = INCBIN_U32("graphics/items/icon_palettes/toxtricitite.gbapal.lz");
+
 
 // Gems
 
