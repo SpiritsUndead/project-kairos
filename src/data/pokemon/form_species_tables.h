@@ -1812,9 +1812,7 @@ static const u16 sDrednawFormSpeciesIdTable[] = {
 #if P_FAMILY_ROLYCOLY
 static const u16 sCoalossalFormSpeciesIdTable[] = {
     SPECIES_COALOSSAL,
-#if P_GIGANTAMAX_FORMS
     SPECIES_COALOSSAL_GIGANTAMAX,
-#endif
     FORM_SPECIES_END,
 };
 #endif //P_FAMILY_ROLYCOLY

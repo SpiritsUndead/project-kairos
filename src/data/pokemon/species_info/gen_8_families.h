@@ -2321,7 +2321,6 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .formChangeTable = sCoalossalFormChangeTable,
     },
 
-#if P_GIGANTAMAX_FORMS
     [SPECIES_COALOSSAL_GIGANTAMAX] =
     {
         .baseHP        = 110,
@@ -2376,7 +2375,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .formSpeciesIdTable = sCoalossalFormSpeciesIdTable,
         .formChangeTable = sCoalossalFormChangeTable,
     },
-#endif //P_GIGANTAMAX_FORMS
+
 #endif //P_FAMILY_ROLYCOLY
 
 #if P_FAMILY_APPLIN

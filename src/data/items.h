@@ -6204,6 +6204,23 @@ const struct Item gItemsInfo[] =
         .iconPalette = gItemIconPalette_Toxtricitite,
     },
 
+    [ITEM_COALOSSALITE] =
+    {
+        .name = _("Coalossalite"),
+        .price = 0,
+        .holdEffect = HOLD_EFFECT_MEGA_STONE,
+        .description = COMPOUND_STRING(
+            "This stone enables\n"
+            "Coalossal to Mega\n"
+            "Evolve in battle."),
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 80,
+        .iconPic = gItemIcon_Coalossalite,
+        .iconPalette = gItemIconPalette_Coalossalite,
+    },
+
 // Gems
 
     [ITEM_NORMAL_GEM] =
