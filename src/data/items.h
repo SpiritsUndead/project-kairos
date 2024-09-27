@@ -6221,6 +6221,23 @@ const struct Item gItemsInfo[] =
         .iconPalette = gItemIconPalette_Coalossalite,
     },
 
+    [ITEM_LAPRASITE] =
+    {
+        .name = _("Laprasite"),
+        .price = 0,
+        .holdEffect = HOLD_EFFECT_MEGA_STONE,
+        .description = COMPOUND_STRING(
+            "This stone enables\n"
+            "Lapras to Mega\n"
+            "Evolve in battle."),
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 80,
+        .iconPic = gItemIcon_Laprasite,
+        .iconPalette = gItemIconPalette_Laprasite,
+    },
+
 // Gems
 
     [ITEM_NORMAL_GEM] =

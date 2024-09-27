@@ -1000,6 +1000,8 @@ extern const u32 gItemIcon_Toxtricitite[];
 extern const u32 gItemIconPalette_Toxtricitite[];
 extern const u32 gItemIcon_Coalossalite[];
 extern const u32 gItemIconPalette_Coalossalite[];
+extern const u32 gItemIcon_Laprasite[];
+extern const u32 gItemIconPalette_Laprasite[];
 
 // Gems
 extern const u32 gItemIcon_NormalGem[];

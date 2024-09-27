@@ -496,9 +496,7 @@ static const u16 sGyaradosFormSpeciesIdTable[] = {
 #if P_FAMILY_LAPRAS
 static const u16 sLaprasFormSpeciesIdTable[] = {
     SPECIES_LAPRAS,
-#if P_GIGANTAMAX_FORMS
     SPECIES_LAPRAS_GIGANTAMAX,
-#endif
     FORM_SPECIES_END,
 };
 #endif //P_FAMILY_LAPRAS

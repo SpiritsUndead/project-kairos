@@ -184,9 +184,7 @@ static const struct FormChange sGyaradosFormChangeTable[] = {
 
 #if P_FAMILY_LAPRAS
 static const struct FormChange sLaprasFormChangeTable[] = {
-#if P_GIGANTAMAX_FORMS
-    {FORM_CHANGE_BATTLE_GIGANTAMAX, SPECIES_LAPRAS_GIGANTAMAX},
-#endif
+    {FORM_CHANGE_BATTLE_MEGA_EVOLUTION_ITEM, SPECIES_LAPRAS_GIGANTAMAX, ITEM_LAPRASITE},
     {FORM_CHANGE_TERMINATOR},
 };
 #endif //P_FAMILY_LAPRAS
