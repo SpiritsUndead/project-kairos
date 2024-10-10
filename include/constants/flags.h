@@ -46,7 +46,7 @@
 #define FLAG_FUE_0x021    0x21 // Fennekin poke ball
 #define FLAG_OSH_0x022    0x22 // Oshawott poke ball
 #define FLAG_Research_Papers    0x23 
-#define FLAG_UNUSED_0x024    0x24 // Unused Flag
+#define FLAG_INVERSE_BATTLE    0x24 // used to turn on/off inverse battles
 #define FLAG_UNUSED_0x025    0x25 // Unused Flag
 #define FLAG_UNUSED_0x026    0x26 // Unused Flag
 #define FLAG_UNUSED_0x027    0x27 // Unused Flag
