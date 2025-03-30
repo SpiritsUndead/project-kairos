@@ -2859,27 +2859,7 @@ u32 BattleStringExpandPlaceholders(const u8 *src, u8 *dst, u32 dstSize)
                     textStart[nameLength] = EOS;
                 }
                 break;
-            case B_TXT_TRAINER1_NAME_WITH_CLASS: // trainer1 name with trainer class
-                toCpy = textStart;
-                classString = BattleStringGetOpponentClassByTrainerId(gTrainerBattleOpponent_A);
-                while (classString[classLength] != EOS)
-                {
-                    textStart[classLength] = classString[classLength];
-                    classLength++;
-                }
-                textStart[classLength] = CHAR_SPACE;
-                textStart += classLength + 1;
-                nameString = BattleStringGetOpponentNameByTrainerId(gTrainerBattleOpponent_A, textStart, multiplayerId, GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT));
-                if (nameString != textStart)
-                {
-                    while (nameString[nameLength] != EOS)
-                    {
-                        textStart[nameLength] = nameString[nameLength];
-                        nameLength++;
-                    }
-                    textStart[nameLength] = EOS;
-                }
-                break;
+                
             case B_TXT_LINK_PLAYER_NAME: // link player name
                 toCpy = gLinkPlayers[multiplayerId].name;
                 break;
