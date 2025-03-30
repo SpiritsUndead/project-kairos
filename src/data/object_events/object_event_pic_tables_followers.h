@@ -929,11 +929,7 @@ static const struct SpriteFrameImage sPicTable_RhydonF[] = {
 static const struct SpriteFrameImage sPicTable_Rhyperior[] = {
     overworld_ascending_frames(gObjectEventPic_Rhyperior, 4, 4),
 };
-#if P_GENDER_DIFFERENCES
-static const struct SpriteFrameImage sPicTable_RhyperiorF[] = {
-    overworld_ascending_frames(gObjectEventPic_RhyperiorF, 4, 4),
-};
-#endif //P_GENDER_DIFFERENCES
+
 #endif //P_GEN_4_CROSS_EVOS
 #endif //P_FAMILY_RHYHORN
 

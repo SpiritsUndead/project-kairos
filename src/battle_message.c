@@ -2624,7 +2624,7 @@ u32 BattleStringExpandPlaceholders(const u8 *src, u8 *dst, u32 dstSize)
             const u8 *nameString;
             switch (*src)
             {
-                u32 i;
+                //u32 i;
             case B_TXT_BUFF1:
                 if (gBattleTextBuff1[0] == B_BUFF_PLACEHOLDER_BEGIN)
                 {

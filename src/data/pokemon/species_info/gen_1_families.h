@@ -12821,7 +12821,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             "Getting up close to a Koffing will give\n"
             "you a chance to observe, through its thin\n"
             "skin, the toxic gases swirling inside. It\n"
-            "will blow up if you try to take its hat."),
+            "will explode if you try to take its hat."),
         .pokemonScale = 369,
         .pokemonOffset = -1,
         .trainerScale = 256,
@@ -12837,7 +12837,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .backPicYOffset = 3,
         .backAnimId = BACK_ANIM_SHRINK_GROW,
         .palette = gMonPalette_KoffingGalarian,
-        .shinyPalette = gMonShinyPalette_WeezingGalarian,//todo
+        .shinyPalette = gMonShinyPalette_WeezingGalar,//todo
         .iconSprite = gMonIcon_KoffingGalarian,
         .iconPalIndex = 1,
         FOOTPRINT(Koffing)
@@ -12853,77 +12853,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .teachableLearnset = sKoffingTeachableLearnset,
         .eggMoveLearnset = sKoffingEggMoveLearnset,
         .formSpeciesIdTable = sKoffingFormSpeciesIdTable,
-        .evolutions = EVOLUTION({EVO_LEVEL, 35, SPECIES_WEEZING_GALARIAN},
-                                {EVO_NONE, 0, SPECIES_WEEZING}),
-    },
-
-    [SPECIES_KOFFING_GALARIAN] =
-    {
-        .baseHP        = 40,
-        .baseAttack    = 65,
-        .baseDefense   = 95,
-        .baseSpeed     = 35,
-        .baseSpAttack  = 60,
-        .baseSpDefense = 45,
-        .types = MON_TYPES(TYPE_POISON, TYPE_FAIRY),
-        .catchRate = 190,
-        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 68 : 114,
-        .evYield_Defense = 1,
-        .itemRare = ITEM_SMOKE_BALL,
-        .genderRatio = PERCENT_FEMALE(50),
-        .eggCycles = 20,
-        .friendship = STANDARD_FRIENDSHIP,
-        .growthRate = GROWTH_MEDIUM_FAST,
-        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_AMORPHOUS),
-    #if P_UPDATED_ABILITIES >= GEN_8
-        .abilities = { ABILITY_LEVITATE, ABILITY_NEUTRALIZING_GAS, ABILITY_STENCH },
-    #else
-        .abilities = { ABILITY_LEVITATE, ABILITY_NONE, ABILITY_NONE },
-    #endif
-        .bodyColor = BODY_COLOR_PURPLE,
-        .speciesName = _("Koffing"),
-        .cryId = CRY_KOFFING,
-        .natDexNum = NATIONAL_DEX_KOFFING,
-        .categoryName = _("Poison Gas"),
-        .height = 6,
-        .weight = 10,
-        .description = COMPOUND_STRING(
-            "Getting up close to a Koffing will give\n"
-            "you a chance to observe, through its thin\n"
-            "skin, the toxic gases swirling inside. It\n"
-            "will blow up if you try to take its hat."),
-        .pokemonScale = 369,
-        .pokemonOffset = -1,
-        .trainerScale = 256,
-        .trainerOffset = 0,
-        .frontPic = gMonFrontPic_KoffingGalarian,
-        .frontPicSize = MON_COORDS_SIZE(56, 48),
-        .frontPicYOffset = 10,
-        .frontAnimFrames = sAnims_Koffing,
-        .frontAnimId = ANIM_V_SLIDE_WOBBLE_SMALL,
-        .enemyMonElevation = 14,
-        .backPic = gMonBackPic_KoffingGalarian,
-        .backPicSize = MON_COORDS_SIZE(64, 64),
-        .backPicYOffset = 3,
-        .backAnimId = BACK_ANIM_SHRINK_GROW,
-        .palette = gMonPalette_KoffingGalarian,
-        .shinyPalette = gMonShinyPalette_WeezingGalarian,//todo
-        .iconSprite = gMonIcon_KoffingGalarian,
-        .iconPalIndex = 1,
-        FOOTPRINT(Koffing)
-        OVERWORLD(
-            sPicTable_Koffing,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_NONE,
-            gOverworldPalette_Koffing,
-            gShinyOverworldPalette_Koffing
-        )
-        .levelUpLearnset = sKoffingLevelUpLearnset,
-        .teachableLearnset = sKoffingTeachableLearnset,
-        .eggMoveLearnset = sKoffingEggMoveLearnset,
-        .formSpeciesIdTable = sKoffingFormSpeciesIdTable,
-        .evolutions = EVOLUTION({EVO_LEVEL, 35, SPECIES_WEEZING_GALARIAN},
+        .evolutions = EVOLUTION({EVO_LEVEL, 35, SPECIES_WEEZING_GALAR},
                                 {EVO_NONE, 0, SPECIES_WEEZING}),
     },
 
@@ -13286,12 +13216,14 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             gOverworldPalette_Rhyperior,
             gShinyOverworldPalette_Rhyperior
         )
+        /*
         OVERWORLD_FEMALE(
             sPicTable_RhyperiorF,
             SIZE_32x32,
             SHADOW_SIZE_M,
             TRACKS_FOOT
         )
+            */
         .levelUpLearnset = sRhyperiorLevelUpLearnset,
         .teachableLearnset = sRhyperiorTeachableLearnset,
     },
