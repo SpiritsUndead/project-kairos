@@ -885,6 +885,9 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_ELECTRICCURRENTISRUNNING]             = COMPOUND_STRING("An electric current is running across the battlefield!"),
     [STRINGID_SEEMSWEIRD]                           = COMPOUND_STRING("The battlefield seems weird!"),
     [STRINGID_WAGGLINGAFINGER]                      = COMPOUND_STRING("Waggling a finger let it use {B_CURRENT_MOVE}!"),
+    [STRINGID_PKMNCUTSSPATTACKWITH]                 = COMPOUND_STRING("{B_SCR_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY} cuts {B_DEF_NAME_WITH_PREFIX2}'s Special Attack!"),
+    [STRINGID_TOXICPARASITESACTIVATE]               = COMPOUND_STRING("The Toxic Parasites heal {B_ATK_NAME_WITH_PREFIX2} a little bit!"),
+    [STRINGID_BOTHMONSPOISONED]                     = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX2}'s Toxic Parasites prevent the Poison damage."),
 };
 
 const u16 gTrainerUsedItemStringIds[] =

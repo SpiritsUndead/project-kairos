@@ -2516,7 +2516,7 @@ u8 DoBattlerEndTurnEffects(void)
                     u32 opponent2 = GetBattlerAtPosition(opp_side + BIT_FLANK);
                     u32 ally_side = GetBattlerAtPosition(battler) & BIT_SIDE;
                     u32 ally = GetBattlerAtPosition(ally_side + BIT_FLANK);
-                    u32 count = 0;
+                    u32 count = 1;
 
                     if (gBattleMons[opponent1].status1 & STATUS1_PSN_ANY)
                         count++;
@@ -2537,7 +2537,7 @@ u8 DoBattlerEndTurnEffects(void)
                     }
                     else if  (!(gStatuses3[battler] & STATUS3_HEAL_BLOCK))  // not heal blocked, calc recovery.
                     {
-                        if (count > 0) 
+                        if (count > 1) 
                         {
                             DebugPrintfLevel(MGBA_LOG_WARN, "recovery count: %d", count);
                             if (!BATTLER_MAX_HP(battler) && !(gStatuses3[battler] & STATUS3_HEAL_BLOCK))
@@ -2553,7 +2553,7 @@ u8 DoBattlerEndTurnEffects(void)
                                 effect++;
                             }
                         }
-                        else if ((count == 0) && (gBattleMons[battler].status1 & STATUS1_PSN_ANY)) // you and 1 other are poisoned, healing is cancelled out.
+                        else if ((count == 1) && (gBattleMons[battler].status1 & STATUS1_PSN_ANY)) // you and 1 other are poisoned, healing is cancelled out.
                         {
                             BattleScriptExecute(BattleScript_ToxicParasitesBothMonsPoisoned);
                             effect++;

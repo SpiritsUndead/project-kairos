@@ -7228,7 +7228,7 @@ BattleScript_ToxicParasitesBothMonsPoisoned::
 
 BattleScript_ToxicParasitesActivate::
 	copybyte gBattlerAbility, gBattlerAttacker
-	call BattleScript_AbilityPopUpTarget
+	call BattleScript_AbilityPopUp
 	printstring STRINGID_TOXICPARASITESACTIVATE
 	waitmessage B_WAIT_TIME_LONG
 	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE | HITMARKER_PASSIVE_DAMAGE
