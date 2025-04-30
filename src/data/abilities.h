@@ -2511,7 +2511,7 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
     #else
         .name = _("AdrenlineBst"),
     #endif
-    .description = COMPOUND_STRING("KO's with powerful moves \nenvigorate the pokemon."),
+    .description = COMPOUND_STRING("KO's with powerful moves envigorate the pokemon."),
     .aiRating = 7,
     },
 
