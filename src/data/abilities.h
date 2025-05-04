@@ -2569,6 +2569,12 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
         .name = _("Soulless"),
         .description = COMPOUND_STRING("Ghost attacks have no effect."),
         .aiRating = 7,
-    },    
+    },
 
+    [ABILITY_TENACIOUS] =
+    {
+        .name = _("Tenacious"),
+        .description = COMPOUND_STRING("Increases Defenses and Speed at half HP to stay in the fight."),
+        .aiRating = 9,
+    },
 };

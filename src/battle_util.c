@@ -9991,6 +9991,9 @@ static inline u32 CalcAttackStat(struct DamageCalculationData *damageCalcData, u
                 RecordAbilityBattle(battlerDef, ABILITY_THICK_FAT);
         }
         break;
+    case ABILITY_TENACIOUS:
+        if (gBattleMons[battlerDef].hp <= (gBattleMons[battlerDef].maxHP / 2))
+            modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(0.5));
     }
 
     // ally's abilities
