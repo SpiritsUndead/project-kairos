@@ -1616,6 +1616,50 @@ const struct Berry gBerries[] =
         .weedsBonus = 0,
         .pestsBonus = 0,
     },
+    [ITEM_LICAR_BERRY - FIRST_BERRY_INDEX] =
+    {
+        .name = _("Licar"),
+        .firmness = BERRY_FIRMNESS_UNKNOWN,
+        .color = BERRY_COLOR_YELLOW,
+        .size = 0,
+        .maxYield = YIELD_RATE(2, 5, 5, 13),
+        .minYield = YIELD_RATE(1, 1, 1, 1),
+        .description1 = COMPOUND_STRING("A rather peculiar Berry."),
+        .description2 = COMPOUND_STRING("Said to be a great immunity booster."),
+        .growthDuration = GROWTH_DURATION(96, 96, 144, 72, 48, 72),
+        .spicy = 40,
+        .dry = 40,
+        .sweet = 40,
+        .bitter = 40,
+        .sour = 40,
+        .smoothness = 40,
+        .drainRate = 7,
+        .waterBonus = 2,
+        .weedsBonus = 0,
+        .pestsBonus = 0,
+    },
+    [ITEM_TARNEC_BERRY - FIRST_BERRY_INDEX] =
+    {
+        .name = _("Tarnec"),
+        .firmness = BERRY_FIRMNESS_UNKNOWN,
+        .color = BERRY_COLOR_YELLOW,
+        .size = 0,
+        .maxYield = YIELD_RATE(2, 5, 5, 13),
+        .minYield = YIELD_RATE(1, 1, 1, 1),
+        .description1 = COMPOUND_STRING("A very hardy Berry."),
+        .description2 = COMPOUND_STRING("Its outer skin is very tough."),
+        .growthDuration = GROWTH_DURATION(96, 96, 144, 72, 48, 72),
+        .spicy = 40,
+        .dry = 40,
+        .sweet = 40,
+        .bitter = 40,
+        .sour = 40,
+        .smoothness = 40,
+        .drainRate = 7,
+        .waterBonus = 2,
+        .weedsBonus = 0,
+        .pestsBonus = 0,
+    },
 };
 
 const struct BerryCrushBerryData gBerryCrush_BerryData[] = {
@@ -1686,7 +1730,9 @@ const struct BerryCrushBerryData gBerryCrush_BerryData[] = {
     [ITEM_ROWAP_BERRY - FIRST_BERRY_INDEX]           = {.difficulty = 130, .powder = 250},
     [ITEM_KEE_BERRY - FIRST_BERRY_INDEX]             = {.difficulty = 160, .powder = 500},
     [ITEM_MARANGA_BERRY - FIRST_BERRY_INDEX]         = {.difficulty = 160, .powder = 500},
-    [ITEM_ENIGMA_BERRY_E_READER - FIRST_BERRY_INDEX] = {.difficulty = 150, .powder = 200}
+    [ITEM_ENIGMA_BERRY_E_READER - FIRST_BERRY_INDEX] = {.difficulty = 150, .powder = 200},
+    [ITEM_LICAR_BERRY - FIRST_BERRY_INDEX]          = {.difficulty =  60, .powder =  50},
+    [ITEM_TARNEC_BERRY - FIRST_BERRY_INDEX]          = {.difficulty =  60, .powder =  50}
 };
 
 const struct BerryTree gBlankBerryTree = {};

@@ -10610,6 +10610,44 @@ const struct Item gItemsInfo[] =
         .iconPalette = gItemIconPalette_EnigmaBerry,
     },
 
+    [ITEM_LICAR_BERRY] =
+    {
+        .name = _("Licar Berry"),
+        .pluralName = _("Licar Berries"),
+        .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
+        .holdEffect = HOLD_EFFECT_RESIST_BERRY,
+        //.holdEffectParam = 
+        .description = COMPOUND_STRING(
+            "A1 hold item that\n"
+            "weakens a Fairy\n"
+            "move if weak to it."),
+        .pocket = POCKET_BERRIES,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 10,
+        .iconPic = gItemIcon_LicarBerry,
+        .iconPalette = gItemIconPalette_LicarBerry,
+    },
+
+    [ITEM_TARNEC_BERRY] =
+    {
+        .name = _("Tarnec Berry"),
+        .pluralName = _("Tarnec Berries"),
+        .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
+        .holdEffect = HOLD_EFFECT_RESIST_BERRY,
+        //.holdEffectParam = 
+        .description = COMPOUND_STRING(
+            "A1 hold item that\n"
+            "weakens a Fairy\n"
+            "move if weak to it."),
+        .pocket = POCKET_BERRIES,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 10,
+        .iconPic = gItemIcon_TarnecBerry,
+        .iconPalette = gItemIconPalette_TarnecBerry,
+    },
+
 // TMs/HMs. They don't have a set flingPower, as that's handled by GetFlingPowerFromItemId.
 
     [ITEM_TM_FOCUS_PUNCH] =

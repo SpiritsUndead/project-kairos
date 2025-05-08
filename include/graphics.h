@@ -1499,6 +1499,10 @@ extern const u32 gItemIcon_KeeBerry[];
 extern const u32 gItemIconPalette_KeeBerry[];
 extern const u32 gItemIcon_MarangaBerry[];
 extern const u32 gItemIconPalette_MarangaBerry[];
+extern const u32 gItemIcon_LicarBerry[];
+extern const u32 gItemIconPalette_LicarBerry[];
+extern const u32 gItemIcon_TarnecBerry[];
+extern const u32 gItemIconPalette_TarnecBerry[];
 // TMs/HMs
 extern const u32 gItemIcon_TM[];
 extern const u32 gItemIcon_HM[];
