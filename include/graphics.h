@@ -1903,6 +1903,8 @@ extern const u32 gBerryPic_Jaboca[];
 extern const u32 gBerryPic_Rowap[];
 extern const u32 gBerryPic_Kee[];
 extern const u32 gBerryPic_Maranga[];
+extern const u32 gBerryPic_Licar[];
+extern const u32 gBerryPic_Tarnec[];
 extern const u32 gBerryPalette_Cheri[];
 extern const u32 gBerryPalette_Chesto[];
 extern const u32 gBerryPalette_Pecha[];
@@ -1970,6 +1972,8 @@ extern const u32 gBerryPalette_Jaboca[];
 extern const u32 gBerryPalette_Rowap[];
 extern const u32 gBerryPalette_Kee[];
 extern const u32 gBerryPalette_Maranga[];
+extern const u32 gBerryPalette_Licar[];
+extern const u32 gBerryPalette_Tarnec[];
 
 //PokéNav
 extern const u16 gPokenavCondition_Pal[];

@@ -10618,9 +10618,9 @@ const struct Item gItemsInfo[] =
         .holdEffect = HOLD_EFFECT_RESIST_BERRY,
         //.holdEffectParam = 
         .description = COMPOUND_STRING(
-            "A1 hold item that\n"
-            "weakens a Fairy\n"
-            "move if weak to it."),
+            "A hold item that\n"
+            "weakens a Special\n"
+            "move one time."),
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -10637,9 +10637,9 @@ const struct Item gItemsInfo[] =
         .holdEffect = HOLD_EFFECT_RESIST_BERRY,
         //.holdEffectParam = 
         .description = COMPOUND_STRING(
-            "A1 hold item that\n"
-            "weakens a Fairy\n"
-            "move if weak to it."),
+            "A hold item that\n"
+            "weakens a Physical\n"
+            "move one time."),
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
