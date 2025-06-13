@@ -10465,6 +10465,7 @@ static inline uq4_12_t GetDefenderItemsModifier(struct DamageCalculationData *da
 {
     u32 battlerDef = damageCalcData->battlerDef;
     u32 moveType = damageCalcData->moveType;
+    u32 move = damageCalcData->move;
 
     u32 holdEffectDefParam = GetBattlerHoldEffectParam(battlerDef);
     u32 itemDef = gBattleMons[battlerDef].item;
@@ -10481,6 +10482,18 @@ static inline uq4_12_t GetDefenderItemsModifier(struct DamageCalculationData *da
             return (abilityDef == ABILITY_RIPEN) ? UQ_4_12(0.25) : UQ_4_12(0.5);
         }
         break;
+    case HOLD_EFFECT_RESIST_PHYSICAL:
+        if (UnnerveOn(battlerDef, itemDef))
+            return UQ_4_12(1.0);
+        if (gMovesInfo[move].category == DAMAGE_CATEGORY_PHYSICAL)
+            gSpecialStatuses[battlerDef].berryReduced = TRUE;
+        return (abilityDef == ABILITY_RIPEN) ? UQ_4_12(0.25) : UQ_4_12(0.5);
+    case HOLD_EFFECT_RESIST_SPECIAL:
+        if (UnnerveOn(battlerDef, itemDef))
+            return UQ_4_12(1.0);
+        if (gMovesInfo[move].category == DAMAGE_CATEGORY_SPECIAL)
+            gSpecialStatuses[battlerDef].berryReduced = TRUE;
+        return (abilityDef == ABILITY_RIPEN) ? UQ_4_12(0.25) : UQ_4_12(0.5);
     }
     return UQ_4_12(1.0);
 }

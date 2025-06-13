@@ -10615,8 +10615,7 @@ const struct Item gItemsInfo[] =
         .name = _("Licar Berry"),
         .pluralName = _("Licar Berries"),
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
-        .holdEffect = HOLD_EFFECT_RESIST_BERRY,
-        //.holdEffectParam = 
+        .holdEffect = HOLD_EFFECT_RESIST_SPECIAL,
         .description = COMPOUND_STRING(
             "A hold item that\n"
             "weakens a Special\n"
@@ -10634,8 +10633,7 @@ const struct Item gItemsInfo[] =
         .name = _("Tarnec Berry"),
         .pluralName = _("Tarnec Berries"),
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
-        .holdEffect = HOLD_EFFECT_RESIST_BERRY,
-        //.holdEffectParam = 
+        .holdEffect = HOLD_EFFECT_RESIST_PHYSICAL,
         .description = COMPOUND_STRING(
             "A hold item that\n"
             "weakens a Physical\n"
