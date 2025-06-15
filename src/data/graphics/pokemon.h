@@ -26805,6 +26805,15 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
 #endif //OW_POKEMON_OBJECT_EVENTS
 #endif //P_FAMILY_PECHARUNT
 
+//pipling
+    const u32 gMonFrontPic_Pipling[] = INCBIN_U32("graphics/pokemon/piplup/pipling/front.4bpp.lz");
+    const u32 gMonPalette_Pipling[] = INCBIN_U32("graphics/pokemon/piplup/pipling/normal.gbapal.lz");
+    const u32 gMonBackPic_Pipling[] = INCBIN_U32("graphics/pokemon/piplup/pipling/back.4bpp.lz");
+    const u32 gMonShinyPalette_Pipling[] = INCBIN_U32("graphics/pokemon/piplup/pipling/shiny.gbapal.lz");
+    const u8 gMonIcon_Pipling[] = INCBIN_U8("graphics/pokemon/piplup/pipling/icon.4bpp");
+
+
+
 
 //turtwick
     const u32 gMonFrontPic_Turtwick[] = INCBIN_U32("graphics/pokemon/turtwig/turtwick/front.4bpp.lz");
