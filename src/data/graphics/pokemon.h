@@ -26812,7 +26812,12 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
     const u32 gMonShinyPalette_Pipling[] = INCBIN_U32("graphics/pokemon/piplup/pipling/shiny.gbapal.lz");
     const u8 gMonIcon_Pipling[] = INCBIN_U8("graphics/pokemon/piplup/pipling/icon.4bpp");
 
-
+//pineplup
+    const u32 gMonFrontPic_Pineplup[] = INCBIN_U32("graphics/pokemon/prinplup/pineplup/front.4bpp.lz");
+    const u32 gMonPalette_Pineplup[] = INCBIN_U32("graphics/pokemon/prinplup/pineplup/normal.gbapal.lz");
+    const u32 gMonBackPic_Pineplup[] = INCBIN_U32("graphics/pokemon/prinplup/pineplup/back.4bpp.lz");
+    const u32 gMonShinyPalette_Pineplup[] = INCBIN_U32("graphics/pokemon/prinplup/pineplup/shiny.gbapal.lz");
+    const u8 gMonIcon_Pineplup[] = INCBIN_U8("graphics/pokemon/prinplup/pineplup/icon.4bpp");
 
 
 //turtwick

@@ -470,7 +470,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .bodyColor = BODY_COLOR_GREEN,
         .speciesName = _("Pipling"),
         .cryId = CRY_PIPLUP,
-        .natDexNum = NATIONAL_DEX_PIPLUP,
+        .natDexNum = NATIONAL_DEX_PIPLING,
         .categoryName = _("Penguin"),
         .height = 4,
         .weight = 52,
@@ -511,8 +511,8 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .eggMoveLearnset = sPiplupEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 16, SPECIES_PRINPLUP}),
     },
-/*
-    [SPECIES_PRINPLUP] =
+
+    [SPECIES_PINEPLUP] =
     {
         .baseHP        = 64,
         .baseAttack    = 66,
@@ -520,7 +520,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .baseSpeed     = 50,
         .baseSpAttack  = 81,
         .baseSpDefense = 76,
-        .types = MON_TYPES(TYPE_WATER),
+        .types = MON_TYPES(TYPE_GRASS),
         .catchRate = 45,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 142 : 143,
         .evYield_SpAttack = 2,
@@ -534,36 +534,36 @@ const struct SpeciesInfo gSpeciesInfo[] =
     #else
         .abilities = { ABILITY_TORRENT, ABILITY_NONE, ABILITY_DEFIANT },
     #endif
-        .bodyColor = BODY_COLOR_BLUE,
-        .speciesName = _("Prinplup"),
+        .bodyColor = BODY_COLOR_GREEN,
+        .speciesName = _("Pineplup"),
         .cryId = CRY_PRINPLUP,
-        .natDexNum = NATIONAL_DEX_PRINPLUP,
+        .natDexNum = NATIONAL_DEX_PINEPLUP,
         .categoryName = _("Penguin"),
         .height = 8,
         .weight = 230,
         .description = COMPOUND_STRING(
-            "Because every Prinplup considers itself\n"
+            "Because every Pineplup considers itself\n"
             "to be the most important, they can never\n"
             "form a group. It searches for prey in\n"
-            "icy seas."),
+            "deep forests."),
         .pokemonScale = 366,
         .pokemonOffset = 10,
         .trainerScale = 257,
         .trainerOffset = 0,
-        .frontPic = gMonFrontPic_Prinplup,
+        .frontPic = gMonFrontPic_Pineplup,
         .frontPicSize = MON_COORDS_SIZE(48, 56),
-        .frontPicYOffset = 7,
-        .frontAnimFrames = sAnims_Prinplup,
-        .frontAnimId = ANIM_V_STRETCH,
-        .backPic = gMonBackPic_Prinplup,
+        .frontPicYOffset = 2,
+        .frontAnimFrames = sAnims_Pineplup,
+        .frontAnimId = ANIM_BOUNCE_ROTATE_TO_SIDES_SLOW,
+        .backPic = gMonBackPic_Pineplup,
         .backPicSize = MON_COORDS_SIZE(48, 56),
-        .backPicYOffset = 7,
-        .backAnimId = BACK_ANIM_V_STRETCH,
-        .palette = gMonPalette_Prinplup,
-        .shinyPalette = gMonShinyPalette_Prinplup,
-        .iconSprite = gMonIcon_Prinplup,
-        .iconPalIndex = 0,
-        SHADOW(0, 7, SHADOW_SIZE_M)
+        .backPicYOffset = 0,
+        .backAnimId = BACK_ANIM_CONCAVE_ARC_LARGE,
+        .palette = gMonPalette_Pineplup,
+        .shinyPalette = gMonShinyPalette_Pineplup,
+        .iconSprite = gMonIcon_Pineplup,
+        .iconPalIndex = 5,
+        SHADOW(0, 12, SHADOW_SIZE_M)
         FOOTPRINT(Prinplup)
         OVERWORLD(
             sPicTable_Prinplup,
@@ -577,7 +577,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .teachableLearnset = sPrinplupTeachableLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 36, SPECIES_EMPOLEON}),
     },
-
+/*
     [SPECIES_EMPOLEON] =
     {
         .baseHP        = 84,
