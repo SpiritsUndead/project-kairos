@@ -278,6 +278,9 @@ const struct SpeciesInfo gSpeciesInfo[] =
     },
     */
 
+//todo
+//for all type swaps, check evos, learnsets, teachsets, eggsets, etc
+
    [SPECIES_TURTWICK] =
     {
         .baseHP        = 55,
@@ -471,7 +474,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .speciesName = _("Pipling"),
         .cryId = CRY_PIPLUP,
         .natDexNum = NATIONAL_DEX_PIPLING,
-        .categoryName = _("Penguin"),
+        .categoryName = _("Sapling"),
         .height = 4,
         .weight = 52,
         .description = COMPOUND_STRING(
@@ -509,7 +512,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .levelUpLearnset = sPiplupLevelUpLearnset,
         .teachableLearnset = sPiplupTeachableLearnset,
         .eggMoveLearnset = sPiplupEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 16, SPECIES_PRINPLUP}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 16, SPECIES_PINEPLUP}),
     },
 
     [SPECIES_PINEPLUP] =
@@ -538,7 +541,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .speciesName = _("Pineplup"),
         .cryId = CRY_PRINPLUP,
         .natDexNum = NATIONAL_DEX_PINEPLUP,
-        .categoryName = _("Penguin"),
+        .categoryName = _("Pine Tree"),
         .height = 8,
         .weight = 230,
         .description = COMPOUND_STRING(
@@ -575,10 +578,10 @@ const struct SpeciesInfo gSpeciesInfo[] =
         )
         .levelUpLearnset = sPrinplupLevelUpLearnset,
         .teachableLearnset = sPrinplupTeachableLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 36, SPECIES_EMPOLEON}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 36, SPECIES_EMPOLIAGE}),
     },
-/*
-    [SPECIES_EMPOLEON] =
+
+    [SPECIES_EMPOLIAGE] =
     {
         .baseHP        = 84,
         .baseAttack    = 86,
@@ -586,7 +589,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .baseSpeed     = 60,
         .baseSpAttack  = 111,
         .baseSpDefense = 101,
-        .types = MON_TYPES(TYPE_WATER, TYPE_STEEL),
+        .types = MON_TYPES(TYPE_GRASS, TYPE_FAIRY),
         .catchRate = 45,
     #if P_UPDATED_EXP_YIELDS >= GEN_8
         .expYield = 265,
@@ -606,35 +609,35 @@ const struct SpeciesInfo gSpeciesInfo[] =
     #else
         .abilities = { ABILITY_TORRENT, ABILITY_NONE, ABILITY_DEFIANT },
     #endif
-        .bodyColor = BODY_COLOR_BLUE,
-        .speciesName = _("Empoleon"),
+        .bodyColor = BODY_COLOR_GREEN,
+        .speciesName = _("Empoliage"),
         .cryId = CRY_EMPOLEON,
-        .natDexNum = NATIONAL_DEX_EMPOLEON,
-        .categoryName = _("Emperor"),
+        .natDexNum = NATIONAL_DEX_EMPOLIAGE,
+        .categoryName = _("Spriggan"),
         .height = 17,
         .weight = 845,
         .description = COMPOUND_STRING(
-            "The three horns that extend from its\n"
+            "The three branches that extend from its\n"
             "beak attest to its power. It avoids\n"
             "unnecessary disputes, but it will decimate\n"
-            "anything that threatens its pride."),
+            "anything that threatens its forest."),
         .pokemonScale = 259,
         .pokemonOffset = 0,
         .trainerScale = 290,
         .trainerOffset = 1,
-        .frontPic = gMonFrontPic_Empoleon,
+        .frontPic = gMonFrontPic_Empoliage,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
-        .frontAnimFrames = sAnims_Empoleon,
-        .frontAnimId = ANIM_V_STRETCH,
-        .backPic = gMonBackPic_Empoleon,
+        .frontAnimFrames = sAnims_Empoliage,
+        .frontAnimId = ANIM_ROTATE_UP_SLAM_DOWN,
+        .backPic = gMonBackPic_Empoliage,
         .backPicSize = MON_COORDS_SIZE(64, 64),
         .backPicYOffset = 0,
-        .backAnimId = BACK_ANIM_SHAKE_GLOW_BLUE,
-        .palette = gMonPalette_Empoleon,
-        .shinyPalette = gMonShinyPalette_Empoleon,
-        .iconSprite = gMonIcon_Empoleon,
-        .iconPalIndex = 0,
+        .backAnimId = BACK_ANIM_SHAKE_GLOW_GREEN,
+        .palette = gMonPalette_Empoliage,
+        .shinyPalette = gMonShinyPalette_Empoliage,
+        .iconSprite = gMonIcon_Empoliage,
+        .iconPalIndex = 5,
         SHADOW(2, 12, SHADOW_SIZE_M)
         FOOTPRINT(Empoleon)
         OVERWORLD(
@@ -648,5 +651,5 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .levelUpLearnset = sEmpoleonLevelUpLearnset,
         .teachableLearnset = sEmpoleonTeachableLearnset,
     },
-    */
+    
 };

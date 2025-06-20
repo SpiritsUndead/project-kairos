@@ -26819,6 +26819,13 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
     const u32 gMonShinyPalette_Pineplup[] = INCBIN_U32("graphics/pokemon/prinplup/pineplup/shiny.gbapal.lz");
     const u8 gMonIcon_Pineplup[] = INCBIN_U8("graphics/pokemon/prinplup/pineplup/icon.4bpp");
 
+//empoliage
+    const u32 gMonFrontPic_Empoliage[] = INCBIN_U32("graphics/pokemon/empoleon/empoliage/front.4bpp.lz");
+    const u32 gMonPalette_Empoliage[] = INCBIN_U32("graphics/pokemon/empoleon/empoliage/normal.gbapal.lz");
+    const u32 gMonBackPic_Empoliage[] = INCBIN_U32("graphics/pokemon/empoleon/empoliage/back.4bpp.lz");
+    const u32 gMonShinyPalette_Empoliage[] = INCBIN_U32("graphics/pokemon/empoleon/empoliage/shiny.gbapal.lz");
+    const u8 gMonIcon_Empoliage[] = INCBIN_U8("graphics/pokemon/empoleon/empoliage/icon.4bpp");
+
 
 //turtwick
     const u32 gMonFrontPic_Turtwick[] = INCBIN_U32("graphics/pokemon/turtwig/turtwick/front.4bpp.lz");
