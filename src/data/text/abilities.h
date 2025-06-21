@@ -623,6 +623,7 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_INTELLECTUAL] = _("Intellectual"),
     [ABILITY_SOULLESS] = _("Soulless"),
     [ABILITY_TENACIOUS] = ("Tenacious"),
+    [ABILITY_GLACIER_FORCE] = _("Glacier Force"),
 };
 #else   // 12 characters
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
@@ -937,6 +938,7 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_HUMILIATE] = _("Humiliate"),
     [ABILITY_HIGH_SPIRITS] = _("High Sprts"),
     [ABILITY_SINKING_SANDS] = _("Sinking Snds")
+    [ABILITY_GLACIER_FORCE] = _("GlacierForce"),
 };
 #endif
 
@@ -1261,4 +1263,5 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_INTELLECTUAL] = sIntellectualDescription,
     [ABILITY_SOULLESS] = sSoullessDescription,
     [ABILITY_TENACIOUS]= sTenaciousDescription,
+    [ABILITY_GLACIER_FORCE] = sGlacierForceDescription,
 };

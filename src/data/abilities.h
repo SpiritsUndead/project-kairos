@@ -2577,4 +2577,11 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
         .description = COMPOUND_STRING("Increases Defenses and Speed at half HP to stay in the fight."),
         .aiRating = 9,
     },
+
+    [ABILITY_GLACIER_FORCE] =
+    {
+        .name = _("Glacier Force"),
+        .description = COMPOUND_STRING("Powers up in a snowstorm."),
+        .aiRating = 4,
+    },
 };
