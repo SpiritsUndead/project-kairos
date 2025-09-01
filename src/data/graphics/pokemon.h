@@ -26848,6 +26848,14 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
     const u32 gMonShinyPalette_Forgeterra[] = INCBIN_U32("graphics/pokemon/torterra/forgeterra/shiny.gbapal.lz");
     const u8 gMonIcon_Forgeterra[] = INCBIN_U8("graphics/pokemon/torterra/forgeterra/icon.4bpp");
 
+//chimshor
+    const u32 gMonFrontPic_Chimshor[] = INCBIN_U32("graphics/pokemon/chimchar/chimshor/front.4bpp.lz");
+    const u32 gMonPalette_Chimshor[] = INCBIN_U32("graphics/pokemon/chimchar/chimshor/normal.gbapal.lz");
+    const u32 gMonBackPic_Chimshor[] = INCBIN_U32("graphics/pokemon/chimchar/chimshor/back.4bpp.lz");
+    const u32 gMonShinyPalette_Chimshor[] = INCBIN_U32("graphics/pokemon/chimchar/chimshor/shiny.gbapal.lz");
+    const u8 gMonIcon_Chimshor[] = INCBIN_U8("graphics/pokemon/chimchar/chimshor/icon.4bpp");
+
+
 
     const u32 gMonFrontPic_Egg[] = INCBIN_U32("graphics/pokemon/egg/anim_front.4bpp.lz");
     const u32 gMonPalette_Egg[] = INCBIN_U32("graphics/pokemon/egg/normal.gbapal.lz");

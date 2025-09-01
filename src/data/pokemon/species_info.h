@@ -651,5 +651,69 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .levelUpLearnset = sEmpoleonLevelUpLearnset,
         .teachableLearnset = sEmpoleonTeachableLearnset,
     },
+
+    [SPECIES_CHIMSHOR] =
+    {
+        .baseHP        = 44,
+        .baseAttack    = 58,
+        .baseDefense   = 44,
+        .baseSpeed     = 61,
+        .baseSpAttack  = 58,
+        .baseSpDefense = 44,
+        .types = MON_TYPES(TYPE_WATER),
+        .catchRate = 45,
+        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 62 : 65,
+        .evYield_Speed = 1,
+        .genderRatio = PERCENT_FEMALE(12.5),
+        .eggCycles = 20,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_SLOW,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD, EGG_GROUP_HUMAN_LIKE),
+        .abilities = { ABILITY_TORRENT, ABILITY_NONE, ABILITY_IRON_FIST },
+        .bodyColor = BODY_COLOR_BLUE,
+        .noFlip = TRUE,
+        .speciesName = _("Chimshor"),
+        .cryId = CRY_CHIMCHAR,
+        .natDexNum = NATIONAL_DEX_CHIMSHOR,
+        .categoryName = _("Chimp"),
+        .height = 5,
+        .weight = 62,
+        .description = COMPOUND_STRING(
+            "Its fiery rear end is fueled by gas made\n"
+            "in its belly. Before going to sleep,\n"
+            "Chimchar extinguish the flame on their\n"
+            "tails to prevent fires."),
+        .pokemonScale = 432,
+        .pokemonOffset = 15,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+        .frontPic = gMonFrontPic_Chimshor,
+        .frontPicSize = MON_COORDS_SIZE(32, 48),
+        .frontPicYOffset = 6,
+        .frontAnimFrames = sAnims_Chimshor,
+        .frontAnimId = ANIM_TWIST,
+        .backPic = gMonBackPic_Chimshor,
+        .backPicSize = MON_COORDS_SIZE(56, 56),
+        .backPicYOffset = 0,
+        .backAnimId = BACK_ANIM_H_SPRING_REPEATED,
+        .palette = gMonPalette_Chimshor,
+        .shinyPalette = gMonShinyPalette_Chimshor,
+        .iconSprite = gMonIcon_Chimshor,
+        .iconPalIndex = 0,
+        SHADOW(-1, 8, SHADOW_SIZE_S)
+        FOOTPRINT(Chimchar)
+        OVERWORLD(
+            sPicTable_Chimchar,
+            SIZE_32x32,
+            SHADOW_SIZE_M,
+            TRACKS_FOOT,
+            gOverworldPalette_Chimchar,
+            gShinyOverworldPalette_Chimchar
+        )
+        .levelUpLearnset = sChimcharLevelUpLearnset,
+        .teachableLearnset = sChimcharTeachableLearnset,
+        .eggMoveLearnset = sChimcharEggMoveLearnset,
+        .evolutions = EVOLUTION({EVO_LEVEL, 14, SPECIES_MONFERNO}),
+    },
     
 };
