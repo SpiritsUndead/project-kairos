@@ -1225,7 +1225,7 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
     const u32 gMonFrontPic_SandslashAlolanMega[] = INCBIN_U32("graphics/pokemon/sandslash/alolan/mega/front.4bpp.lz");
     const u32 gMonPalette_SandslashAlolanMega[] = INCBIN_U32("graphics/pokemon/sandslash/alolan/mega/normal.gbapal.lz");
     const u32 gMonBackPic_SandslashAlolanMega[] = INCBIN_U32("graphics/pokemon/sandslash/alolan/mega/back.4bpp.lz");
-    const u32 gMonShinyPalette_SandslashAlolanMega[] = INCBIN_U32("graphics/pokemon/sandslash/alolan/normal.gbapal.lz"); //todo
+    const u32 gMonShinyPalette_SandslashAlolanMega[] = INCBIN_U32("graphics/pokemon/sandslash/alola/normal.gbapal.lz"); //todo
     const u8 gMonIcon_SandslashAlolanMega[] = INCBIN_U8("graphics/pokemon/sandslash/alolan/mega/icon.4bpp");
 
 #if OW_POKEMON_OBJECT_EVENTS
@@ -4527,7 +4527,7 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
 #endif //P_GENDER_DIFFERENCES
 
 #if P_GEN_4_CROSS_EVOS
-    const u32 gMonFrontPic_Rhyperior[] = INCBIN_U32("graphics/pokemon/rhyperior/anim_frontf2.4bpp.lz");
+    const u32 gMonFrontPic_Rhyperior[] = INCBIN_U32("graphics/pokemon/rhyperior/anim_frontf.4bpp.lz");
     const u32 gMonPalette_Rhyperior[] = INCBIN_U32("graphics/pokemon/rhyperior/normal.gbapal.lz");
     const u32 gMonBackPic_Rhyperior[] = INCBIN_U32("graphics/pokemon/rhyperior/back2.4bpp.lz");
     const u32 gMonShinyPalette_Rhyperior[] = INCBIN_U32("graphics/pokemon/rhyperior/shiny.gbapal.lz");
@@ -4544,7 +4544,7 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
 #endif //OW_POKEMON_OBJECT_EVENTS
 
     const u32 gMonFrontPic_RhyperiorF[] = INCBIN_U32("graphics/pokemon/rhyperior/anim_frontf.4bpp.lz");
-    const u32 gMonBackPic_RhyperiorF[] = INCBIN_U32("graphics/pokemon/rhyperior/backf.4bpp.lz");
+    const u32 gMonBackPic_RhyperiorF[] = INCBIN_U32("graphics/pokemon/rhyperior/back2.4bpp.lz");
 #endif //P_GEN_4_CROSS_EVOS
 #endif //P_FAMILY_RHYHORN
 
