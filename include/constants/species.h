@@ -1656,9 +1656,9 @@
 #define SPECIES_EMPOLIAGE                               1540
 #define SPECIES_CHIMSHOR                                1541
 #define SPECIES_MONCHURNO                               1542
+#define SPECIES_INUNDAPE                                1543
 
-
-#define SPECIES_EGG (SPECIES_MONCHURNO  + 1)
+#define SPECIES_EGG (SPECIES_INUNDAPE  + 1)
 
 #define NUM_SPECIES SPECIES_EGG
 

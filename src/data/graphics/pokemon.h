@@ -26862,6 +26862,13 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
     const u32 gMonShinyPalette_Monchurno[] = INCBIN_U32("graphics/pokemon/monferno/monchurno/shiny.gbapal.lz");
     const u8 gMonIcon_Monchurno[] = INCBIN_U8("graphics/pokemon/monferno/monchurno/icon.4bpp");
 
+//monchurno
+    const u32 gMonFrontPic_Inundape[] = INCBIN_U32("graphics/pokemon/infernape/inundape/front.4bpp.lz");
+    const u32 gMonPalette_Inundape[] = INCBIN_U32("graphics/pokemon/infernape/inundape/normal.gbapal.lz");
+    const u32 gMonBackPic_Inundape[] = INCBIN_U32("graphics/pokemon/infernape/inundape/back.4bpp.lz");
+    const u32 gMonShinyPalette_Inundape[] = INCBIN_U32("graphics/pokemon/infernape/inundape/shiny.gbapal.lz");
+    const u8 gMonIcon_Inundape[] = INCBIN_U8("graphics/pokemon/infernape/inundape/icon.4bpp");
+
 
 
     const u32 gMonFrontPic_Egg[] = INCBIN_U32("graphics/pokemon/egg/anim_front.4bpp.lz");

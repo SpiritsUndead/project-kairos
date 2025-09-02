@@ -780,4 +780,73 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .evolutions = EVOLUTION({EVO_LEVEL, 36, SPECIES_INFERNAPE}),
     },
 
+    [SPECIES_INUNDAPE] =
+    {
+        .baseHP        = 76,
+        .baseAttack    = 104,
+        .baseDefense   = 71,
+        .baseSpeed     = 108,
+        .baseSpAttack  = 104,
+        .baseSpDefense = 71,
+        .types = MON_TYPES(TYPE_WATER, TYPE_GROUND),
+        .catchRate = 45,
+    #if P_UPDATED_EXP_YIELDS >= GEN_8
+        .expYield = 267,
+    #elif P_UPDATED_EXP_YIELDS >= GEN_5
+        .expYield = 240,
+    #else
+        .expYield = 209,
+    #endif
+        .evYield_Attack = 1,
+        .evYield_Speed = 1,
+        .evYield_SpAttack = 1,
+        .genderRatio = PERCENT_FEMALE(12.5),
+        .eggCycles = 20,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_SLOW,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD, EGG_GROUP_HUMAN_LIKE),
+        .abilities = { ABILITY_TORRENT, ABILITY_NONE, ABILITY_IRON_FIST },
+        .bodyColor = BODY_COLOR_BLUE,
+        .speciesName = _("Inundape"),
+        .cryId = CRY_INFERNAPE,
+        .natDexNum = NATIONAL_DEX_INUNDAPE,
+        .categoryName = _("Flame"),
+        .height = 12,
+        .weight = 550,
+        .description = COMPOUND_STRING(
+            "Its crown of fire is indicative of its\n"
+            "fiery nature. It uses a special kind of\n"
+            "martial arts involving all of its limbs to\n"
+            "take on any opponent."),
+        .pokemonScale = 282,
+        .pokemonOffset = 3,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+        .frontPic = gMonFrontPic_Inundape,
+        .frontPicSize = MON_COORDS_SIZE(64, 64),
+        .frontPicYOffset = 2,
+        .frontAnimFrames = sAnims_Inundape,
+        .frontAnimId = ANIM_ROTATE_UP_SLAM_DOWN,
+        .backPic = gMonBackPic_Inundape,
+        .backPicSize = MON_COORDS_SIZE(64, 64),
+        .backPicYOffset = 0,
+        .backAnimId = BACK_ANIM_SHAKE_GLOW_BLUE,
+        .palette = gMonPalette_Inundape,
+        .shinyPalette = gMonShinyPalette_Inundape,
+        .iconSprite = gMonIcon_Inundape,
+        .iconPalIndex = 0,
+        SHADOW(-5, 11, SHADOW_SIZE_L)
+        FOOTPRINT(Infernape)
+        OVERWORLD(
+            sPicTable_Infernape,
+            SIZE_32x32,
+            SHADOW_SIZE_M,
+            TRACKS_FOOT,
+            gOverworldPalette_Infernape,
+            gShinyOverworldPalette_Infernape
+        )
+        .levelUpLearnset = sInfernapeLevelUpLearnset,
+        .teachableLearnset = sInfernapeTeachableLearnset,
+    },
+
 };
