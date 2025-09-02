@@ -1655,9 +1655,10 @@
 #define SPECIES_PINEPLUP                                1539
 #define SPECIES_EMPOLIAGE                               1540
 #define SPECIES_CHIMSHOR                                1541
+#define SPECIES_MONCHURNO                               1542
 
 
-#define SPECIES_EGG (SPECIES_CHIMSHOR  + 1)
+#define SPECIES_EGG (SPECIES_MONCHURNO  + 1)
 
 #define NUM_SPECIES SPECIES_EGG
 

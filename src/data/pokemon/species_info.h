@@ -716,4 +716,68 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .evolutions = EVOLUTION({EVO_LEVEL, 14, SPECIES_MONFERNO}),
     },
     
+    [SPECIES_MONCHURNO] =
+    {
+        .baseHP        = 64,
+        .baseAttack    = 78,
+        .baseDefense   = 52,
+        .baseSpeed     = 81,
+        .baseSpAttack  = 78,
+        .baseSpDefense = 52,
+        .types = MON_TYPES(TYPE_WATER),
+        .catchRate = 45,
+        .expYield = 142,
+        .evYield_Speed = 1,
+        .evYield_SpAttack = 1,
+        .genderRatio = PERCENT_FEMALE(12.5),
+        .eggCycles = 20,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_SLOW,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD, EGG_GROUP_HUMAN_LIKE),
+        .abilities = { ABILITY_TORRENT, ABILITY_NONE, ABILITY_IRON_FIST },
+        .bodyColor = BODY_COLOR_BLUE,
+        .noFlip = TRUE,
+        .speciesName = _("Monchurno"),
+        .cryId = CRY_MONFERNO,
+        .natDexNum = NATIONAL_DEX_MONCHURNO,
+        .categoryName = _("Playful"),
+        .height = 9,
+        .weight = 220,
+        .description = COMPOUND_STRING(
+            "It carefully controls the intensity of\n"
+            "the flame on its tail, so as to keep its\n"
+            "foes at an adequate distance.\n"
+            "Its fiery tail is but one weapon."),
+        .pokemonScale = 338,
+        .pokemonOffset = 9,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+        .frontPic = gMonFrontPic_Monchurno,
+        .frontPicSize = MON_COORDS_SIZE(56, 56),
+        .frontPicYOffset = 5,
+        .frontAnimFrames = sAnims_Monchurno,
+        .frontAnimId = ANIM_H_JUMPS,
+        .backPic = gMonBackPic_Monchurno,
+        .backPicSize = MON_COORDS_SIZE(64, 64),
+        .backPicYOffset = 0,
+        .backAnimId = BACK_ANIM_V_SHAKE,
+        .palette = gMonPalette_Monchurno,
+        .shinyPalette = gMonShinyPalette_Monchurno,
+        .iconSprite = gMonIcon_Monchurno,
+        .iconPalIndex = 0,
+        SHADOW(-1, 8, SHADOW_SIZE_S)
+        FOOTPRINT(Monferno)
+        OVERWORLD(
+            sPicTable_Monferno,
+            SIZE_32x32,
+            SHADOW_SIZE_M,
+            TRACKS_FOOT,
+            gOverworldPalette_Monferno,
+            gShinyOverworldPalette_Monferno
+        )
+        .levelUpLearnset = sMonfernoLevelUpLearnset,
+        .teachableLearnset = sMonfernoTeachableLearnset,
+        .evolutions = EVOLUTION({EVO_LEVEL, 36, SPECIES_INFERNAPE}),
+    },
+
 };
